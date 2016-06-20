@@ -209,7 +209,7 @@ function checkConnection($conn,$db_name){
 }
 
 function getIDbyMobile($api_data,$conn){
-	if(!checkUniqueness($api_data,$conn){
+	if(!checkUniqueness($api_data,$conn)){
 		$data_ = json_decode($api_data);
 		$query = "SELECT id FROM User WHERE Mobile = '".$data->mobile."'";
 		$result = mysql_query($query,$conn);
