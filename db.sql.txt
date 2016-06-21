@@ -1,2 +1,52 @@
-CREATE TABLE `project_car`.`User` ( `id` SERIAL NOT NULL , `Name` VARCHAR(20) NOT NULL , `Surname` VARCHAR(20) NOT NULL , `Mobile` VARCHAR(20) NOT NULL , `Password` VARCHAR(50) NOT NULL , `Type_id` BIGINT NULL , PRIMARY KEY (`id`), UNIQUE `ix_User` (`Mobile`)) ENGINE = InnoDB;
-ALTER TABLE `user` ADD CONSTRAINT `user_user_type` FOREIGN KEY (`Type_id`) REFERENCES `project_car`.`user_type`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+CREATE TABLE `user` (
+ `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+ `Name` varchar(20) NOT NULL,
+ `Surname` varchar(20) NOT NULL,
+ `Mobile` varchar(20) NOT NULL,
+ `Password` varchar(50) NOT NULL,
+ `Type_id` bigint(20) unsigned DEFAULT NULL,
+ PRIMARY KEY (`id`),
+ UNIQUE KEY `id` (`id`),
+ UNIQUE KEY `ix_User` (`Mobile`),
+ KEY `Type_id` (`Type_id`),
+ CONSTRAINT `user_user_type` FOREIGN KEY (`Type_id`) REFERENCES `user_type` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8
+
+CREATE TABLE `city` (
+ `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+ `Name` varchar(20) NOT NULL,
+ `Province` varchar(2) NOT NULL,
+ PRIMARY KEY (`id`),
+ UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8
+
+CREATE TABLE `user_city` (
+ `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+ `User_id` bigint(20) unsigned NOT NULL,
+ `City_id` bigint(20) unsigned NOT NULL,
+ PRIMARY KEY (`id`),
+ UNIQUE KEY `id` (`id`),
+ KEY `User_id` (`User_id`),
+ KEY `City_id` (`City_id`),
+ CONSTRAINT `user_city_city` FOREIGN KEY (`City_id`) REFERENCES `city` (`id`),
+ CONSTRAINT `user_city_user` FOREIGN KEY (`User_id`) REFERENCES `user` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8
+
+CREATE TABLE `user_position` (
+ `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+ `User_id` bigint(20) unsigned NOT NULL,
+ `Longitude` double NOT NULL,
+ `Latitude` double NOT NULL,
+ `Date` date NOT NULL,
+ PRIMARY KEY (`id`),
+ UNIQUE KEY `id` (`id`),
+ KEY `User_id` (`User_id`),
+ CONSTRAINT `user_position_user` FOREIGN KEY (`User_id`) REFERENCES `user` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+CREATE TABLE `user_type` (
+ `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+ `Descr` varchar(20) NOT NULL,
+ PRIMARY KEY (`id`),
+ UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8
