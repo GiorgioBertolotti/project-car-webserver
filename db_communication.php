@@ -10,11 +10,11 @@ $api_method = isset($_POST['api_method']) ? $_POST['api_method'] : '';
 $api_data = isset($_POST['api_data']) ? $_POST['api_data'] : '';
 
 // Test
-$api_method='logoutUser';
-$api_data = '{"name":"Andrea","surname":"Quadriglia","mobile":"11151","password":"ppp","type":"autostoppista","city":"Trezzo"}';
+/*$api_method='User_City';
+$api_data = '{"mobile":"444","password":"ppp"}';
 echo $api_method;
 echo $api_data;
-
+*/
 // Validate Request
 if (empty($api_method) || empty($api_data)) {
     API_Response(true, 'Invalid Request');
@@ -73,18 +73,21 @@ function loginUser($api_data){
 		$result = mysql_query($query,$conn);
 		if(!$result)
 			API_Response(true,"Errore nella query");
-		$row = mysql_fetch_array($result);
-		// Check if the selected user's password is the same
-		if($row['Password']==$login_data->password){
-			$json_result = json_encode($row);
-			if($json_result==true){
-				API_Response(false,$json_result);
+		if($row = mysql_fetch_array($result)){
+			// Check if the selected user's password is the same
+			if($row['Password']==$login_data->password){
+				unset($row['Password']);
+				unset($row['4']);
+				$json_result = json_encode($row);
+				if($json_result==true){
+					API_Response(false,$json_result);
+				}
+				else
+					API_Response(true,"Errore nella query");
 			}
 			else
-				API_Response(true,"Errore nella query");
+				API_Response(true,"Numero di telefono e password non coincidono");
 		}
-		else
-			API_Response(true,"Numero di telefono e password non coincidono");
 	}
 	else
 		API_Response(true,"Errore di connessione");
@@ -131,7 +134,7 @@ function User_City($api_data){
 		$result = mysql_query($query);
 		if(!$result)
 			API_Response(true,"Errore nella query");
-		while ($row = mysql_fetch_array($result)) {
+		if ($row = mysql_fetch_array($result)) {
 			// Insert user id and city id in User_City table
 			$query2 = "INSERT INTO User_City (User_ID,City_ID) VALUES ('".$id."','".$row['id']."')";
 			if(!mysql_query($query2,$conn))
@@ -156,12 +159,13 @@ function User_Type($api_data){
 		$result = mysql_query($query,$conn);
 		if(!$result)
 			API_Response(true,"Errore nella query");
-		$row = mysql_fetch_array($result);
-		// Set type of the user to the selected id
-		$query2 = "UPDATE User SET Type_id = '".$row['id']."' WHERE id = '".$id."'";
-		if(!mysql_query($query2,$conn))
-			API_Response(true,"Errore nella query");
-		API_Response(false,"Utente associato al tipo");
+		if($row = mysql_fetch_array($result)){
+			// Set type of the user to the selected id
+			$query2 = "UPDATE User SET Type_id = '".$row['id']."' WHERE id = '".$id."'";
+			if(!mysql_query($query2,$conn))
+				API_Response(true,"Errore nella query");
+			API_Response(false,"Utente associato al tipo");
+		}
 	}
 	else
 		API_Response(true,"Errore di connessione");
@@ -201,38 +205,41 @@ function getAS($api_data){
 		if(!$tipi)
 			API_Response(true,"Errore nella query");
 		$lista = array();
-		$tipo = mysql_fetch_array($tipi);
-		// Select all users with type_id equals to the selected id
-		$query2 = "SELECT * FROM User WHERE Type_id = '".$tipo['id']."'";
-		$utenti = mysql_query($query2,$conn);
-		if(!$utenti)
-			API_Response(true,"Errore nella query");
-		while ($utente = mysql_fetch_array($utenti)){
-			// Select destinations of selected users
-			$query3 = "SELECT * FROM User_City WHERE User_id = '".$utente['id']."'";
-			$idcittap = mysql_query($query3,$conn);
-			if(!$idcittap)
+		if($tipo = mysql_fetch_array($tipi)){
+			// Select all users with type_id equals to the selected id
+			$query2 = "SELECT * FROM User WHERE Type_id = '".$tipo['id']."'";
+			$utenti = mysql_query($query2,$conn);
+			if(!$utenti)
 				API_Response(true,"Errore nella query");
-			$idcitta = mysql_fetch_array($idcittap);
-			// Select cities and get informations
-			$query4 = "SELECT * FROM City WHERE id = '".$idcitta['City_id']."'";
-			$cittap = mysql_query($query4,$conn);
-			if(!$cittap)
-				API_Response(true,"Errore nella query");
-			$citta = mysql_fetch_array($cittap);
-			// Associate to user's data the city's informations
-			$utente['City_Name'] = $citta['Name'];
-			$utente['City_Province'] = $citta['Province'];
-			unset($utente['Password']);
-			unset($utente['4']);
-			unset($utente['Type_id']);
-			unset($utente['5']);
-			$lista[] = $utente;
+			while ($utente = mysql_fetch_array($utenti)){
+				// Select destinations of selected users
+				$query3 = "SELECT * FROM User_City WHERE User_id = '".$utente['id']."'";
+				$idcittap = mysql_query($query3,$conn);
+				if(!$idcittap)
+					API_Response(true,"Errore nella query");
+				if($idcitta = mysql_fetch_array($idcittap)){
+					// Select cities and get informations
+					$query4 = "SELECT * FROM City WHERE id = '".$idcitta['City_id']."'";
+					$cittap = mysql_query($query4,$conn);
+					if(!$cittap)
+						API_Response(true,"Errore nella query");
+					if($citta = mysql_fetch_array($cittap)){
+						// Associate to user's data the city's informations
+						$utente['City_Name'] = $citta['Name'];
+						$utente['City_Province'] = $citta['Province'];
+						unset($utente['Password']);
+						unset($utente['4']);
+						unset($utente['Type_id']);
+						unset($utente['5']);
+						$lista[] = $utente;
+					}
+				}
+			}
+			$json_result = json_encode($lista);
+			if(!$json_result)
+				API_Response(true,"Errore nella codifica JSON");
+			API_Response(false,$json_result);
 		}
-		$json_result = json_encode($lista);
-		if(!$json_result)
-			API_Response(true,"Errore nella codifica JSON");
-		API_Response(false,$json_result);
 	}
 	else
 		API_Response(true,"Errore di connessione");
@@ -255,14 +262,15 @@ function getActiveUsers($api_data){
 			$posizioni = mysql_query($query2);
 			if(!$posizioni)
 				API_Response(true,"Errore nella query");
-			$posizione = mysql_fetch_array($posizioni);
-			// Associate to each user the position's information
-			$utente['Longitude'] = $posizione['Longitude'];
-			$utente['Latitude'] = $posizione['Latitude'];
-			$utente['Date'] = $posizione['Date'];
-			unset($utente['Password']);
-			unset($utente['4']);
-			$lista[] = $utente;
+			if($posizione = mysql_fetch_array($posizioni)){
+				// Associate to each user the position's information
+				$utente['Longitude'] = $posizione['Longitude'];
+				$utente['Latitude'] = $posizione['Latitude'];
+				$utente['Date'] = $posizione['Date'];
+				unset($utente['Password']);
+				unset($utente['4']);
+				$lista[] = $utente;
+			}
 		}
 		$json_result = json_encode($lista);
 		if(!$json_result)
@@ -339,8 +347,9 @@ function getIDbyMobile($api_data,$conn){
 		$result = mysql_query($query,$conn);
 		if(!$result)
 			API_Response(true,"Errore nella query");
-		$riga = mysql_fetch_array($result);
-		return $riga['id'];
+		if($riga = mysql_fetch_array($result)){
+			return $riga['id'];
+		}
 	}
 	API_Response(true,"Nessun utente con questo numero");
 }
