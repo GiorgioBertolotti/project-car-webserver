@@ -8,13 +8,13 @@ define('db_host','localhost');
 // Load Request
 $api_method = isset($_POST['api_method']) ? $_POST['api_method'] : '';
 $api_data = isset($_POST['api_data']) ? $_POST['api_data'] : '';
-
+/*
 // Test
-$api_method='getActiveUsers';
-$api_data = '{"mobile":"6","city":"dalmen"}';
+$api_method='logoutUser';
+$api_data = '{"mobile":"11151	","city":"dalmen"}';
 echo $api_method;
 echo $api_data;
-
+*/
 // Validate Request
 if (empty($api_method) || empty($api_data)) {
     API_Response(true, 'Invalid Request',"");
