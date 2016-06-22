@@ -10,169 +10,175 @@ $api_method = isset($_POST['api_method']) ? $_POST['api_method'] : '';
 $api_data = isset($_POST['api_data']) ? $_POST['api_data'] : '';
 
 // Test
-/*$api_method='User_City';
-$api_data = '{"mobile":"444","password":"ppp"}';
+$api_method='getAS';
+$api_data = '{"mobile":"6","city":"roma"}';
 echo $api_method;
 echo $api_data;
-*/
+
 // Validate Request
 if (empty($api_method) || empty($api_data)) {
-    API_Response(true, 'Invalid Request');
+    API_Response(true, 'Invalid Request',"");
 }
 if (!function_exists($api_method)) {
-    API_Response(true, 'API Method Not Implemented');
+    API_Response(true, 'API Method Not Implemented',"");
 }
 
 // Call API Method
 call_user_func($api_method, $api_data);
 
 // Function response
-function API_Response($isError, $Message){
+function API_Response($isError, $Message, $method){
     exit(json_encode(array(
         'IsError' => $isError,
-        'Message' => $Message
+        'Message' => json_decode($Message),
+		'Function' => $method
     )));
 }
 
 // Functions
 // Register
-function registerUser($api_data){
+function registerUser($data){
 	// Connection to db
     $conn = mysql_connect(db_host, db_user);
     if(checkConnection($conn,db_name)){
 		// Check the user doesn't already exists
-		if(checkUniqueness($api_data,$conn)){
+		if(checkUniqueness($data,$conn)){
 			// Decode register data
-			$register_data = json_decode($api_data);
+			$register_data = json_decode($data);
 			// Insert
 			$query = "INSERT INTO User (Name, Surname, Mobile, Password, Type_id) VALUES ('".$register_data->name."','".$register_data->surname."','".$register_data->mobile."','".$register_data->password."',NULL)";
 			if(mysql_query($query,$conn) == true)
-				API_Response(false,"Utente registrato");
+				API_Response(false,"Utente registrato",__FUNCTION__);
 			else
-				API_Response(true,"Errore nella query");
+				API_Response(true,"Errore nella query",__FUNCTION__);
 		}
 		else{
-			API_Response(true,"Utente gi&agrave registrato.");
+			API_Response(true,"Esiste un utente con lo stesso numero.",__FUNCTION__);
 		}
 	}
 	else
-		API_Response(true,"Errore di connessione");
+		API_Response(true,"Errore di connessione",__FUNCTION__);
 }
 
 // Login
-function loginUser($api_data){
+function loginUser($data){
 	// Connection to db
     $conn = mysql_connect(db_host, db_user);
     if(checkConnection($conn,db_name)){
 		// Get user id
-		$id = getIDbyMobile($api_data,$conn);
+		$id = getIDbyMobile($data,$conn);
 		// Decode login data
-		$login_data = json_decode($api_data);
+		$login_data = json_decode($data);
 		// Get user with the id
 		$query = "SELECT * FROM User WHERE id = '".$id."'";
 		$result = mysql_query($query,$conn);
 		if(!$result)
-			API_Response(true,"Errore nella query");
+			API_Response(true,"Errore nella query",__FUNCTION__);
+		$temp = array();
 		if($row = mysql_fetch_array($result)){
 			// Check if the selected user's password is the same
 			if($row['Password']==$login_data->password){
-				unset($row['Password']);
-				unset($row['4']);
-				$json_result = json_encode($row);
+				$temp[] = array(
+					'Name'=>$row['Name'],
+					'Surname'=>$row['Surname'],
+					'Mobile'=>$row['Mobile']);
+				$json_result = json_encode($temp);
 				if($json_result==true){
-					API_Response(false,$json_result);
+					API_Response(false,$json_result,__FUNCTION__);
 				}
 				else
-					API_Response(true,"Errore nella query");
+					API_Response(true,"Errore nella query",__FUNCTION__);
 			}
 			else
-				API_Response(true,"Numero di telefono e password non coincidono");
+				API_Response(true,"Numero di telefono e password non coincidono",__FUNCTION__);
 		}
 	}
 	else
-		API_Response(true,"Errore di connessione");
+		API_Response(true,"Errore di connessione",__FUNCTION__);
 }
 
 // Logout
-function logoutUser($api_data){
+function logoutUser($data){
 	// Connect to db
     $conn = mysql_connect(db_host, db_user);
     if(checkConnection($conn,db_name)){
 		//Get id by mobile phone
-		$id = getIDbyMobile($api_data,$conn);
-		$logout_data = json_decode($api_data);
+		$id = getIDbyMobile($data,$conn);
+		$logout_data = json_decode($data);
 		// Delete user's position from User_Position table
 		$queryp = "DELETE FROM User_Position WHERE User_id = '".$id."'";
 		if(!mysql_query($queryp,$conn))
-			API_Response(true,"Errore nella query");
+			API_Response(true,"Errore nella query",__FUNCTION__);
 		// Delete user's destination from User_City table
 		$queryc = "DELETE FROM User_City WHERE User_id = '".$id."'";
 		if(!mysql_query($queryc,$conn))
-			API_Response(true,"Errore nella query");
+			API_Response(true,"Errore nella query",__FUNCTION__);
 		// Set user's type to null
 		$queryt = "UPDATE User SET Type_id = NULL WHERE id = '".$id."'";
 		if(!mysql_query($queryt,$conn))
-			API_Response(true,"Errore nella query");
-		API_Response(false,"Logout eseguito con successo");
+			API_Response(true,"Errore nella query",__FUNCTION__);
+		API_Response(false,"Logout eseguito con successo",__FUNCTION__);
 	}
 	else
-		API_Response(true,"Errore di connessione");
+		API_Response(true,"Errore di connessione",__FUNCTION__);
 }
 
 // Set destination
-function User_City($api_data){
+function User_City($data){
 	// Connect to db
     $conn = mysql_connect(db_host, db_user);
     if(checkConnection($conn,db_name)){
 		// Get id by mobile phone
-		$id = getIDbyMobile($api_data,$conn);
-		$data = json_decode($api_data);
+		$id = getIDbyMobile($data,$conn);
+		$data = json_decode($data);
 		// Get city information
 		$query = sprintf("SELECT * FROM City WHERE Name = '%s'",
             mysql_real_escape_string($data->city));
 		//$query = "SELECT * FROM City WHERE Name = '".$data->city."'";
 		$result = mysql_query($query);
 		if(!$result)
-			API_Response(true,"Errore nella query");
+			API_Response(true,"Errore nella query",__FUNCTION__);
+		if(mysql_num_rows($result)==0)
+			API_Response(true,"Destinazione non esistente",__FUNCTION__);
 		if ($row = mysql_fetch_array($result)) {
 			// Insert user id and city id in User_City table
 			$query2 = "INSERT INTO User_City (User_ID,City_ID) VALUES ('".$id."','".$row['id']."')";
 			if(!mysql_query($query2,$conn))
-				API_Response(true,"Errore nella query");
-			API_Response(false,"Destinazione associata");
+				API_Response(true,"Errore nella query",__FUNCTION__);
+			API_Response(false,"Destinazione associata",__FUNCTION__);
 		}
 	}
 	else
-		API_Response(true,"Errore di connessione");
+		API_Response(true,"Errore di connessione",__FUNCTION__);
 }
 
 // Set type of user
-function User_Type($api_data){
+function User_Type($data){
 	// Connect to db
     $conn = mysql_connect(db_host, db_user);
     if(checkConnection($conn,db_name)){
 		// Get id by mobile phone
-		$id = getIDbyMobile($api_data,$conn);
-		$data = json_decode($api_data);
+		$id = getIDbyMobile($data,$conn);
+		$data = json_decode($data);
 		// Select id of user type
 		$query = "SELECT * FROM User_Type WHERE Descr = '".$data->type."'";
 		$result = mysql_query($query,$conn);
 		if(!$result)
-			API_Response(true,"Errore nella query");
+			API_Response(true,"Errore nella query",__FUNCTION__);
 		if($row = mysql_fetch_array($result)){
 			// Set type of the user to the selected id
 			$query2 = "UPDATE User SET Type_id = '".$row['id']."' WHERE id = '".$id."'";
 			if(!mysql_query($query2,$conn))
-				API_Response(true,"Errore nella query");
-			API_Response(false,"Utente associato al tipo");
+				API_Response(true,"Errore nella query",__FUNCTION__);
+			API_Response(false,"Utente associato al tipo",__FUNCTION__);
 		}
 	}
 	else
-		API_Response(true,"Errore di connessione");
+		API_Response(true,"Errore di connessione",__FUNCTION__);
 }
 
 // Get all cities from db
-function getCities($api_data){
+function getCities($data){
 	// Connect to db
     $conn = mysql_connect(db_host, db_user);
     if(checkConnection($conn,db_name)){
@@ -180,22 +186,25 @@ function getCities($api_data){
 		$query = "SELECT * FROM City";
 		$result = mysql_query($query,$conn);
 		if(!$result)
-			API_Response(true,"Errore nella query");
+			API_Response(true,"Errore nella query",__FUNCTION__);
 		$lista = array();
 		while ($row = mysql_fetch_array($result)){
-			$lista[] = $row;
+			$lista[] = array(
+				'Name'=>$row['Name'],
+				'Province'=>$row['Province']
+			);
 		}
 		$json_result = json_encode($lista);
 		if(!$json_result)
-			API_Response(true,"Errore nella codifica JSON");
-		API_Response(false,$json_result);
+			API_Response(true,"Errore nella codifica JSON",__FUNCTION__);
+		API_Response(false,$json_result,__FUNCTION__);
 	}
 	else
-		API_Response(true,"Errore di connessione");
+		API_Response(true,"Errore di connessione",__FUNCTION__);
 }
 
 // Get all users of type "autostoppista"
-function getAS($api_data){
+function getAS($data){
 	// Connect to db
 	$conn = mysql_connect(db_host, db_user);
 	if(checkConnection($conn,db_name)){
@@ -203,50 +212,50 @@ function getAS($api_data){
 		$query = "SELECT * FROM User_Type WHERE Descr = 'autostoppista'";
 		$tipi = mysql_query($query,$conn);
 		if(!$tipi)
-			API_Response(true,"Errore nella query");
+			API_Response(true,"Errore nella query",__FUNCTION__);
 		$lista = array();
 		if($tipo = mysql_fetch_array($tipi)){
 			// Select all users with type_id equals to the selected id
 			$query2 = "SELECT * FROM User WHERE Type_id = '".$tipo['id']."'";
 			$utenti = mysql_query($query2,$conn);
 			if(!$utenti)
-				API_Response(true,"Errore nella query");
+				API_Response(true,"Errore nella query",__FUNCTION__);
 			while ($utente = mysql_fetch_array($utenti)){
 				// Select destinations of selected users
 				$query3 = "SELECT * FROM User_City WHERE User_id = '".$utente['id']."'";
 				$idcittap = mysql_query($query3,$conn);
 				if(!$idcittap)
-					API_Response(true,"Errore nella query");
+					API_Response(true,"Errore nella query",__FUNCTION__);
 				if($idcitta = mysql_fetch_array($idcittap)){
 					// Select cities and get informations
 					$query4 = "SELECT * FROM City WHERE id = '".$idcitta['City_id']."'";
 					$cittap = mysql_query($query4,$conn);
 					if(!$cittap)
-						API_Response(true,"Errore nella query");
+						API_Response(true,"Errore nella query",__FUNCTION__);
 					if($citta = mysql_fetch_array($cittap)){
 						// Associate to user's data the city's informations
-						$utente['City_Name'] = $citta['Name'];
-						$utente['City_Province'] = $citta['Province'];
-						unset($utente['Password']);
-						unset($utente['4']);
-						unset($utente['Type_id']);
-						unset($utente['5']);
-						$lista[] = $utente;
+						$lista[] = array(
+							'Name'=>$utente['Name'],
+							'Surname'=>$utente['Surname'],
+							'Mobile'=>$utente['Mobile'],
+							'City_Name'=>$citta['Name'],
+							'City_Province'=>$citta['Province']
+						);
 					}
 				}
 			}
 			$json_result = json_encode($lista);
 			if(!$json_result)
-				API_Response(true,"Errore nella codifica JSON");
-			API_Response(false,$json_result);
+				API_Response(true,"Errore nella codifica JSON",__FUNCTION__);
+			API_Response(false,$json_result,__FUNCTION__);
 		}
 	}
 	else
-		API_Response(true,"Errore di connessione");
+		API_Response(true,"Errore di connessione",__FUNCTION__);
 }
 
 // Get all active users
-function getActiveUsers($api_data){
+function getActiveUsers($data){
 	// Connect to db
 	$conn = mysql_connect(db_host, db_user);
 	if(checkConnection($conn,db_name)){
@@ -254,69 +263,72 @@ function getActiveUsers($api_data){
 		$query = "SELECT * FROM User WHERE Type_id != 'NULL'";
 		$utenti = mysql_query($query,$conn);
 		if(!$utenti)
-			API_Response(true,"Errore nella query");
+			API_Response(true,"Errore nella query",__FUNCTION__);
 		$lista = array();
 		while($utente = mysql_fetch_array($utenti)){
 			// Select user's position
 			$query2 = "SELECT * FROM User_Position WHERE User_id = '".$utente['id']."'";
 			$posizioni = mysql_query($query2);
 			if(!$posizioni)
-				API_Response(true,"Errore nella query");
+				API_Response(true,"Errore nella query",__FUNCTION__);
 			if($posizione = mysql_fetch_array($posizioni)){
 				// Associate to each user the position's information
-				$utente['Longitude'] = $posizione['Longitude'];
-				$utente['Latitude'] = $posizione['Latitude'];
-				$utente['Date'] = $posizione['Date'];
-				unset($utente['Password']);
-				unset($utente['4']);
-				$lista[] = $utente;
+				$lista[] = array(
+					'Name'=>$utente['Name'],
+					'Surname'=>$utente['Surname'],
+					'Mobile'=>$utente['Mobile'],
+					'Type_id'=>$utente['Type_id'],
+					'Longitude'=>$posizione['Longitude'],
+					'Latitude'=>$posizione['Latitude'],
+					'Date'=>$posizione['Date']
+				);
 			}
 		}
 		$json_result = json_encode($lista);
 		if(!$json_result)
-			API_Response(true,"Errore nella codifica JSON");
-		API_Response(false,$json_result);
+			API_Response(true,"Errore nella codifica JSON",__FUNCTION__);
+		API_Response(false,$json_result,__FUNCTION__);
 	}
 	else
-		API_Response(true,"Errore di connessione");
+		API_Response(true,"Errore di connessione",__FUNCTION__);
 }
 
 // Remove destination
-function removeUser_City($api_data){
+function removeUser_City($data){
 	// Connect to db
 	$conn = mysql_connect(db_host, db_user);
 	if(checkConnection($conn,db_name)){
 		// Get id by mobile phone
-		$id = getIDbyMobile($api_data,$conn);
+		$id = getIDbyMobile($data,$conn);
 		// Delete the destination from User_City table
 		$query = "DELETE FROM User_City WHERE User_id = '".$id."'";
 		if(!mysql_query($query))
-			API_Response(true,"Errore nella query");
-		API_Response(false,"Destinazione rimossa");
+			API_Response(true,"Errore nella query",__FUNCTION__);
+		API_Response(false,"Destinazione rimossa",__FUNCTION__);
 	}
 	else
-		API_Response(true,"Errore di connessione");
+		API_Response(true,"Errore di connessione",__FUNCTION__);
 }
 
 // Remove type of user
-function removeUser_Type($api_data){
+function removeUser_Type($data){
 	// Connect to db
 	$conn = mysql_connect(db_host, db_user);
 	if(checkConnection($conn,db_name)){
 		// Get user's id by mobile phone
-		$id = getIDbyMobile($api_data,$conn);
+		$id = getIDbyMobile($data,$conn);
 		// Set user's type_id to null
 		$query = "UPDATE User SET Type_id = NULL WHERE id = '".$id."'";
 		if(!mysql_query($query))
-			API_Response(true,"Errore nella query");
+			API_Response(true,"Errore nella query",__FUNCTION__);
 		// Delete user's record from the position table
 		$query2 = "DELETE FROM User_Position WHERE User_id = '".$id."'";
 		if(!mysql_query($query2))
-			API_Response(true,"Errore nella query");
-		API_Response(false,"Utente dissociato al tipo");
+			API_Response(true,"Errore nella query",__FUNCTION__);
+		API_Response(false,"Utente dissociato al tipo",__FUNCTION__);
 	}
 	else
-		API_Response(true,"Errore di connessione");
+		API_Response(true,"Errore di connessione",__FUNCTION__);
 }
 
 // Check if the connection to the db is active
@@ -324,45 +336,45 @@ function checkConnection($conn,$db_name){
 	$errore = true;
 	if (!$conn)
 	{
-		API_Response(true,"Errore nella connessione.");
+		API_Response(true,"Errore nella connessione.",__FUNCTION__);
 		$errore = false;
 	}
     $ris = mysql_select_db($db_name);
     if (!$ris)
 	{
-		API_Response(true,"Errore nella connessione col database.");
+		API_Response(true,"Errore nella connessione col database.",__FUNCTION__);
 		$errore = false;
 	}
 	return $errore;
 }
 
 // Get the user id by the mobile phone
-function getIDbyMobile($api_data,$conn){
+function getIDbyMobile($data,$conn){
 	// Check if there is any user with this mobile phone
-	if(!checkUniqueness($api_data,$conn)){
+	if(!checkUniqueness($data,$conn)){
 		// Decode user's data
-		$data = json_decode($api_data);
+		$data = json_decode($data);
 		// Select user's id
 		$query = "SELECT id FROM User WHERE Mobile = '".$data->mobile."'";
 		$result = mysql_query($query,$conn);
 		if(!$result)
-			API_Response(true,"Errore nella query");
+			API_Response(true,"Errore nella query",__FUNCTION__);
 		if($riga = mysql_fetch_array($result)){
 			return $riga['id'];
 		}
 	}
-	API_Response(true,"Nessun utente con questo numero");
+	API_Response(true,"Nessun utente con questo numero",__FUNCTION__);
 }
 
 // If the user doesn't already exists returns true, else returns false
-function checkUniqueness($api_data,$conn){
+function checkUniqueness($data,$conn){
 	// Decode user data
-	$user_data = json_decode($api_data);
+	$user_data = json_decode($data);
 	// Istruzione
 	$query = "SELECT * FROM User WHERE mobile = '".$user_data->mobile."'";
 	$result = mysql_query($query);
 	if(!$result)
-		API_Response(true,"Errore nella query");
+		API_Response(true,"Errore nella query",__FUNCTION__);
 	if(mysql_num_rows($result)=='0'){
 		return true;
 	} else{
