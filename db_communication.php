@@ -10,8 +10,8 @@ $api_method = isset($_POST['api_method']) ? $_POST['api_method'] : '';
 $api_data = isset($_POST['api_data']) ? $_POST['api_data'] : '';
 
 // Test
-$api_method='getAS';
-$api_data = '{"mobile":"6","city":"roma"}';
+$api_method='getActiveUsers';
+$api_data = '{"mobile":"6","city":"dalmen"}';
 echo $api_method;
 echo $api_data;
 
@@ -27,10 +27,17 @@ if (!function_exists($api_method)) {
 call_user_func($api_method, $api_data);
 
 // Function response
-function API_Response($isError, $Message, $method){
+function API_Response_JSON($isError, $Message, $method){
     exit(json_encode(array(
         'IsError' => $isError,
         'Message' => json_decode($Message),
+		'Function' => $method
+    )));
+}
+function API_Response($isError, $Message, $method){
+    exit(json_encode(array(
+        'IsError' => $isError,
+        'Message' => $Message,
 		'Function' => $method
     )));
 }
@@ -74,6 +81,8 @@ function loginUser($data){
 		$result = mysql_query($query,$conn);
 		if(!$result)
 			API_Response(true,"Errore nella query",__FUNCTION__);
+		if(mysql_num_rows($result)==0)
+			API_Response(true,"Nessun utente con questo id",__FUNCTION__);
 		$temp = array();
 		if($row = mysql_fetch_array($result)){
 			// Check if the selected user's password is the same
@@ -84,7 +93,7 @@ function loginUser($data){
 					'Mobile'=>$row['Mobile']);
 				$json_result = json_encode($temp);
 				if($json_result==true){
-					API_Response(false,$json_result,__FUNCTION__);
+					API_Response_JSON(false,$json_result,__FUNCTION__);
 				}
 				else
 					API_Response(true,"Errore nella query",__FUNCTION__);
@@ -165,6 +174,8 @@ function User_Type($data){
 		$result = mysql_query($query,$conn);
 		if(!$result)
 			API_Response(true,"Errore nella query",__FUNCTION__);
+		if(mysql_num_rows($result)==0)
+			API_Response(true,"Nessun tipo con questa descrizione",__FUNCTION__);
 		if($row = mysql_fetch_array($result)){
 			// Set type of the user to the selected id
 			$query2 = "UPDATE User SET Type_id = '".$row['id']."' WHERE id = '".$id."'";
@@ -187,6 +198,8 @@ function getCities($data){
 		$result = mysql_query($query,$conn);
 		if(!$result)
 			API_Response(true,"Errore nella query",__FUNCTION__);
+		if(mysql_num_rows($result)==0)
+			API_Response(true,"Nessuna destinazione trovata",__FUNCTION__);
 		$lista = array();
 		while ($row = mysql_fetch_array($result)){
 			$lista[] = array(
@@ -197,7 +210,7 @@ function getCities($data){
 		$json_result = json_encode($lista);
 		if(!$json_result)
 			API_Response(true,"Errore nella codifica JSON",__FUNCTION__);
-		API_Response(false,$json_result,__FUNCTION__);
+		API_Response_JSON(false,$json_result,__FUNCTION__);
 	}
 	else
 		API_Response(true,"Errore di connessione",__FUNCTION__);
@@ -213,6 +226,8 @@ function getAS($data){
 		$tipi = mysql_query($query,$conn);
 		if(!$tipi)
 			API_Response(true,"Errore nella query",__FUNCTION__);
+		if(mysql_num_rows($tipi)==0)
+			API_Response(true,"Nessun tipo di nome autostoppista",__FUNCTION__);
 		$lista = array();
 		if($tipo = mysql_fetch_array($tipi)){
 			// Select all users with type_id equals to the selected id
@@ -220,6 +235,8 @@ function getAS($data){
 			$utenti = mysql_query($query2,$conn);
 			if(!$utenti)
 				API_Response(true,"Errore nella query",__FUNCTION__);
+			if(mysql_num_rows($utenti)==0)
+				API_Response(true,"Nessun utente autostoppista",__FUNCTION__);
 			while ($utente = mysql_fetch_array($utenti)){
 				// Select destinations of selected users
 				$query3 = "SELECT * FROM User_City WHERE User_id = '".$utente['id']."'";
@@ -232,6 +249,8 @@ function getAS($data){
 					$cittap = mysql_query($query4,$conn);
 					if(!$cittap)
 						API_Response(true,"Errore nella query",__FUNCTION__);
+					if(mysql_num_rows($utenti)==0)
+						API_Response(true,"Nessuna destinazione con questo id",__FUNCTION__);
 					if($citta = mysql_fetch_array($cittap)){
 						// Associate to user's data the city's informations
 						$lista[] = array(
@@ -244,10 +263,12 @@ function getAS($data){
 					}
 				}
 			}
+			if(count($lista)==0)
+				API_Response(true,"Nessun autostoppista con destinazione impostata",__FUNCTION__);
 			$json_result = json_encode($lista);
 			if(!$json_result)
 				API_Response(true,"Errore nella codifica JSON",__FUNCTION__);
-			API_Response(false,$json_result,__FUNCTION__);
+			API_Response_JSON(false,$json_result,__FUNCTION__);
 		}
 	}
 	else
@@ -264,6 +285,8 @@ function getActiveUsers($data){
 		$utenti = mysql_query($query,$conn);
 		if(!$utenti)
 			API_Response(true,"Errore nella query",__FUNCTION__);
+		if(mysql_num_rows($utenti)==0)
+			API_Response(true,"Nessun utente attivo",__FUNCTION__);
 		$lista = array();
 		while($utente = mysql_fetch_array($utenti)){
 			// Select user's position
@@ -284,10 +307,12 @@ function getActiveUsers($data){
 				);
 			}
 		}
+		if(count($lista)==0)
+			API_Response(true,"Nessun utente attivo con posizione localizzata",__FUNCTION__);
 		$json_result = json_encode($lista);
 		if(!$json_result)
 			API_Response(true,"Errore nella codifica JSON",__FUNCTION__);
-		API_Response(false,$json_result,__FUNCTION__);
+		API_Response_JSON(false,$json_result,__FUNCTION__);
 	}
 	else
 		API_Response(true,"Errore di connessione",__FUNCTION__);
