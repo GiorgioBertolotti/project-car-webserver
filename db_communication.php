@@ -10,8 +10,8 @@ $api_method = isset($_POST['api_method']) ? $_POST['api_method'] : '';
 $api_data = isset($_POST['api_data']) ? $_POST['api_data'] : '';
 /*
 // Test
-$api_method='logoutUser';
-$api_data = '{"mobile":"11151	","city":"dalmen"}';
+$api_method='User_Type';
+$api_data = '{"mobile":"11151","type":"autostoppista"}';
 echo $api_method;
 echo $api_data;
 */
@@ -351,6 +351,36 @@ function removeUser_Type($data){
 		if(!mysql_query($query2))
 			API_Response(true,"Errore nella query",__FUNCTION__);
 		API_Response(false,"Utente dissociato al tipo",__FUNCTION__);
+	}
+	else
+		API_Response(true,"Errore di connessione",__FUNCTION__);
+}
+
+function setGPSLocation($data){
+	$conn = mysql_connect(db_host, db_user);
+	if(checkConnection($conn,db_name)){
+		$id = getIDbyMobile($data,$conn);
+		$query = "SELECT * FROM User_Position WHERE User_id = '".$id."'";
+		$result = mysql_query($query);
+		if(!$result)
+			API_Response(true,"Errore nella query1",__FUNCTION__);
+		if(mysql_num_rows($result)=='0'){
+			// Insert
+			$data = json_decode($data);
+			$query2 = "INSERT INTO User_Position (User_id,Longitude,Latitude) VALUES (".$id.",".$data->lon.",".$data->lat.")";
+			if(mysql_query($query2,$conn) == true)
+				API_Response(false,"Posizione salvata",__FUNCTION__);
+			else
+				API_Response(true,"Errore nella query2",__FUNCTION__);
+		} else{
+			// Update
+			$data = json_decode($data);
+			$query2 = "UPDATE User_Position SET Longitude = '".$data->lon."', Latitude = '".$data->lat."', Date = '".$data->date."' WHERE id = '".$id."'";
+			if(mysql_query($query2,$conn) == true)
+				API_Response(false,"Posizione aggiornata",__FUNCTION__);
+			else
+				API_Response(true,"Errore nella query3",__FUNCTION__);
+		}
 	}
 	else
 		API_Response(true,"Errore di connessione",__FUNCTION__);
