@@ -375,7 +375,7 @@ function setGPSLocation($data){
 		} else{
 			// Update
 			$data = json_decode($data);
-			$query2 = "UPDATE User_Position SET Longitude = '".$data->lon."', Latitude = '".$data->lat."', Date = '".$data->date."' WHERE id = '".$id."'";
+			$query2 = "UPDATE User_Position SET Longitude = '".$data->lon."', Latitude = '".$data->lat."', Date = '".$data->date."' WHERE User_id = '".$id."'";
 			if(mysql_query($query2,$conn) == true)
 				API_Response(false,"Posizione aggiornata",__FUNCTION__);
 			else
