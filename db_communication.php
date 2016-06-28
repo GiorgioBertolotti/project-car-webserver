@@ -221,8 +221,33 @@ function getAS($data){
 	// Connect to db
 	$conn = mysql_connect(db_host, db_user);
 	if(checkConnection($conn,db_name)){
-		// Select id of the type "autostoppista"
-		$query = "SELECT * FROM User_Type WHERE Descr = 'autostoppista'";
+		$data = json_decode($data);
+		$query = "SELECT u.Name,u.Surname,u.Mobile,c.Name AS City,c.Province,up.Latitude,up.Longitude,up.Date FROM User u INNER JOIN User_City AS uc ON u.id = uc.User_id INNER JOIN City as c ON uc.City_id = c.id INNER JOIN User_Position AS up ON u.id = up.User_id WHERE u.Type_id = 1 AND ACOS((SIN(Latitude*PI()/180)*SIN((".$data->lat.")*PI()/180)+COS(Latitude*PI()/180)*COS((".$data->lat.")*PI()/180))*COS(ABS(Longitude-".$data->lon.")*PI()/180))*6378 < ".$data->range."";
+		$utenti = mysql_query($query,$conn);
+		if(!$utenti)
+			API_Response(true,"Errore nelle query",__FUNCTION__);
+		if(mysql_num_rows($utenti)==0)
+			API_Response(true,"Nessun autostoppista",__FUNCTION__);
+		$lista = array();
+		while($utente = mysql_fetch_array($utenti)){
+			$lista[] = array(
+				'Name'=>$utente['Name'],
+				'Surname'=>$utente['Surname'],
+				'Mobile'=>$utente['Mobile'],
+				'City_Name'=>$utente['City'],
+				'City_Province'=>$utente['Province'],
+				'Longitude'=>$utente['Longitude'],
+				'Latitude'=>$utente['Latitude'],
+				'Date'=>$utente['Date']
+			);
+		}
+		if(count($lista)==0)
+			API_Response(true,"Nessun autostoppista",__FUNCTION__);
+		$json_result = json_encode($lista);
+		if(!$json_result)
+			API_Response(true,"Errore nella codifica JSON",__FUNCTION__);
+		API_Response_JSON(false,$json_result,__FUNCTION__);
+		/*$query = "SELECT * FROM User_Type WHERE Descr = 'autostoppista'";
 		$tipi = mysql_query($query,$conn);
 		if(!$tipi)
 			API_Response(true,"Errore nella query",__FUNCTION__);
@@ -231,6 +256,7 @@ function getAS($data){
 		$lista = array();
 		if($tipo = mysql_fetch_array($tipi)){
 			// Select all users with type_id equals to the selected id
+			$calcolo = "SELECT * FROM `user_position` WHERE ACOS((SIN(Latitude*PI()/180)*SIN((Latitude)*PI()/180)+COS(Latitude*PI()/180)*COS((Latitude)*PI()/180))*COS(ABS(Longitude-(Longitude+1))*PI()/180))*6378 < 111";
 			$query2 = "SELECT * FROM User WHERE Type_id = '".$tipo['id']."'";
 			$utenti = mysql_query($query2,$conn);
 			if(!$utenti)
@@ -253,7 +279,7 @@ function getAS($data){
 						API_Response(true,"Nessuna destinazione con questo id",__FUNCTION__);
 					if($citta = mysql_fetch_array($cittap)){
 						// Select user's position
-						$query5 = "SELECT * FROM User_Position WHERE User_id = '".$utente['id']."'";
+						$query5 = "SELECT * FROM User_Position WHERE User_id = '".$utente['id']."' AND ACOS((SIN(Latitude*PI()/180)*SIN((".$data->lat.")*PI()/180)+COS(Latitude*PI()/180)*COS((".$data->lat.")*PI()/180))*COS(ABS(Longitude-".$data->lon.")*PI()/180))*6378 < ".$data->range."";
 						$posizioni = mysql_query($query5);
 						if(!$posizioni)
 							API_Response(true,"Errore nella query",__FUNCTION__);
@@ -279,7 +305,7 @@ function getAS($data){
 			if(!$json_result)
 				API_Response(true,"Errore nella codifica JSON",__FUNCTION__);
 			API_Response_JSON(false,$json_result,__FUNCTION__);
-		}
+		}*/
 	}
 	else
 		API_Response(true,"Errore di connessione",__FUNCTION__);
