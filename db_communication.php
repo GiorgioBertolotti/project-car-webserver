@@ -252,14 +252,24 @@ function getAS($data){
 					if(mysql_num_rows($utenti)==0)
 						API_Response(true,"Nessuna destinazione con questo id",__FUNCTION__);
 					if($citta = mysql_fetch_array($cittap)){
-						// Associate to user's data the city's informations
-						$lista[] = array(
-							'Name'=>$utente['Name'],
-							'Surname'=>$utente['Surname'],
-							'Mobile'=>$utente['Mobile'],
-							'City_Name'=>$citta['Name'],
-							'City_Province'=>$citta['Province']
-						);
+						// Select user's position
+						$query5 = "SELECT * FROM User_Position WHERE User_id = '".$utente['id']."'";
+						$posizioni = mysql_query($query5);
+						if(!$posizioni)
+							API_Response(true,"Errore nella query",__FUNCTION__);
+						if($posizione = mysql_fetch_array($posizioni)){
+							// Associate to each user the position's information
+							$lista[] = array(
+								'Name'=>$utente['Name'],
+								'Surname'=>$utente['Surname'],
+								'Mobile'=>$utente['Mobile'],
+								'City_Name'=>$citta['Name'],
+								'City_Province'=>$citta['Province'],
+								'Longitude'=>$posizione['Longitude'],
+								'Latitude'=>$posizione['Latitude'],
+								'Date'=>$posizione['Date']
+							);
+						}
 					}
 				}
 			}
