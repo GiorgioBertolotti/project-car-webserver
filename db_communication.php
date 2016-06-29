@@ -305,8 +305,6 @@ function setRange($data){
 		$result = mysql_query($query);
 		if(!$result)
 			API_Response(true,"Errore nella query1",__FUNCTION__);
-		if(mysql_num_rows($result)=='0')
-			API_Response(true,"Nessuna riga è stata modificata",__FUNCTION__);
 		API_Response(false,"Range aggiornato",__FUNCTION__);
 	}
 	else
