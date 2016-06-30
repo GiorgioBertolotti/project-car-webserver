@@ -10,7 +10,7 @@ $api_method = isset($_POST['api_method']) ? $_POST['api_method'] : '';
 $api_data = isset($_POST['api_data']) ? $_POST['api_data'] : '';
 /*
 // Test
-$api_method='User_Type';
+$api_method='getActiveUsers';
 $api_data = '{"mobile":"11151","type":"autostoppista"}';
 echo $api_method;
 echo $api_data;
@@ -90,7 +90,8 @@ function loginUser($data){
 				$temp[] = array(
 					'Name'=>$row['Name'],
 					'Surname'=>$row['Surname'],
-					'Mobile'=>$row['Mobile']);
+					'Mobile'=>$row['Mobile'],
+					'Range'=>$row['Range']);
 				$json_result = json_encode($temp);
 				if($json_result==true){
 					API_Response_JSON(false,$json_result,__FUNCTION__);
@@ -221,7 +222,9 @@ function getAS($data){
 	// Connect to db
 	$conn = mysql_connect(db_host, db_user);
 	if(checkConnection($conn,db_name)){
+		// Decode JSON data
 		$data = json_decode($data);
+		// Query for select the informations from tables User, User_City and User_Position
 		$query = "SELECT u.Name,u.Surname,u.Mobile,u.Range,c.Name AS City,c.Province,up.Latitude,up.Longitude,up.Date FROM User u INNER JOIN User_City AS uc ON u.id = uc.User_id INNER JOIN City as c ON uc.City_id = c.id INNER JOIN User_Position AS up ON u.id = up.User_id WHERE u.Type_id = 1 AND ACOS((SIN(Latitude*PI()/180)*SIN((".$data->lat.")*PI()/180)+COS(Latitude*PI()/180)*COS((".$data->lat.")*PI()/180))*COS(ABS(Longitude-".$data->lon.")*PI()/180))*6378 < ".$data->range."";
 		$utenti = mysql_query($query,$conn);
 		if(!$utenti)
@@ -230,6 +233,7 @@ function getAS($data){
 			API_Response(true,"Nessun autostoppista",__FUNCTION__);
 		$lista = array();
 		while($utente = mysql_fetch_array($utenti)){
+			// Add each user to an array
 			$lista[] = array(
 				'Name'=>$utente['Name'],
 				'Surname'=>$utente['Surname'],
@@ -244,6 +248,7 @@ function getAS($data){
 		}
 		if(count($lista)==0)
 			API_Response(true,"Nessun autostoppista",__FUNCTION__);
+		// JSON encode the array
 		$json_result = json_encode($lista);
 		if(!$json_result)
 			API_Response(true,"Errore nella codifica JSON",__FUNCTION__);
@@ -258,8 +263,8 @@ function getActiveUsers($data){
 	// Connect to db
 	$conn = mysql_connect(db_host, db_user);
 	if(checkConnection($conn,db_name)){
-		// Select all users with type_id that is not null (that means the user is active)
-		$query = "SELECT * FROM User WHERE Type_id != 'NULL'";
+		// Query for select the informations from tables User and User_Position
+		$query = "SELECT u.Name,u.Surname,u.Mobile,u.Type_id,u.Range,up.Latitude,up.Longitude,up.Date FROM User AS u INNER JOIN user_position AS up ON u.id = up.User_id WHERE u.Type_id != 'NULL'";
 		$utenti = mysql_query($query,$conn);
 		if(!$utenti)
 			API_Response(true,"Errore nella query",__FUNCTION__);
@@ -267,27 +272,21 @@ function getActiveUsers($data){
 			API_Response(true,"Nessun utente attivo",__FUNCTION__);
 		$lista = array();
 		while($utente = mysql_fetch_array($utenti)){
-			// Select user's position
-			$query2 = "SELECT * FROM User_Position WHERE User_id = '".$utente['id']."'";
-			$posizioni = mysql_query($query2);
-			if(!$posizioni)
-				API_Response(true,"Errore nella query",__FUNCTION__);
-			if($posizione = mysql_fetch_array($posizioni)){
-				// Associate to each user the position's information
-				$lista[] = array(
-					'Name'=>$utente['Name'],
-					'Surname'=>$utente['Surname'],
-					'Mobile'=>$utente['Mobile'],
-					'Type_id'=>$utente['Type_id'],
-					'Range'=>$utente['Range'],
-					'Longitude'=>$posizione['Longitude'],
-					'Latitude'=>$posizione['Latitude'],
-					'Date'=>$posizione['Date']
-				);
-			}
+			// Add each user to an array
+			$lista[] = array(
+				'Name'=>$utente['Name'],
+				'Surname'=>$utente['Surname'],
+				'Mobile'=>$utente['Mobile'],
+				'Type_id'=>$utente['Type_id'],
+				'Range'=>$utente['Range'],
+				'Longitude'=>$utente['Longitude'],
+				'Latitude'=>$utente['Latitude'],
+				'Date'=>$utente['Date']
+			);
 		}
 		if(count($lista)==0)
 			API_Response(true,"Nessun utente attivo con posizione localizzata",__FUNCTION__);
+		// JSON encode the array
 		$json_result = json_encode($lista);
 		if(!$json_result)
 			API_Response(true,"Errore nella codifica JSON",__FUNCTION__);
@@ -297,10 +296,14 @@ function getActiveUsers($data){
 		API_Response(true,"Errore di connessione",__FUNCTION__);
 }
 
+// Set the range of localization for the user
 function setRange($data){
+	// Connect to DB
 	$conn = mysql_connect(db_host, db_user);
 	if(checkConnection($conn,db_name)){
+		// Decode user's data
 		$data = json_decode($data);
+		// Query used to set the localization's range of the user
 		$query = "UPDATE `User` SET `Range` = ".$data->range." WHERE `Mobile` = '".$data->mobile."'";
 		$result = mysql_query($query);
 		if(!$result)
