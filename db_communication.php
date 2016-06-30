@@ -356,7 +356,6 @@ function setImage($data){
 		// Decode user's data
 		$data = json_decode($data);
 		$query = "UPDATE `User` SET `Image`='".$data->img."' WHERE `Mobile` = '".$data->mobile."'";
-		echo $query;
 		$result = mysql_query($query);
 		if(!$result)
 			API_Response(true,"Errore nella query",__FUNCTION__);
