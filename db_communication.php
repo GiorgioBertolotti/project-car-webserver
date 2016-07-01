@@ -240,12 +240,12 @@ function getAS($data){
 				'Surname'=>$utente['Surname'],
 				'Mobile'=>$utente['Mobile'],
 				'Range'=>$utente['Range'],
-				'Image'=>$utente['Image'],
 				'City_Name'=>$utente['City'],
 				'City_Province'=>$utente['Province'],
 				'Longitude'=>$utente['Longitude'],
 				'Latitude'=>$utente['Latitude'],
-				'Date'=>$utente['Date']
+				'Date'=>$utente['Date'],
+				'Image'=>$utente['Image']
 			);
 		}
 		if(count($lista)==0)
@@ -281,10 +281,10 @@ function getActiveUsers($data){
 				'Mobile'=>$utente['Mobile'],
 				'Type_id'=>$utente['Type_id'],
 				'Range'=>$utente['Range'],
-				'Image'=>$utente['Image'],
 				'Longitude'=>$utente['Longitude'],
 				'Latitude'=>$utente['Latitude'],
-				'Date'=>$utente['Date']
+				'Date'=>$utente['Date'],
+				'Image'=>$utente['Image']
 			);
 		}
 		if(count($lista)==0)
@@ -352,10 +352,12 @@ function setRange($data){
 function setImage($data){
 	// Connect to DB
 	$conn = mysql_connect(db_host, db_user);
+	ini_set('mysql.connect_timeout', 300);
+	ini_set('default_socket_timeout', 300); 
 	if(checkConnection($conn,db_name)){
 		// Decode user's data
 		$data = json_decode($data);
-		$query = "UPDATE `User` SET `Image`='".$data->img."' WHERE `Mobile` = '".$data->mobile."'";
+		$query = "UPDATE User SET Image='".$data->img."' WHERE Mobile = '".$data->mobile."'";
 		$result = mysql_query($query);
 		if(!$result)
 			API_Response(true,"Errore nella query",__FUNCTION__);
