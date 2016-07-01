@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 01, 2016 at 11:57 AM
+-- Generation Time: Jul 01, 2016 at 05:41 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.21
 
@@ -43,7 +43,7 @@ INSERT INTO `user_position` (`id`, `User_id`, `Longitude`, `Latitude`, `Date`) V
 (4, 5, 9.630747, 45.675688, '2016-06-27 16:57:55'),
 (6, 8, 10.677444, 45.67577, '2016-06-28 09:38:48'),
 (11, 6, 9.7, 45.6775733, '2016-06-29 10:00:33'),
-(67, 10, 9.624789, 45.6767724, '2016-07-01 11:46:00');
+(78, 11, 9.6301367, 45.675695, '2016-07-01 17:33:26');
 
 --
 -- Indexes for dumped tables
@@ -65,7 +65,7 @@ ALTER TABLE `user_position`
 -- AUTO_INCREMENT for table `user_position`
 --
 ALTER TABLE `user_position`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
 --
 -- Constraints for dumped tables
 --
