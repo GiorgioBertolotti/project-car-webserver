@@ -16,8 +16,8 @@ $api_method = isset($_POST['api_method']) ? $_POST['api_method'] : '';
 $api_data = isset($_POST['api_data']) ? $_POST['api_data'] : '';
 /*
 // Test
-$api_method='loginUser';
-$api_data = '{"mobile":"3290358217","password":"prova"}';
+$api_method='forgotPassword';
+$api_data = '{"mobile":"3290358217"}';
 echo $api_method;
 echo $api_data;
 */

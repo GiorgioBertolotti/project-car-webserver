@@ -31,7 +31,7 @@ CREATE TABLE `user_position` (
   `User_id` bigint(20) UNSIGNED NOT NULL,
   `Longitude` double NOT NULL,
   `Latitude` double NOT NULL,
-  `Date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `Date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
