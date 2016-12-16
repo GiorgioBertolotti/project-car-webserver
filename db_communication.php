@@ -266,6 +266,49 @@ function getAS($data){
 		API_Response(true,"Errore di connessione",__FUNCTION__);
 }
 
+// Get all users of type "autostoppista" for notifications
+function getAS2($data){
+	// Connect to db
+	$conn = mysql_connect(db_host, db_user, db_pwd);
+	if(checkConnection($conn,db_name)){
+		// Decode JSON data
+		$id = getIDbyMobile($data,$conn);
+		$data = json_decode($data);
+		// Query for select the informations from tables User, User_City and User_Position
+		$query = "SELECT u.Name,u.Surname,u.Mobile,u.Range,u.Image,c.Name AS City,c.Province,up.Latitude,up.Longitude,up.Date FROM user AS u INNER JOIN user_city AS uc ON u.id = uc.User_id INNER JOIN city as c ON uc.City_id = c.id INNER JOIN user_position AS up ON u.id = up.User_id WHERE u.Type_id = 1 AND u.id != ".$id." AND ACOS((SIN(Latitude*PI()/180)*SIN((".$data->lat.")*PI()/180)+COS(Latitude*PI()/180)*COS((".$data->lat.")*PI()/180))*COS(ABS(Longitude-".$data->lon.")*PI()/180))*6378 < ".$data->range."";
+		$utenti = mysql_query($query,$conn);
+		if(!$utenti)
+			API_Response(true,"Errore nelle query",__FUNCTION__);
+		if(mysql_num_rows($utenti)==0)
+			API_Response(true,"Nessun autostoppista",__FUNCTION__);
+		$lista = array();
+		while($utente = mysql_fetch_array($utenti)){
+			// Add each user to an array
+			$lista[] = array(
+				'Name'=>$utente['Name'],
+				'Surname'=>$utente['Surname'],
+				'Mobile'=>$utente['Mobile'],
+				'Range'=>$utente['Range'],
+				'City_Name'=>$utente['City'],
+				'City_Province'=>$utente['Province'],
+				'Longitude'=>$utente['Longitude'],
+				'Latitude'=>$utente['Latitude'],
+				'Date'=>$utente['Date'],
+				'Image'=>$utente['Image']
+			);
+		}
+		if(count($lista)==0)
+			API_Response(true,"Nessun autostoppista",__FUNCTION__);
+		// JSON encode the array
+		$json_result = json_encode($lista);
+		if(!$json_result)
+			API_Response(true,"Errore nella codifica JSON",__FUNCTION__);
+		API_Response_JSON(false,$json_result,__FUNCTION__);
+	}
+	else
+		API_Response(true,"Errore di connessione",__FUNCTION__);
+}
+
 // Get all active users
 function getActiveUsers($data){
 	// Connect to db
