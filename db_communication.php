@@ -126,8 +126,8 @@ function logoutUser($data){
 		$queryp = "DELETE FROM user_position WHERE User_id = '".$id."'";
 		if(!mysql_query($queryp,$conn))
 			API_Response(true,"Errore nella query",__FUNCTION__);
-		// Delete user's destination from User_City table
-		$queryc = "DELETE FROM user_city WHERE User_id = '".$id."'";
+		// Delete user's destination from User_Destination table
+		$queryc = "DELETE FROM user_destination WHERE User_id = '".$id."'";
 		if(!mysql_query($queryc,$conn))
 			API_Response(true,"Errore nella query",__FUNCTION__);
 		// Set user's type to null
@@ -141,30 +141,18 @@ function logoutUser($data){
 }
 
 // Set destination
-function User_City($data){
+function User_Destination($data){
 	// Connect to db
     $conn = mysql_connect(db_host, db_user, db_pwd);
     if(checkConnection($conn,db_name)){
 		// Get id by mobile phone
 		$id = getIDbyMobile($data,$conn);
 		$data = json_decode($data);
-		// Get city information
-		$query = sprintf("SELECT * FROM city WHERE Name = '%s'",
-            mysql_real_escape_string($data->city));
-		//$query = "SELECT * FROM City WHERE Name = '".$data->city."'";
-		$result = mysql_query($query);
-		if(!$result)
+		// Insert user id and destination coordinates in User_Destination table
+		$query2 = "INSERT INTO user_destination (User_ID,Longitude,Latitude) VALUES ('".$id."','".$data->Longitude."','".$data->Latitude."')";
+		if(!mysql_query($query2,$conn))
 			API_Response(true,"Errore nella query",__FUNCTION__);
-		if(mysql_num_rows($result)==0)
-			API_Response(true,"Destinazione non esistente",__FUNCTION__);
-		if ($row = mysql_fetch_array($result)) {
-			// Insert user id and city id in User_City table
-			$query2 = "INSERT INTO user_city (User_ID,City_ID) VALUES ('".$id."','".$row['id']."')";
-			if(!mysql_query($query2,$conn))
-				API_Response(true,"Errore nella query",__FUNCTION__);
-			API_Response(false,"Destinazione associata",__FUNCTION__);
-		}
-	}
+		API_Response(false,"Destinazione associata",__FUNCTION__);	}
 	else
 		API_Response(true,"Errore di connessione",__FUNCTION__);
 }
@@ -196,34 +184,6 @@ function User_Type($data){
 		API_Response(true,"Errore di connessione",__FUNCTION__);
 }
 
-// Get all cities from db
-function getCities($data){
-	// Connect to db
-    $conn = mysql_connect(db_host, db_user, db_pwd);
-    if(checkConnection($conn,db_name)){
-		// Get all cities informations
-		$query = "SELECT * FROM city";
-		$result = mysql_query($query,$conn);
-		if(!$result)
-			API_Response(true,"Errore nella query",__FUNCTION__);
-		if(mysql_num_rows($result)==0)
-			API_Response(true,"Nessuna destinazione trovata",__FUNCTION__);
-		$lista = array();
-		while ($row = mysql_fetch_array($result)){
-			$lista[] = array(
-				'Name'=>$row['Name'],
-				'Province'=>$row['Province']
-			);
-		}
-		$json_result = json_encode($lista);
-		if(!$json_result)
-			API_Response(true,"Errore nella codifica JSON",__FUNCTION__);
-		API_Response_JSON(false,$json_result,__FUNCTION__);
-	}
-	else
-		API_Response(true,"Errore di connessione",__FUNCTION__);
-}
-
 // Get all users of type "autostoppista"
 function getAS($data){
 	// Connect to db
@@ -231,8 +191,8 @@ function getAS($data){
 	if(checkConnection($conn,db_name)){
 		// Decode JSON data
 		$data = json_decode($data);
-		// Query for select the informations from tables User, User_City and User_Position
-		$query = "SELECT u.Name,u.Surname,u.Mobile,u.Range,u.Image,c.Name AS City,c.Province,up.Latitude,up.Longitude,up.Date FROM user AS u INNER JOIN user_city AS uc ON u.id = uc.User_id INNER JOIN city as c ON uc.City_id = c.id INNER JOIN user_position AS up ON u.id = up.User_id WHERE u.Type_id = 1 AND ACOS((SIN(Latitude*PI()/180)*SIN((".$data->lat.")*PI()/180)+COS(Latitude*PI()/180)*COS((".$data->lat.")*PI()/180))*COS(ABS(Longitude-".$data->lon.")*PI()/180))*6378 < ".$data->range."";
+		// Query for select the informations from tables User, User_Destination and User_Position
+		$query = "SELECT u.Name,u.Surname,u.Mobile,u.Range,u.Image,d.Latitude AS Destlat,d.Longitude AS Destlon,up.Latitude,up.Longitude,up.Date FROM user AS u INNER JOIN user_destination AS d ON u.id = d.User_id INNER JOIN user_position AS up ON u.id = up.User_id WHERE u.Type_id = 1 AND ACOS((SIN(up.Latitude*PI()/180)*SIN((".$data->lat.")*PI()/180)+COS(up.Latitude*PI()/180)*COS((".$data->lat.")*PI()/180))*COS(ABS(up.Longitude-".$data->lon.")*PI()/180))*6378 < ".$data->range."";
 		$utenti = mysql_query($query,$conn);
 		if(!$utenti)
 			API_Response(true,"Errore nelle query",__FUNCTION__);
@@ -246,12 +206,12 @@ function getAS($data){
 				'Surname'=>$utente['Surname'],
 				'Mobile'=>$utente['Mobile'],
 				'Range'=>$utente['Range'],
-				'City_Name'=>$utente['City'],
-				'City_Province'=>$utente['Province'],
+				'Image'=>$utente['Image'],
+				'Destlat'=>$utente['Destlat'],
+				'Destlon'=>$utente['Destlon'],
 				'Longitude'=>$utente['Longitude'],
 				'Latitude'=>$utente['Latitude'],
-				'Date'=>$utente['Date'],
-				'Image'=>$utente['Image']
+				'Date'=>$utente['Date']
 			);
 		}
 		if(count($lista)==0)
@@ -274,8 +234,8 @@ function getAS2($data){
 		// Decode JSON data
 		$id = getIDbyMobile($data,$conn);
 		$data = json_decode($data);
-		// Query for select the informations from tables User, User_City and User_Position
-		$query = "SELECT u.Name,u.Surname,u.Mobile,u.Range,u.Image,c.Name AS City,c.Province,up.Latitude,up.Longitude,up.Date FROM user AS u INNER JOIN user_city AS uc ON u.id = uc.User_id INNER JOIN city as c ON uc.City_id = c.id INNER JOIN user_position AS up ON u.id = up.User_id WHERE u.Type_id = 1 AND u.id != ".$id." AND ACOS((SIN(Latitude*PI()/180)*SIN((".$data->lat.")*PI()/180)+COS(Latitude*PI()/180)*COS((".$data->lat.")*PI()/180))*COS(ABS(Longitude-".$data->lon.")*PI()/180))*6378 < ".$data->range."";
+		// Query for select the informations from tables User, User_Destination and User_Position
+		$query = "SELECT u.Name,u.Surname,u.Mobile,u.Range,u.Image,d.Latitude AS Destlat,d.Longitude AS Destlon,up.Latitude,up.Longitude,up.Date FROM user AS u INNER JOIN user_destination AS d ON u.id = d.User_id INNER JOIN user_position AS up ON u.id = up.User_id WHERE u.Type_id = 1 AND ACOS((SIN(up.Latitude*PI()/180)*SIN((".$data->lat.")*PI()/180)+COS(up.Latitude*PI()/180)*COS((".$data->lat.")*PI()/180))*COS(ABS(up.Longitude-".$data->lon.")*PI()/180))*6378 < ".$data->range."";
 		$utenti = mysql_query($query,$conn);
 		if(!$utenti)
 			API_Response(true,"Errore nelle query",__FUNCTION__);
@@ -289,12 +249,12 @@ function getAS2($data){
 				'Surname'=>$utente['Surname'],
 				'Mobile'=>$utente['Mobile'],
 				'Range'=>$utente['Range'],
-				'City_Name'=>$utente['City'],
-				'City_Province'=>$utente['Province'],
+				'Image'=>$utente['Image'],
+				'Destlat'=>$utente['Destlat'],
+				'Destlon'=>$utente['Destlon'],
 				'Longitude'=>$utente['Longitude'],
 				'Latitude'=>$utente['Latitude'],
-				'Date'=>$utente['Date'],
-				'Image'=>$utente['Image']
+				'Date'=>$utente['Date']
 			);
 		}
 		if(count($lista)==0)
@@ -431,14 +391,14 @@ function setPassword($data){
 }
 
 // Remove destination
-function removeUser_City($data){
+function removeUser_Destination($data){
 	// Connect to db
 	$conn = mysql_connect(db_host, db_user, db_pwd);
 	if(checkConnection($conn,db_name)){
 		// Get id by mobile phone
 		$id = getIDbyMobile($data,$conn);
-		// Delete the destination from User_City table
-		$query = "DELETE FROM user_city WHERE User_id = '".$id."'";
+		// Delete the destination from User_Destination table
+		$query = "DELETE FROM user_destination WHERE User_id = '".$id."'";
 		if(!mysql_query($query))
 			API_Response(true,"Errore nella query",__FUNCTION__);
 		API_Response(false,"Destinazione rimossa",__FUNCTION__);
