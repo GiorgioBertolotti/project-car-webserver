@@ -10,17 +10,10 @@ define('db_user','root');
 define('db_pwd','usbw');
 define('db_host','localhost');
 
-
 // Load Request
 $api_method = isset($_POST['api_method']) ? $_POST['api_method'] : '';
 $api_data = isset($_POST['api_data']) ? $_POST['api_data'] : '';
-/*
-// Test
-$api_method='loginUser';
-$api_data = '{"mobile":"3290358217","password":"prova"}';
-echo $api_method;
-echo $api_data;
-*/
+
 // Validate Request
 if (empty($api_method) || empty($api_data)) {
     API_Response(true, 'Invalid Request',"");
@@ -93,12 +86,14 @@ function loginUser($data){
 		if($row = mysql_fetch_array($result)){
 			// Check if the selected user's password is the same
 			if($row['Password']==$login_data->password){
+				$token = authorizationToken($data);
 				$temp[] = array(
 					'Name'=>$row['Name'],
 					'Surname'=>$row['Surname'],
 					'Mobile'=>$row['Mobile'],
 					'Range'=>$row['Range'],
-					'Image'=>$row['Image']);
+					'Image'=>$row['Image'],
+					'Token'=>$token);
 				$json_result = json_encode($temp);
 				if($json_result==true){
 					API_Response_JSON(false,$json_result,__FUNCTION__);
@@ -449,11 +444,7 @@ function authorizationToken($data){
 					if(!$result2)
 						API_Response(true,"Errore nella query",__FUNCTION__);
 					$isok = true;
-					$temp=array(
-						'token' => $token
-					);
-					$json_result = json_encode($temp);
-					API_Response(false,$json_result,__FUNCTION__);
+					return $token;
 				}else{
 					$isok = false;
 				}
