@@ -428,6 +428,42 @@ function removeUser_Type($data){
 		API_Response(true,"Errore di connessione",__FUNCTION__);
 }
 
+// Generate authorization token
+function authorizationToken($data){
+	$conn = mysql_connect(db_host, db_user, db_pwd);
+	if(checkConnection($conn,db_name)){
+		$id = getIDbyMobile($data,$conn);
+		$isok = true;
+		do{
+			$token = generateRandomString();
+			$query = "SELECT count(*) AS risultato FROM user_token WHERE Token='".$token."'";
+			$result = mysql_query($query);
+			if(!$result)
+				API_Response(true,"Errore nella query",__FUNCTION__);
+			if($conto = mysql_fetch_array($result)){
+				if($conto['risultato']==0){
+					$timestamp = date('Y-m-d');
+					$deadline = date('Y-m-d', strtotime($timestamp. ' + 30 days'));
+					$query2 = "INSERT INTO user_token (User_id,Token,Deadline) VALUES (".$id.",'".$token."','".$deadline."')";
+					$result2 = mysql_query($query2);
+					if(!$result2)
+						API_Response(true,"Errore nella query",__FUNCTION__);
+					$isok = true;
+					$temp=array(
+						'token' => $token
+					);
+					$json_result = json_encode($temp);
+					API_Response(false,$json_result,__FUNCTION__);
+				}else{
+					$isok = false;
+				}
+			}
+		} while(!$isok);
+	}
+	else
+		API_Response(true,"Errore di connessione",__FUNCTION__);
+}
+
 function forgotPassword($data){
 	$conn = mysql_connect(db_host,db_user, db_pwd);
 	if(checkConnection($conn,db_name)){
