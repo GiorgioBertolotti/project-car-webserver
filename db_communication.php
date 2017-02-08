@@ -109,6 +109,37 @@ function loginUser($data){
 		API_Response(true,"Errore di connessione",__FUNCTION__);
 }
 
+// Login
+function loginWToken($data){
+    $conn = mysql_connect(db_host, db_user, db_pwd);
+    if(checkConnection($conn,db_name)){
+		$login_data = json_decode($data);
+		$query = "SELECT * FROM user WHERE user.id=(SELECT User_id FROM user_token WHERE Token='".$login_data->token."')";
+		$result = mysql_query($query,$conn);
+		if(!$result)
+			API_Response(true,"Errore nella query",__FUNCTION__);
+		if(mysql_num_rows($result)==0)
+			API_Response(true,"Nessun utente con questo id",__FUNCTION__);
+		$temp = array();
+		if($row = mysql_fetch_array($result)){
+			$temp[] = array(
+				'Name'=>$row['Name'],
+				'Surname'=>$row['Surname'],
+				'Mobile'=>$row['Mobile'],
+				'Range'=>$row['Range'],
+				'Image'=>$row['Image']);
+			$json_result = json_encode($temp);
+			if($json_result==true){
+				API_Response_JSON(false,$json_result,__FUNCTION__);
+			}
+			else
+				API_Response(true,"Errore nella query",__FUNCTION__);
+		}
+	}
+	else
+		API_Response(true,"Errore di connessione",__FUNCTION__);
+}
+
 // Logout
 function logoutUser($data){
 	// Connect to db
