@@ -7,7 +7,7 @@ require_once 'class.smtp.php';
 // Database connection data
 define('db_name','project_car');
 define('db_user','root');
-define('db_pwd','');
+define('db_pwd','usbw');
 define('db_host','localhost');
 
 // Load Request
@@ -88,7 +88,7 @@ function loginUser($data){
 			// Check if the selected user's password is the same
 			if($row['Password']==$login_data->password){
 				$token = authorizationToken($data);
-				$img = "";
+				$base64 = "";
 				if($row['Image']!=null&&$row['Image']!=""){
 					$img = file_get_contents($row['Image'], true);
 					$base64 = 'data:image/jpeg;base64,' . base64_encode($img);
@@ -129,7 +129,7 @@ function loginWToken($data){
 			API_Response(true,"Nessun utente con questo id",__FUNCTION__);
 		$temp = array();
 		if($row = mysql_fetch_array($result)){
-			$img = "";
+			$base64 = "";
 			if($row['Image']!=null&&$row['Image']!=""){
 				$img = file_get_contents($row['Image'], true);
 				$base64 = 'data:image/jpeg;base64,' . base64_encode($img);
