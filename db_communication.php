@@ -7,7 +7,7 @@ require_once 'class.smtp.php';
 // Database connection data
 define('db_name','project_car');
 define('db_user','root');
-define('db_pwd','usbw');
+define('db_pwd','');
 define('db_host','localhost');
 
 // Load Request
@@ -78,8 +78,9 @@ function loginUser($data){
 		// Get user with the id
 		$query = "SELECT * FROM user WHERE id = '".$id."'";
 		$result = mysql_query($query,$conn);
-		if(!$result)
+		if(!$result){
 			API_Response(true,"Errore nella query",__FUNCTION__);
+		}
 		if(mysql_num_rows($result)==0)
 			API_Response(true,"Nessun utente con questo id",__FUNCTION__);
 		$temp = array();
@@ -87,19 +88,25 @@ function loginUser($data){
 			// Check if the selected user's password is the same
 			if($row['Password']==$login_data->password){
 				$token = authorizationToken($data);
+				$img = "";
+				if($row['Image']!=null&&$row['Image']!=""){
+					$img = file_get_contents($row['Image'], true);
+					$base64 = 'data:image/jpeg;base64,' . base64_encode($img);
+				}
 				$temp[] = array(
 					'Name'=>$row['Name'],
 					'Surname'=>$row['Surname'],
 					'Mobile'=>$row['Mobile'],
 					'Range'=>$row['Range'],
-					'Image'=>$row['Image'],
+					'Image'=>$base64,
 					'Token'=>$token);
 				$json_result = json_encode($temp);
 				if($json_result==true){
 					API_Response_JSON(false,$json_result,__FUNCTION__);
 				}
-				else
+				else{
 					API_Response(true,"Errore nella query",__FUNCTION__);
+				}
 			}
 			else
 				API_Response(true,"Numero di telefono e password non coincidono",__FUNCTION__);
@@ -122,12 +129,17 @@ function loginWToken($data){
 			API_Response(true,"Nessun utente con questo id",__FUNCTION__);
 		$temp = array();
 		if($row = mysql_fetch_array($result)){
+			$img = "";
+			if($row['Image']!=null&&$row['Image']!=""){
+				$img = file_get_contents($row['Image'], true);
+				$base64 = 'data:image/jpeg;base64,' . base64_encode($img);
+			}
 			$temp[] = array(
 				'Name'=>$row['Name'],
 				'Surname'=>$row['Surname'],
 				'Mobile'=>$row['Mobile'],
 				'Range'=>$row['Range'],
-				'Image'=>$row['Image']);
+				'Image'=>$base64);
 			$json_result = json_encode($temp);
 			if($json_result==true){
 				API_Response_JSON(false,$json_result,__FUNCTION__);
@@ -159,10 +171,6 @@ function logoutUser($data){
 		// Set user's type to null
 		$queryt = "UPDATE user SET Type_id = NULL WHERE id = '".$id."'";
 		if(!mysql_query($queryt,$conn))
-			API_Response(true,"Errore nella query",__FUNCTION__);
-		// Delete token from User_Token
-		$queryto = "DELETE FROM user_token WHERE Token='".$logout_data->token."'";
-		if(!mysql_query($queryto,$conn))
 			API_Response(true,"Errore nella query",__FUNCTION__);
 		API_Response(false,"Logout eseguito con successo",__FUNCTION__);
 	}
@@ -396,7 +404,11 @@ function setImage($data){
 	if(checkConnection($conn,db_name)){
 		// Decode user's data
 		$data = json_decode($data);
-		$query = "UPDATE user SET Image='".$data->img."' WHERE Mobile = '".$data->mobile."'";
+		$count = file_get_contents('/propics/count.txt', true);
+		$filepath = str_replace("\\","/",dirname(__FILE__)).'/propics/'.$count.'.jpeg';
+		file_put_contents($filepath, base64_decode($data->img));
+		file_put_contents(dirname(__FILE__).'/propics/count.txt', $count+1);
+		$query = "UPDATE user SET Image='".$filepath."' WHERE Mobile = '".$data->mobile."'";
 		$result = mysql_query($query);
 		if(!$result)
 			API_Response(true,"Errore nella query",__FUNCTION__);
@@ -411,10 +423,20 @@ function setPassword($data){
 	$conn = mysql_connect(db_host, db_user, db_pwd);
 	if(checkConnection($conn,db_name)){
 		$data = json_decode($data);
-		$query = "UPDATE user SET Password = IF(Password = '".$data->old."', '".$data->new."', '".$data->old."') WHERE Mobile = '".$data->mobile."'";
-		if(!mysql_query($query))
-			API_Response(true,"Errore nella query",__FUNCTION__);
-		API_Response(false,"Password modificata",__FUNCTION__);
+		$query = "SELECT count(*) AS risultato FROM user WHERE Mobile = '".$data->mobile."' AND Password = '".$data->oldpwd."'";
+		$result = mysql_query($query);
+			if(!$result)
+				API_Response(true,"Errore nella query",__FUNCTION__);
+			if($conto = mysql_fetch_array($result)){
+				if($conto['risultato']==1){
+					$query2 = "UPDATE user SET Password = IF(Password = '".$data->oldpwd."', '".$data->newpwd."', '".$data->oldpwd."') WHERE Mobile = '".$data->mobile."'";
+					if(!mysql_query($query2))
+						API_Response(true,"Errore nella query",__FUNCTION__);
+					API_Response(false,"Password modificata",__FUNCTION__);
+				}else{
+					API_Response(true,"Password sbagliata",__FUNCTION__);
+				}
+			}
 	}
 	else
 		API_Response(true,"Errore di connessione",__FUNCTION__);
