@@ -239,12 +239,17 @@ function getAS($data){
 		$lista = array();
 		while($utente = mysql_fetch_array($utenti)){
 			// Add each user to an array
+			$base64 = "";
+			if($utente['Image']!=null&&$utente['Image']!=""){
+				$img = file_get_contents($utente['Image'], true);
+				$base64 = 'data:image/jpeg;base64,' . base64_encode($img);
+			}
 			$lista[] = array(
 				'Name'=>$utente['Name'],
 				'Surname'=>$utente['Surname'],
 				'Mobile'=>$utente['Mobile'],
 				'Range'=>$utente['Range'],
-				'Image'=>$utente['Image'],
+				'Image'=>$base64,
 				'Destlat'=>$utente['Destlat'],
 				'Destlon'=>$utente['Destlon'],
 				'Longitude'=>$utente['Longitude'],
@@ -282,12 +287,17 @@ function getAS2($data){
 		$lista = array();
 		while($utente = mysql_fetch_array($utenti)){
 			// Add each user to an array
+			$base64 = "";
+			if($utente['Image']!=null&&$utente['Image']!=""){
+				$img = file_get_contents($utente['Image'], true);
+				$base64 = 'data:image/jpeg;base64,' . base64_encode($img);
+			}
 			$lista[] = array(
 				'Name'=>$utente['Name'],
 				'Surname'=>$utente['Surname'],
 				'Mobile'=>$utente['Mobile'],
 				'Range'=>$utente['Range'],
-				'Image'=>$utente['Image'],
+				'Image'=>$base64,
 				'Destlat'=>$utente['Destlat'],
 				'Destlon'=>$utente['Destlon'],
 				'Longitude'=>$utente['Longitude'],
@@ -322,6 +332,11 @@ function getActiveUsers($data){
 		$lista = array();
 		while($utente = mysql_fetch_array($utenti)){
 			// Add each user to an array
+			$base64 = "";
+			if($utente['Image']!=null&&$utente['Image']!=""){
+				$img = file_get_contents($utente['Image'], true);
+				$base64 = 'data:image/jpeg;base64,' . base64_encode($img);
+			}
 			$lista[] = array(
 				'Name'=>$utente['Name'],
 				'Surname'=>$utente['Surname'],
@@ -331,7 +346,7 @@ function getActiveUsers($data){
 				'Longitude'=>$utente['Longitude'],
 				'Latitude'=>$utente['Latitude'],
 				'Date'=>$utente['Date'],
-				'Image'=>$utente['Image']
+				'Image'=>$base64
 			);
 		}
 		if(count($lista)==0)
