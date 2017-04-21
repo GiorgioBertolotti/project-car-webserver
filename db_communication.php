@@ -96,6 +96,7 @@ function loginUser($data){
 				$temp[] = array(
 					'Name'=>$row['Name'],
 					'Surname'=>$row['Surname'],
+					'Mail'=>$row['Mail'],
 					'Mobile'=>$row['Mobile'],
 					'Range'=>$row['Range'],
 					'Image'=>$base64,
@@ -137,6 +138,7 @@ function loginWToken($data){
 			$temp[] = array(
 				'Name'=>$row['Name'],
 				'Surname'=>$row['Surname'],
+				'Mail'=>$row['Mail'],
 				'Mobile'=>$row['Mobile'],
 				'Range'=>$row['Range'],
 				'Image'=>$base64);
@@ -230,7 +232,7 @@ function getAS($data){
 		// Decode JSON data
 		$data = json_decode($data);
 		// Query for select the informations from tables User, User_Destination and User_Position
-		$query = "SELECT u.Name,u.Surname,u.Mobile,u.Range,u.Image,d.Latitude AS Destlat,d.Longitude AS Destlon,up.Latitude,up.Longitude,up.Date FROM user AS u INNER JOIN user_destination AS d ON u.id = d.User_id INNER JOIN user_position AS up ON u.id = up.User_id WHERE u.Type_id = 1 AND ACOS((SIN(up.Latitude*PI()/180)*SIN((".$data->lat.")*PI()/180)+COS(up.Latitude*PI()/180)*COS((".$data->lat.")*PI()/180))*COS(ABS(up.Longitude-".$data->lon.")*PI()/180))*6378 < ".$data->range."";
+		$query = "SELECT u.Name,u.Surname,u.Mail,u.Mobile,u.Range,u.Image,d.Latitude AS Destlat,d.Longitude AS Destlon,up.Latitude,up.Longitude,up.Date FROM user AS u INNER JOIN user_destination AS d ON u.id = d.User_id INNER JOIN user_position AS up ON u.id = up.User_id WHERE u.Type_id = 1 AND ACOS((SIN(up.Latitude*PI()/180)*SIN((".$data->lat.")*PI()/180)+COS(up.Latitude*PI()/180)*COS((".$data->lat.")*PI()/180))*COS(ABS(up.Longitude-".$data->lon.")*PI()/180))*6378 < ".$data->range."";
 		$utenti = mysql_query($query,$conn);
 		if(!$utenti)
 			API_Response(true,"Errore nelle query",__FUNCTION__);
@@ -247,6 +249,7 @@ function getAS($data){
 			$lista[] = array(
 				'Name'=>$utente['Name'],
 				'Surname'=>$utente['Surname'],
+				'Mail'=>$utente['Mail'],
 				'Mobile'=>$utente['Mobile'],
 				'Range'=>$utente['Range'],
 				'Image'=>$base64,
@@ -278,7 +281,7 @@ function getAS2($data){
 		$id = getIDbyMobile($data,$conn);
 		$data = json_decode($data);
 		// Query for select the informations from tables User, User_Destination and User_Position
-		$query = "SELECT u.Name,u.Surname,u.Mobile,u.Range,u.Image,d.Latitude AS Destlat,d.Longitude AS Destlon,up.Latitude,up.Longitude,up.Date FROM user AS u INNER JOIN user_destination AS d ON u.id = d.User_id INNER JOIN user_position AS up ON u.id = up.User_id WHERE u.Type_id = 1 AND ACOS((SIN(up.Latitude*PI()/180)*SIN((".$data->lat.")*PI()/180)+COS(up.Latitude*PI()/180)*COS((".$data->lat.")*PI()/180))*COS(ABS(up.Longitude-".$data->lon.")*PI()/180))*6378 < ".$data->range."";
+		$query = "SELECT u.Name,u.Surname,u.Mail,u.Mobile,u.Range,u.Image,d.Latitude AS Destlat,d.Longitude AS Destlon,up.Latitude,up.Longitude,up.Date FROM user AS u INNER JOIN user_destination AS d ON u.id = d.User_id INNER JOIN user_position AS up ON u.id = up.User_id WHERE u.Type_id = 1 AND ACOS((SIN(up.Latitude*PI()/180)*SIN((".$data->lat.")*PI()/180)+COS(up.Latitude*PI()/180)*COS((".$data->lat.")*PI()/180))*COS(ABS(up.Longitude-".$data->lon.")*PI()/180))*6378 < ".$data->range."";
 		$utenti = mysql_query($query,$conn);
 		if(!$utenti)
 			API_Response(true,"Errore nelle query",__FUNCTION__);
@@ -295,6 +298,7 @@ function getAS2($data){
 			$lista[] = array(
 				'Name'=>$utente['Name'],
 				'Surname'=>$utente['Surname'],
+				'Mail'=>$utente['Mail'],
 				'Mobile'=>$utente['Mobile'],
 				'Range'=>$utente['Range'],
 				'Image'=>$base64,
@@ -323,7 +327,7 @@ function getActiveUsers($data){
 	$conn = mysql_connect(db_host, db_user, db_pwd);
 	if(checkConnection($conn,db_name)){
 		// Query for select the informations from tables User and User_Position
-		$query = "SELECT u.Name,u.Surname,u.Mobile,u.Type_id,u.Range,u.Image,up.Latitude,up.Longitude,up.Date FROM user AS u INNER JOIN user_position AS up ON u.id = up.User_id WHERE u.Type_id != 'NULL'";
+		$query = "SELECT u.Name,u.Surname,u.Mail,u.Mobile,u.Type_id,u.Range,u.Image,up.Latitude,up.Longitude,up.Date FROM user AS u INNER JOIN user_position AS up ON u.id = up.User_id WHERE u.Type_id != 'NULL'";
 		$utenti = mysql_query($query,$conn);
 		if(!$utenti)
 			API_Response(true,"Errore nella query",__FUNCTION__);
@@ -340,6 +344,7 @@ function getActiveUsers($data){
 			$lista[] = array(
 				'Name'=>$utente['Name'],
 				'Surname'=>$utente['Surname'],
+				'Mail'=>$utente['Mail'],
 				'Mobile'=>$utente['Mobile'],
 				'Type_id'=>$utente['Type_id'],
 				'Range'=>$utente['Range'],
