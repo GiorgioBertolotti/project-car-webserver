@@ -117,7 +117,7 @@ function loginUser($data){
 		API_Response(true,"Errore di connessione",__FUNCTION__);
 }
 
-// Login
+// Login with token
 function loginWToken($data){
     $conn = mysql_connect(db_host, db_user, db_pwd);
     if(checkConnection($conn,db_name)){
@@ -278,7 +278,6 @@ function getAS2($data){
 	$conn = mysql_connect(db_host, db_user, db_pwd);
 	if(checkConnection($conn,db_name)){
 		// Decode JSON data
-		$id = getIDbyMobile($data,$conn);
 		$data = json_decode($data);
 		// Query for select the informations from tables User, User_Destination and User_Position
 		$query = "SELECT u.Name,u.Surname,u.Mail,u.Mobile,u.Range,u.Image,d.Latitude AS Destlat,d.Longitude AS Destlon,up.Latitude,up.Longitude,up.Date FROM user AS u INNER JOIN user_destination AS d ON u.id = d.User_id INNER JOIN user_position AS up ON u.id = up.User_id WHERE u.Type_id = 1 AND ACOS((SIN(up.Latitude*PI()/180)*SIN((".$data->lat.")*PI()/180)+COS(up.Latitude*PI()/180)*COS((".$data->lat.")*PI()/180))*COS(ABS(up.Longitude-".$data->lon.")*PI()/180))*6378 < ".$data->range."";
