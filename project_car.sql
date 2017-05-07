@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 04, 2017 at 03:38 PM
--- Server version: 10.1.16-MariaDB
--- PHP Version: 5.6.24
+-- Generation Time: May 07, 2017 at 10:34 PM
+-- Server version: 10.1.13-MariaDB
+-- PHP Version: 5.6.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -28,6 +28,7 @@ USE `project_car`;
 -- Table structure for table `user`
 --
 
+DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `Name` varchar(20) NOT NULL,
@@ -45,13 +46,36 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `Name`, `Surname`, `Mail`, `Mobile`, `Password`, `Type_id`, `Range`, `Image`) VALUES
-(4, 'Mattia', 'Pozzi', '', '333333', '189bbbb0c5f1fb7fba9ad9285f193d1', 1, 10, ''),
-(5, 'Alessandro', 'Bertolotti', '', '334338848', 'boh', 2, 10, ''),
-(6, 'Andrea', 'Quadriglia', '', '3311', 'ppp', 1, 10, ''),
-(8, 'andrea', 'ocera', '', '3482467286', 'occy', 1, 10, ''),
-(12, 'Paolo', 'Bertolotti', 'pcbertolotti@gmail.com', '3355761144', '189bbbb00c5f1fb7fba9ad9285f193d1', NULL, 41, ''),
-(13, 'Giorgio', 'Bertolotti', 'giorgiobertol@gmail.com', '3290358217', '189bbbb00c5f1fb7fba9ad9285f193d1', NULL, 20, 'C:/xampp/htdocs/pcws/propics/4.jpeg'),
-(14, 'Ciao', 'Ciao', 'giongi@gio.com', '3408812553', 'e268724caade7065c48790389788a526', NULL, 10, '');
+(4, 'Mattia', 'Pozzi', 'abc@def.it', '333333', '189bbbb0c5f1fb7fba9ad9285f193d1', 1, 10, 'C:/xampp/htdocs/pcws/propics/0.jpeg'),
+(5, 'Alessandro', 'Bertolotti', 'abc@def.com', '334338848', 'boh', 2, 10, ''),
+(6, 'Andrea', 'Quadriglia', 'abc@def.bbb', '3311', '189bbbb00c5f1fb7fba9ad9285f193d1', NULL, 10, ''),
+(8, 'Andrea', 'Ocera', 'abc@def.bbc', '3482467286', 'occy', 1, 10, ''),
+(12, 'Paolo', 'Bertolotti', 'pcbertolotti@gmail.com', '3355761144', '189bbbb00c5f1fb7fba9ad9285f193d1', NULL, 41, 'C:/xampp/htdocs/pcws/propics/32.jpeg'),
+(13, 'Giorgio', 'Bertolotti', 'giorgiobertol@gmail.com', '3290358217', '189bbbb00c5f1fb7fba9ad9285f193d1', NULL, 100, 'C:/xampp/htdocs/pcws/propics/40.jpeg'),
+(14, 'Ciao', 'Ciao', 'giongi@gio.com', '3408812553', 'e268724caade7065c48790389788a526', 1, 10, '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_contacts`
+--
+
+DROP TABLE IF EXISTS `user_contacts`;
+CREATE TABLE `user_contacts` (
+  `Caller_id` bigint(20) UNSIGNED NOT NULL,
+  `Receiver_id` bigint(20) UNSIGNED NOT NULL,
+  `Datetime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `Contact_Type` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `user_contacts`
+--
+
+INSERT INTO `user_contacts` (`Caller_id`, `Receiver_id`, `Datetime`, `Contact_Type`) VALUES
+(13, 4, '2017-05-07 20:05:27', 'Mobile'),
+(13, 4, '2017-05-07 20:05:36', 'Mail'),
+(13, 12, '2017-05-07 19:15:28', 'Mail');
 
 -- --------------------------------------------------------
 
@@ -59,9 +83,11 @@ INSERT INTO `user` (`id`, `Name`, `Surname`, `Mail`, `Mobile`, `Password`, `Type
 -- Table structure for table `user_destination`
 --
 
+DROP TABLE IF EXISTS `user_destination`;
 CREATE TABLE `user_destination` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `User_id` bigint(20) UNSIGNED NOT NULL,
+  `Datetime` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `Longitude` double NOT NULL,
   `Latitude` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -70,10 +96,16 @@ CREATE TABLE `user_destination` (
 -- Dumping data for table `user_destination`
 --
 
-INSERT INTO `user_destination` (`id`, `User_id`, `Longitude`, `Latitude`) VALUES
-(1, 4, 9.586026, 45.6424541),
-(3, 8, 9.6306367, 45.6754767),
-(8, 6, 9.5857583, 45.6423917);
+INSERT INTO `user_destination` (`id`, `User_id`, `Datetime`, `Longitude`, `Latitude`) VALUES
+(1, 4, '2017-05-07 19:19:00', 9.586026, 45.6424541),
+(3, 8, '2017-05-07 19:19:00', 9.6306367, 45.6754767),
+(4, 8, '2017-05-09 22:00:00', 9.6406367, 45.6954767),
+(5, 14, '2017-05-07 19:37:45', 10, 11),
+(6, 14, '2017-05-07 19:39:04', 15, 16),
+(7, 14, '2017-05-07 19:43:12', 18, 19),
+(10, 12, '2017-05-07 20:11:04', 7.541770935058594, 45.05363590935136),
+(11, 13, '2017-05-07 20:13:10', 7.532501220703125, 45.075702652276576),
+(12, 13, '2017-05-07 20:24:29', 9.604907099999991, 45.6502006);
 
 -- --------------------------------------------------------
 
@@ -81,6 +113,7 @@ INSERT INTO `user_destination` (`id`, `User_id`, `Longitude`, `Latitude`) VALUES
 -- Table structure for table `user_position`
 --
 
+DROP TABLE IF EXISTS `user_position`;
 CREATE TABLE `user_position` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `User_id` bigint(20) UNSIGNED NOT NULL,
@@ -96,8 +129,9 @@ CREATE TABLE `user_position` (
 INSERT INTO `user_position` (`id`, `User_id`, `Longitude`, `Latitude`, `Date`) VALUES
 (1, 4, 9.6306367, 45.6754767, '2016-06-27 12:40:08'),
 (4, 5, 9.586026, 45.6424541, '2016-06-27 14:57:55'),
-(6, 8, 9.586026, 45.6424541, '2016-06-28 07:38:48'),
-(11, 6, 9.586026, 45.6424541, '2016-06-29 08:00:33');
+(6, 8, 9.587026, 45.6425541, '2016-06-28 07:38:48'),
+(9, 14, 9.587026, 45.6425541, '2016-06-29 07:38:48'),
+(20, 13, 0, 0, '2017-05-07 20:33:22');
 
 -- --------------------------------------------------------
 
@@ -105,6 +139,7 @@ INSERT INTO `user_position` (`id`, `User_id`, `Longitude`, `Latitude`, `Date`) V
 -- Table structure for table `user_token`
 --
 
+DROP TABLE IF EXISTS `user_token`;
 CREATE TABLE `user_token` (
   `id` bigint(20) NOT NULL,
   `User_id` bigint(20) UNSIGNED NOT NULL,
@@ -162,7 +197,57 @@ INSERT INTO `user_token` (`id`, `User_id`, `Token`, `Deadline`) VALUES
 (46, 13, 'mnwMjNLvHn', '2017-05-03 22:00:00'),
 (47, 13, 'nUhuP4eX6z', '2017-05-03 22:00:00'),
 (48, 13, 'i8EvGSru7v', '2017-05-03 22:00:00'),
-(49, 13, 'WBPS9rvku6', '2017-05-03 22:00:00');
+(49, 13, 'WBPS9rvku6', '2017-05-03 22:00:00'),
+(50, 13, 'LjHCiNGLcf', '2017-05-03 22:00:00'),
+(51, 13, 'aBFuaIqT8e', '2017-05-03 22:00:00'),
+(52, 13, 'Hh2Hd0kfbT', '2017-05-03 22:00:00'),
+(53, 13, 'NQ8LgtxIgO', '2017-05-05 22:00:00'),
+(54, 13, 'qD6um7u2XD', '2017-05-06 22:00:00'),
+(55, 13, 'eRs0hvyB67', '2017-05-06 22:00:00'),
+(56, 13, 'XCkdgnZw3y', '2017-05-08 22:00:00'),
+(57, 13, '7yGDPyZAGd', '2017-05-08 22:00:00'),
+(58, 13, 'jTOLvuMVTT', '2017-05-08 22:00:00'),
+(59, 6, 'GHLz83psww', '2017-05-09 22:00:00'),
+(60, 13, 'ugaA3cWdJ0', '2017-05-09 22:00:00'),
+(61, 13, 'aSBSHwfxSD', '2017-05-09 22:00:00'),
+(62, 6, 'NeycNE3En1', '2017-05-09 22:00:00'),
+(63, 13, 'eZ73qF7YuE', '2017-05-09 22:00:00'),
+(64, 13, 'XvLpKS6V4M', '2017-05-09 22:00:00'),
+(65, 6, 'OE2rMzdBk8', '2017-05-09 22:00:00'),
+(66, 13, 'Isjk8J3ByD', '2017-05-09 22:00:00'),
+(67, 13, 'qWzUKPhKRc', '2017-05-09 22:00:00'),
+(68, 13, 'RVx63JdGz6', '2017-05-09 22:00:00'),
+(69, 13, '3pQdiYzhDH', '2017-05-09 22:00:00'),
+(70, 13, 'HMZkXre6nU', '2017-05-09 22:00:00'),
+(71, 13, 'GNUM2L2ayQ', '2017-05-09 22:00:00'),
+(72, 6, 'IEUnrlld9O', '2017-05-09 22:00:00'),
+(73, 13, 'AIk9PGXYOv', '2017-05-09 22:00:00'),
+(74, 13, 'FuaIqT8eHh', '2017-05-10 22:00:00'),
+(75, 13, 'YSxQkyq6DV', '2017-05-20 22:00:00'),
+(76, 13, 'cxCjjdtzJK', '2017-05-20 22:00:00'),
+(77, 13, '33shUkwOkh', '2017-05-20 22:00:00'),
+(78, 13, 'S92cfLiAMm', '2017-05-22 22:00:00'),
+(79, 13, 'VuhSwD8Ocd', '2017-05-22 22:00:00'),
+(80, 13, '7N0Piy9zzs', '2017-05-24 22:00:00'),
+(81, 13, '7wLvvoe8oo', '2017-05-24 22:00:00'),
+(82, 13, 'OjnfQxycbK', '2017-05-24 22:00:00'),
+(83, 13, 'Vgg21LyVRF', '2017-05-29 22:00:00'),
+(84, 13, '8k3u5bIOoj', '2017-06-02 22:00:00'),
+(85, 13, 'po5sKWqfiY', '2017-06-02 22:00:00'),
+(86, 13, 'Fmu4Yw39qM', '2017-06-02 22:00:00'),
+(87, 13, 'bkIwlH5xuQ', '2017-06-02 22:00:00'),
+(88, 13, '9WWNeWihUQ', '2017-06-02 22:00:00'),
+(89, 12, '4wHLtoxhfd', '2017-06-02 22:00:00'),
+(90, 13, 'ipFDJNtsuU', '2017-06-03 22:00:00'),
+(91, 13, 'IwlioMZx9b', '2017-06-04 22:00:00'),
+(92, 13, 'tZRIlmOQJR', '2017-06-04 22:00:00'),
+(93, 13, 'UvNqe0CoyA', '2017-06-05 22:00:00'),
+(94, 13, 'yS2THO0dNJ', '2017-06-05 22:00:00'),
+(95, 12, '2Yew5XHatU', '2017-06-05 22:00:00'),
+(96, 13, 'PRx9hPNdqm', '2017-06-05 22:00:00'),
+(97, 13, 'RLRb4iGwgK', '2017-06-05 22:00:00'),
+(98, 13, 't5NCk7vRRj', '2017-06-05 22:00:00'),
+(99, 13, 'yF8ur37uER', '2017-06-05 22:00:00');
 
 -- --------------------------------------------------------
 
@@ -170,6 +255,7 @@ INSERT INTO `user_token` (`id`, `User_id`, `Token`, `Deadline`) VALUES
 -- Table structure for table `user_type`
 --
 
+DROP TABLE IF EXISTS `user_type`;
 CREATE TABLE `user_type` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `Descr` varchar(20) NOT NULL
@@ -195,6 +281,14 @@ ALTER TABLE `user`
   ADD UNIQUE KEY `id` (`id`),
   ADD UNIQUE KEY `ix_User` (`Mobile`),
   ADD KEY `Type_id` (`Type_id`);
+
+--
+-- Indexes for table `user_contacts`
+--
+ALTER TABLE `user_contacts`
+  ADD PRIMARY KEY (`Caller_id`,`Receiver_id`,`Datetime`),
+  ADD KEY `Caller_id` (`Caller_id`),
+  ADD KEY `Receiver_id` (`Receiver_id`);
 
 --
 -- Indexes for table `user_destination`
@@ -241,17 +335,17 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `user_destination`
 --
 ALTER TABLE `user_destination`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `user_position`
 --
 ALTER TABLE `user_position`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT for table `user_token`
 --
 ALTER TABLE `user_token`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
 --
 -- AUTO_INCREMENT for table `user_type`
 --
@@ -266,6 +360,13 @@ ALTER TABLE `user_type`
 --
 ALTER TABLE `user`
   ADD CONSTRAINT `user_user_type` FOREIGN KEY (`Type_id`) REFERENCES `user_type` (`id`);
+
+--
+-- Constraints for table `user_contacts`
+--
+ALTER TABLE `user_contacts`
+  ADD CONSTRAINT `Caller_User` FOREIGN KEY (`Caller_id`) REFERENCES `user` (`id`),
+  ADD CONSTRAINT `Receiver_User` FOREIGN KEY (`Receiver_id`) REFERENCES `user` (`id`);
 
 --
 -- Constraints for table `user_destination`
