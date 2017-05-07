@@ -423,10 +423,19 @@ function setImage($data){
 	if(checkConnection($conn,db_name)){
 		// Decode user's data
 		$data = json_decode($data);
-		$count = file_get_contents('/propics/count.txt', true);
+		$query = "SELECT Image FROM `user` WHERE mobile='".$data->mobile."'";
+		$result = mysql_query($query);
+		if(!$result)
+			API_Response(true,"Errore nella query",__FUNCTION__);
+		if($rimage = mysql_fetch_array($result)){
+			if($rimage['Image']){
+				unlink($rimage['Image']);
+			}
+		}
+		$count = file_get_contents(str_replace("\\","/",dirname(__FILE__)).'/propics/count.txt', true);
 		$filepath = str_replace("\\","/",dirname(__FILE__)).'/propics/'.$count.'.jpeg';
 		file_put_contents($filepath, base64_decode($data->img));
-		file_put_contents(dirname(__FILE__).'/propics/count.txt', $count+1);
+		file_put_contents(str_replace("\\","/",dirname(__FILE__)).'/propics/count.txt', $count+1);
 		$query = "UPDATE user SET Image='".$filepath."' WHERE Mobile = '".$data->mobile."'";
 		$result = mysql_query($query);
 		if(!$result)
@@ -444,18 +453,18 @@ function setPassword($data){
 		$data = json_decode($data);
 		$query = "SELECT count(*) AS risultato FROM user WHERE Mobile = '".$data->mobile."' AND Password = '".$data->oldpwd."'";
 		$result = mysql_query($query);
-			if(!$result)
-				API_Response(true,"Errore nella query",__FUNCTION__);
-			if($conto = mysql_fetch_array($result)){
-				if($conto['risultato']==1){
-					$query2 = "UPDATE user SET Password = IF(Password = '".$data->oldpwd."', '".$data->newpwd."', '".$data->oldpwd."') WHERE Mobile = '".$data->mobile."'";
-					if(!mysql_query($query2))
-						API_Response(true,"Errore nella query",__FUNCTION__);
-					API_Response(false,"Password modificata",__FUNCTION__);
-				}else{
-					API_Response(true,"Password sbagliata",__FUNCTION__);
-				}
+		if(!$result)
+			API_Response(true,"Errore nella query",__FUNCTION__);
+		if($conto = mysql_fetch_array($result)){
+			if($conto['risultato']==1){
+				$query2 = "UPDATE user SET Password = IF(Password = '".$data->oldpwd."', '".$data->newpwd."', '".$data->oldpwd."') WHERE Mobile = '".$data->mobile."'";
+				if(!mysql_query($query2))
+					API_Response(true,"Errore nella query",__FUNCTION__);
+				API_Response(false,"Password modificata",__FUNCTION__);
+			}else{
+				API_Response(true,"Password sbagliata",__FUNCTION__);
 			}
+		}
 	}
 	else
 		API_Response(true,"Errore di connessione",__FUNCTION__);
