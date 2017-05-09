@@ -1,0 +1,9 @@
+C:\xampp\htdocs\pcws\EasyTravelWSServer\EasyTravelWSServer\bin\Debug\EasyTravelWSServer.exe.config
+C:\xampp\htdocs\pcws\EasyTravelWSServer\EasyTravelWSServer\bin\Debug\EasyTravelWSServer.exe
+C:\xampp\htdocs\pcws\EasyTravelWSServer\EasyTravelWSServer\bin\Debug\EasyTravelWSServer.pdb
+C:\xampp\htdocs\pcws\EasyTravelWSServer\EasyTravelWSServer\bin\Debug\Fleck.dll
+C:\xampp\htdocs\pcws\EasyTravelWSServer\EasyTravelWSServer\bin\Debug\Newtonsoft.Json.dll
+C:\xampp\htdocs\pcws\EasyTravelWSServer\EasyTravelWSServer\bin\Debug\Newtonsoft.Json.xml
+C:\xampp\htdocs\pcws\EasyTravelWSServer\EasyTravelWSServer\obj\Debug\EasyTravelWSServer.csprojResolveAssemblyReference.cache
+C:\xampp\htdocs\pcws\EasyTravelWSServer\EasyTravelWSServer\obj\Debug\EasyTravelWSServer.exe
+C:\xampp\htdocs\pcws\EasyTravelWSServer\EasyTravelWSServer\obj\Debug\EasyTravelWSServer.pdb
