@@ -88,6 +88,16 @@ function loginUser($data){
 			// Check if the selected user's password is the same
 			if($row['Password']==$login_data->password){
 				$token = authorizationToken($data);
+				// Evaluate average rating
+				$query2="SELECT AVG(Feedback) as rating from user_contacts WHERE caller_id = ".$id." GROUP BY caller_id";
+				$result = mysql_query($query2,$conn);
+				if(!$result)
+					API_Response(true,"Errore nella query",__FUNCTION__);
+				if($riga = mysql_fetch_array($result)){
+					$rating = $riga['rating'];
+				}else{
+					$rating = 0;
+				}
 				$base64 = "";
 				if($row['Image']!=null&&$row['Image']!=""){
 					$img = file_get_contents($row['Image'], true);
@@ -100,7 +110,8 @@ function loginUser($data){
 					'Mobile'=>$row['Mobile'],
 					'Range'=>$row['Range'],
 					'Image'=>$base64,
-					'Token'=>$token);
+					'Token'=>$token,
+					'Rating'=>$rating);
 				$json_result = json_encode($temp);
 				if($json_result==true){
 					API_Response_JSON(false,$json_result,__FUNCTION__);
@@ -130,6 +141,16 @@ function loginWToken($data){
 			API_Response(true,"Nessun utente con questo id",__FUNCTION__);
 		$temp = array();
 		if($row = mysql_fetch_array($result)){
+			// Evaluate average rating
+			$query2="SELECT AVG(Feedback) as rating from user_contacts WHERE caller_id = ".$row['id']." GROUP BY caller_id";
+			$result = mysql_query($query2,$conn);
+			if(!$result)
+				API_Response(true,"Errore nella query",__FUNCTION__);
+			if($riga = mysql_fetch_array($result)){
+				$rating = $riga['rating'];
+			}else{
+				$rating = 0;
+			}
 			$base64 = "";
 			if($row['Image']!=null&&$row['Image']!=""){
 				$img = file_get_contents($row['Image'], true);
@@ -141,7 +162,8 @@ function loginWToken($data){
 				'Mail'=>$row['Mail'],
 				'Mobile'=>$row['Mobile'],
 				'Range'=>$row['Range'],
-				'Image'=>$base64);
+				'Image'=>$base64,
+				'Rating'=>$rating);
 			$json_result = json_encode($temp);
 			if($json_result==true){
 				API_Response_JSON(false,$json_result,__FUNCTION__);
@@ -228,7 +250,7 @@ function getAS($data){
 		// Decode JSON data
 		$data = json_decode($data);
 		// Query for select the informations from tables User, User_Destination and User_Position
-		$query = "SELECT user.Name,user.Surname,user.Mail,user.Mobile,user.Range,user.Image,user_destination.Longitude as Destlon,user_destination.Latitude as Destlat,user_position.Longitude,user_position.Latitude, user_destination.Datetime FROM user INNER JOIN user_destination ON user.id = user_destination.User_id INNER JOIN user_position on user.id = user_position.User_id WHERE user.Type_id = 1 AND ACOS((SIN(user_position.Latitude*PI()/180)*SIN((".$data->lat.")*PI()/180)+COS(user_position.Latitude*PI()/180)*COS((".$data->lat.")*PI()/180))*COS(ABS(user_position.Longitude-".$data->lon.")*PI()/180))*6378 < ".$data->range." and user_destination.Datetime IN (SELECT max(user_destination.Datetime) FROM user_destination WHERE user_destination.User_id = user.id)";		
+		$query = "SELECT user.id, user.Name,user.Surname,user.Mail,user.Mobile,user.Range,user.Image,user_destination.Longitude as Destlon,user_destination.Latitude as Destlat,user_position.Longitude,user_position.Latitude, user_destination.Datetime FROM user INNER JOIN user_destination ON user.id = user_destination.User_id INNER JOIN user_position on user.id = user_position.User_id WHERE user.Type_id = 1 AND ACOS((SIN(user_position.Latitude*PI()/180)*SIN((".$data->lat.")*PI()/180)+COS(user_position.Latitude*PI()/180)*COS((".$data->lat.")*PI()/180))*COS(ABS(user_position.Longitude-".$data->lon.")*PI()/180))*6378 < ".$data->range." and user_destination.Datetime IN (SELECT max(user_destination.Datetime) FROM user_destination WHERE user_destination.User_id = user.id)";		
 		$utenti = mysql_query($query,$conn);
 		if(!$utenti)
 			API_Response(true,"Errore nelle query",__FUNCTION__);
@@ -236,6 +258,16 @@ function getAS($data){
 			API_Response(true,"Nessun autostoppista",__FUNCTION__);
 		$lista = array();
 		while($utente = mysql_fetch_array($utenti)){
+			// Evaluate average rating
+			$query2="SELECT AVG(Feedback) as rating from user_contacts WHERE caller_id = ".$utente['id']." GROUP BY caller_id";
+			$result = mysql_query($query2,$conn);
+			if(!$result)
+				API_Response(true,"Errore nella query",__FUNCTION__);
+			if($riga = mysql_fetch_array($result)){
+				$rating = $riga['rating'];
+			}else{
+				$rating = 0;
+			}
 			// Add each user to an array
 			$base64 = "";
 			if($utente['Image']!=null&&$utente['Image']!=""){
@@ -253,7 +285,8 @@ function getAS($data){
 				'Destlon'=>$utente['Destlon'],
 				'Longitude'=>$utente['Longitude'],
 				'Latitude'=>$utente['Latitude'],
-				'Date'=>$utente['Datetime']
+				'Date'=>$utente['Datetime'],
+				'Rating'=>$rating
 			);
 		}
 		if(count($lista)==0)
@@ -274,7 +307,7 @@ function getActiveUsers($data){
 	$conn = mysql_connect(db_host, db_user, db_pwd);
 	if(checkConnection($conn,db_name)){
 		// Query for select the informations from tables User and User_Position
-		$query = "SELECT u.Name,u.Surname,u.Mail,u.Mobile,u.Type_id,u.Range,u.Image,up.Latitude,up.Longitude,up.Date FROM user AS u INNER JOIN user_position AS up ON u.id = up.User_id WHERE u.Type_id != 'NULL'";
+		$query = "SELECT u.id, u.Name,u.Surname,u.Mail,u.Mobile,u.Type_id,u.Range,u.Image,up.Latitude,up.Longitude,up.Date FROM user AS u INNER JOIN user_position AS up ON u.id = up.User_id WHERE u.Type_id != 'NULL'";
 		$utenti = mysql_query($query,$conn);
 		if(!$utenti)
 			API_Response(true,"Errore nella query",__FUNCTION__);
@@ -282,6 +315,16 @@ function getActiveUsers($data){
 			API_Response(true,"Nessun utente attivo",__FUNCTION__);
 		$lista = array();
 		while($utente = mysql_fetch_array($utenti)){
+			// Evaluate average rating
+			$query2="SELECT AVG(Feedback) as rating from user_contacts WHERE caller_id = ".$utente['id']." GROUP BY caller_id";
+			$result = mysql_query($query2,$conn);
+			if(!$result)
+				API_Response(true,"Errore nella query",__FUNCTION__);
+			if($riga = mysql_fetch_array($result)){
+				$rating = $riga['rating'];
+			}else{
+				$rating = 0;
+			}
 			// Add each user to an array
 			$base64 = "";
 			if($utente['Image']!=null&&$utente['Image']!=""){
@@ -298,7 +341,8 @@ function getActiveUsers($data){
 				'Longitude'=>$utente['Longitude'],
 				'Latitude'=>$utente['Latitude'],
 				'Date'=>$utente['Date'],
-				'Image'=>$base64
+				'Image'=>$base64,
+				'Rating'=>$rating
 			);
 		}
 		if(count($lista)==0)
@@ -333,7 +377,7 @@ function addContact($data){
 		if($riga = mysql_fetch_array($result)){
 			$id2 = $riga['id'];
 		}
-		$query = "INSERT INTO user_contacts (Caller_id,Receiver_id,Contact_Type) VALUES (".$id1.",".$id2.",'".$data->type."')";
+		$query = "INSERT INTO user_contacts (Caller_id,Receiver_id,Contact_Type,PassageReceived,Feedback) VALUES (".$id1.",".$id2.",'".$data->type."',".$data->received.",".$data->rating.")";
 		if(mysql_query($query,$conn) == true)
 			API_Response(false,"Contatto memorizzato",__FUNCTION__);
 		else
