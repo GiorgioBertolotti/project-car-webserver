@@ -357,6 +357,27 @@ function getActiveUsers($data){
 		API_Response(true,"Errore di connessione",__FUNCTION__);
 }
 
+// Evaluate rating of a user
+function getRating($data){
+	// Connect to db
+	$conn = mysql_connect(db_host, db_user, db_pwd);
+	if(checkConnection($conn,db_name)){
+		$id = getIDbyMobile($data,$conn);
+		$data = json_decode($data);
+		$query="SELECT AVG(Feedback) as rating from user_contacts WHERE caller_id = ".$id." GROUP BY caller_id";
+		$result = mysql_query($query,$conn);
+		if(!$result)
+			API_Response(true,"Errore nella query",__FUNCTION__);
+		if($riga = mysql_fetch_array($result)){
+			API_Response(false,$riga['rating'],__FUNCTION__);
+		}else{
+			API_Response(false,0,__FUNCTION__);
+		}
+	}
+	else
+		API_Response(true,"Errore di connessione",__FUNCTION__);
+}
+
 // Add a contact between two users
 function addContact($data){
 	// Connect to db
