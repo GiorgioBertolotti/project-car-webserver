@@ -96,7 +96,7 @@ function loginUser($data){
 				if($riga = mysql_fetch_array($result)){
 					$rating = $riga['rating'];
 				}else{
-					$rating = 0;
+					$rating = "0";
 				}
 				$base64 = "";
 				if($row['Image']!=null&&$row['Image']!=""){
@@ -149,7 +149,7 @@ function loginWToken($data){
 			if($riga = mysql_fetch_array($result)){
 				$rating = $riga['rating'];
 			}else{
-				$rating = 0;
+				$rating = "0";
 			}
 			$base64 = "";
 			if($row['Image']!=null&&$row['Image']!=""){
@@ -266,7 +266,7 @@ function getAS($data){
 			if($riga = mysql_fetch_array($result)){
 				$rating = $riga['rating'];
 			}else{
-				$rating = 0;
+				$rating = "0";
 			}
 			// Add each user to an array
 			$base64 = "";
@@ -323,7 +323,7 @@ function getActiveUsers($data){
 			if($riga = mysql_fetch_array($result)){
 				$rating = $riga['rating'];
 			}else{
-				$rating = 0;
+				$rating = "0";
 			}
 			// Add each user to an array
 			$base64 = "";
@@ -357,6 +357,74 @@ function getActiveUsers($data){
 		API_Response(true,"Errore di connessione",__FUNCTION__);
 }
 
+// Set Feedback for a contact
+function updateFeedback($data){
+	$conn = mysql_connect(db_host, db_user, db_pwd);
+	if(checkConnection($conn,db_name)){
+		$data = json_decode($data);
+		$query = "SELECT id FROM user WHERE Mobile = '".$data->caller."'";
+		$result = mysql_query($query,$conn);
+		if(!$result)
+			API_Response(true,"Errore nella query",__FUNCTION__);
+		if($riga = mysql_fetch_array($result)){
+			$id1 = $riga['id'];
+		}
+		$query = "SELECT id FROM user WHERE Mobile = '".$data->receiver."'";
+		$result = mysql_query($query,$conn);
+		if(!$result)
+			API_Response(true,"Errore nella query",__FUNCTION__);
+		if($riga = mysql_fetch_array($result)){
+			$id2 = $riga['id'];
+		}
+		$query = "UPDATE user_contacts SET Feedback=".$data->feedback." WHERE Caller_id = ".$id1." AND Receiver_id = ".$id2." AND Datetime = '".$data->datetime."'";
+		if(mysql_query($query,$conn) == true)
+				API_Response(false,"Feedback inserito",__FUNCTION__);
+			else
+				API_Response(true,"Errore nella query",__FUNCTION__);
+	}
+	else
+		API_Response(true,"Errore di connessione",__FUNCTION__);
+}
+
+// Get new contacts received for a user
+function getNewContacts($data){
+	// Connect to db
+	$conn = mysql_connect(db_host, db_user, db_pwd);
+	if(checkConnection($conn,db_name)){
+		$id = getIDbyMobile($data,$conn);
+		$data = json_decode($data);
+		$query="SELECT u.Mobile, u.Name, u.Surname, uc.Datetime, uc.Contact_Type FROM user_contacts as uc INNER JOIN user as u ON uc.Caller_id = u.id WHERE Receiver_id = ".$id." AND ContactSeen = 0";
+		$result = mysql_query($query,$conn);
+		if(!$result)
+			API_Response(true,"Errore nella query",__FUNCTION__);
+		if(mysql_num_rows($result)==0)
+			API_Response(true,"Nessun nuovo contatto",__FUNCTION__);
+		$lista = array();
+		while($contatto = mysql_fetch_array($result)){
+			$lista[] = array(
+				'Mobile'=>$contatto['Mobile'],
+				'Name'=>$contatto['Name'],
+				'Surname'=>$contatto['Surname'],
+				'Datetime'=>$contatto['Datetime'],
+				'Type'=>$contatto['Contact_Type']
+			);
+		}
+		$query3 = "UPDATE user_contacts SET ContactSeen = 1 WHERE Receiver_id = ".$id." AND ContactSeen = 0";
+		$result3 = mysql_query($query3,$conn);
+		if(!$result3)
+			API_Response(true,"Errore nella query",__FUNCTION__);
+		if(count($lista)==0)
+			API_Response(true,"Nessun nuovo contatto",__FUNCTION__);
+		// JSON encode the array
+		$json_result = json_encode($lista);
+		if(!$json_result)
+			API_Response(true,"Errore nella codifica JSON",__FUNCTION__);
+		API_Response_JSON(false,$json_result,__FUNCTION__);
+	}
+	else
+		API_Response(true,"Errore di connessione",__FUNCTION__);
+}
+
 // Evaluate rating of a user
 function getRating($data){
 	// Connect to db
@@ -364,14 +432,14 @@ function getRating($data){
 	if(checkConnection($conn,db_name)){
 		$id = getIDbyMobile($data,$conn);
 		$data = json_decode($data);
-		$query="SELECT AVG(Feedback) as rating from user_contacts WHERE caller_id = ".$id." GROUP BY caller_id";
+		$query="SELECT AVG(Feedback) as rating from user_contacts WHERE caller_id = ".$id." AND ContactSeen = 1 AND Feedback > 0 GROUP BY caller_id";
 		$result = mysql_query($query,$conn);
 		if(!$result)
 			API_Response(true,"Errore nella query",__FUNCTION__);
 		if($riga = mysql_fetch_array($result)){
 			API_Response(false,$riga['rating'],__FUNCTION__);
 		}else{
-			API_Response(false,0,__FUNCTION__);
+			API_Response(false,"0",__FUNCTION__);
 		}
 	}
 	else
@@ -398,7 +466,7 @@ function addContact($data){
 		if($riga = mysql_fetch_array($result)){
 			$id2 = $riga['id'];
 		}
-		$query = "INSERT INTO user_contacts (Caller_id,Receiver_id,Contact_Type,PassageReceived,Feedback) VALUES (".$id1.",".$id2.",'".$data->type."',".$data->received.",".$data->rating.")";
+		$query = "INSERT INTO user_contacts (Caller_id,Receiver_id,Contact_Type,ContactSeen,Feedback) VALUES (".$id1.",".$id2.",'".$data->type."',0,0)";
 		if(mysql_query($query,$conn) == true)
 			API_Response(false,"Contatto memorizzato",__FUNCTION__);
 		else
