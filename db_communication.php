@@ -249,8 +249,7 @@ function getAS($data){
 	if(checkConnection($conn,db_name)){
 		// Decode JSON data
 		$data = json_decode($data);
-		// Query for select the informations from tables User, User_Destination and User_Position
-		$query = "SELECT user.id, user.Name,user.Surname,user.Mail,user.Mobile,user.Range,user.Image,user_destination.Longitude as Destlon,user_destination.Latitude as Destlat,user_position.Longitude,user_position.Latitude, user_destination.Datetime FROM user INNER JOIN user_destination ON user.id = user_destination.User_id INNER JOIN user_position on user.id = user_position.User_id WHERE user.Type_id = 1 AND ACOS((SIN(user_position.Latitude*PI()/180)*SIN((".$data->lat.")*PI()/180)+COS(user_position.Latitude*PI()/180)*COS((".$data->lat.")*PI()/180))*COS(ABS(user_position.Longitude-".$data->lon.")*PI()/180))*6378 < ".$data->range." and user_destination.Datetime IN (SELECT max(user_destination.Datetime) FROM user_destination WHERE user_destination.User_id = user.id)";		
+		$query = "SELECT user.id, user.Name,user.Surname,user.Mail,user.Mobile,user.Range,user.Image,user_destination.Longitude as Destlon,user_destination.Latitude as Destlat,user_position.Longitude,user_position.Latitude, user_destination.Datetime, ACOS((SIN(user_position.Latitude*PI()/180)*SIN((".$data->lat.")*PI()/180)+COS(user_position.Latitude*PI()/180)*COS((".$data->lat.")*PI()/180))*COS(ABS(user_position.Longitude-".$data->lon.")*PI()/180))*6378 as Distance FROM user INNER JOIN user_destination ON user.id = user_destination.User_id INNER JOIN user_position on user.id = user_position.User_id WHERE user.Type_id = 1 and user_destination.Datetime IN (SELECT max(user_destination.Datetime) FROM user_destination WHERE user_destination.User_id = user.id)";
 		$utenti = mysql_query($query,$conn);
 		if(!$utenti)
 			API_Response(true,"Errore nelle query",__FUNCTION__);
@@ -258,36 +257,38 @@ function getAS($data){
 			API_Response(true,"Nessun autostoppista",__FUNCTION__);
 		$lista = array();
 		while($utente = mysql_fetch_array($utenti)){
-			// Evaluate average rating
-			$query2="SELECT AVG(Feedback) as rating from user_contacts WHERE caller_id = ".$utente['id']." GROUP BY caller_id";
-			$result = mysql_query($query2,$conn);
-			if(!$result)
-				API_Response(true,"Errore nella query",__FUNCTION__);
-			if($riga = mysql_fetch_array($result)){
-				$rating = $riga['rating'];
-			}else{
-				$rating = "0";
+			if($utente['Distance']<$data->range){
+				// Evaluate average rating
+				$query2="SELECT AVG(Feedback) as rating from user_contacts WHERE caller_id = ".$utente['id']." GROUP BY caller_id";
+				$result = mysql_query($query2,$conn);
+				if(!$result)
+					API_Response(true,"Errore nella query",__FUNCTION__);
+				if($riga = mysql_fetch_array($result)){
+					$rating = $riga['rating'];
+				}else{
+					$rating = "0";
+				}
+				// Add each user to an array
+				$base64 = "";
+				if($utente['Image']!=null&&$utente['Image']!=""){
+					$img = file_get_contents($utente['Image'], true);
+					$base64 = 'data:image/jpeg;base64,' . base64_encode($img);
+				}
+				$lista[] = array(
+					'Name'=>$utente['Name'],
+					'Surname'=>$utente['Surname'],
+					'Mail'=>$utente['Mail'],
+					'Mobile'=>$utente['Mobile'],
+					'Range'=>$utente['Range'],
+					'Image'=>$base64,
+					'Destlat'=>$utente['Destlat'],
+					'Destlon'=>$utente['Destlon'],
+					'Longitude'=>$utente['Longitude'],
+					'Latitude'=>$utente['Latitude'],
+					'Date'=>$utente['Datetime'],
+					'Rating'=>$rating
+				);
 			}
-			// Add each user to an array
-			$base64 = "";
-			if($utente['Image']!=null&&$utente['Image']!=""){
-				$img = file_get_contents($utente['Image'], true);
-				$base64 = 'data:image/jpeg;base64,' . base64_encode($img);
-			}
-			$lista[] = array(
-				'Name'=>$utente['Name'],
-				'Surname'=>$utente['Surname'],
-				'Mail'=>$utente['Mail'],
-				'Mobile'=>$utente['Mobile'],
-				'Range'=>$utente['Range'],
-				'Image'=>$base64,
-				'Destlat'=>$utente['Destlat'],
-				'Destlon'=>$utente['Destlon'],
-				'Longitude'=>$utente['Longitude'],
-				'Latitude'=>$utente['Latitude'],
-				'Date'=>$utente['Datetime'],
-				'Rating'=>$rating
-			);
 		}
 		if(count($lista)==0)
 			API_Response(true,"Nessun autostoppista",__FUNCTION__);
@@ -386,14 +387,80 @@ function updateFeedback($data){
 		API_Response(true,"Errore di connessione",__FUNCTION__);
 }
 
-// Get new contacts received for a user
+// Delete a contact
+function notificationSeen($data){
+	$conn = mysql_connect(db_host, db_user, db_pwd);
+	if(checkConnection($conn,db_name)){
+		$id = getIDbyMobile($data,$conn);
+		$query = "UPDATE user_contacts SET ContactSeen = 1 WHERE Receiver_id = ".$id." AND ContactSeen = 0";
+		$result = mysql_query($query,$conn);
+		if(!$result)
+			API_Response(true,"Errore nella query",__FUNCTION__);
+		else
+			API_Response(false,"Ok",__FUNCTION__);
+	}
+	else
+		API_Response(true,"Errore di connessione",__FUNCTION__);
+}
+
+// Delete a contact
+function deleteContact($data){
+	$conn = mysql_connect(db_host, db_user, db_pwd);
+	if(checkConnection($conn,db_name)){
+		$data = json_decode($data);
+		$query = "SELECT id FROM user WHERE Mobile = '".$data->caller."'";
+		$result = mysql_query($query,$conn);
+		if(!$result)
+			API_Response(true,"Errore nella query",__FUNCTION__);
+		if($riga = mysql_fetch_array($result)){
+			$id1 = $riga['id'];
+		}
+		$query = "SELECT id FROM user WHERE Mobile = '".$data->receiver."'";
+		$result = mysql_query($query,$conn);
+		if(!$result)
+			API_Response(true,"Errore nella query",__FUNCTION__);
+		if($riga = mysql_fetch_array($result)){
+			$id2 = $riga['id'];
+		}
+		$query = "UPDATE user_contacts SET Deleted=1 WHERE Caller_id = ".$id1." AND Receiver_id = ".$id2." AND Datetime = '".$data->datetime."'";
+		if(mysql_query($query,$conn) == true)
+				API_Response(false,"Contatto eliminato",__FUNCTION__);
+			else
+				API_Response(true,"Errore nella query",__FUNCTION__);
+	}
+	else
+		API_Response(true,"Errore di connessione",__FUNCTION__);
+}
+
+// Get number of new contacts received for a user
+function checkContacts($data){
+	// Connect to db
+	$conn = mysql_connect(db_host, db_user, db_pwd);
+	if(checkConnection($conn,db_name)){
+		$id = getIDbyMobile($data,$conn);
+		$data = json_decode($data);
+		$query="SELECT count(*) as tot FROM user_contacts as uc WHERE Receiver_id = ".$id." AND ContactSeen = 0";
+		$result = mysql_query($query,$conn);
+		if(!$result)
+			API_Response(true,"Errore nella query",__FUNCTION__);
+		if($riga = mysql_fetch_array($result)){
+			API_Response(false,$riga['tot'],__FUNCTION__);
+		}else{
+			API_Response(false,"0",__FUNCTION__);
+		}
+	}
+	else
+		API_Response(true,"Errore di connessione",__FUNCTION__);
+}
+
+// Get contacts received for a user
 function getNewContacts($data){
 	// Connect to db
 	$conn = mysql_connect(db_host, db_user, db_pwd);
 	if(checkConnection($conn,db_name)){
 		$id = getIDbyMobile($data,$conn);
 		$data = json_decode($data);
-		$query="SELECT u.Mobile, u.Name, u.Surname, uc.Datetime, uc.Contact_Type FROM user_contacts as uc INNER JOIN user as u ON uc.Caller_id = u.id WHERE Receiver_id = ".$id." AND ContactSeen = 0";
+		$query="SELECT u.Mobile, u.Name, u.Surname, uc.Datetime, uc.Contact_Type FROM user_contacts as uc INNER JOIN user as u ON uc.Caller_id = u.id WHERE Receiver_id = ".$id." AND Deleted = 0 AND Feedback = 0";
 		$result = mysql_query($query,$conn);
 		if(!$result)
 			API_Response(true,"Errore nella query",__FUNCTION__);
@@ -409,10 +476,6 @@ function getNewContacts($data){
 				'Type'=>$contatto['Contact_Type']
 			);
 		}
-		$query3 = "UPDATE user_contacts SET ContactSeen = 1 WHERE Receiver_id = ".$id." AND ContactSeen = 0";
-		$result3 = mysql_query($query3,$conn);
-		if(!$result3)
-			API_Response(true,"Errore nella query",__FUNCTION__);
 		if(count($lista)==0)
 			API_Response(true,"Nessun nuovo contatto",__FUNCTION__);
 		// JSON encode the array
@@ -432,7 +495,7 @@ function getRating($data){
 	if(checkConnection($conn,db_name)){
 		$id = getIDbyMobile($data,$conn);
 		$data = json_decode($data);
-		$query="SELECT AVG(Feedback) as rating from user_contacts WHERE caller_id = ".$id." AND ContactSeen = 1 AND Feedback > 0 GROUP BY caller_id";
+		$query="SELECT AVG(Feedback) as rating from user_contacts WHERE caller_id = ".$id." AND ContactSeen = 1 AND Deleted = 0 AND Feedback > 0 GROUP BY caller_id";
 		$result = mysql_query($query,$conn);
 		if(!$result)
 			API_Response(true,"Errore nella query",__FUNCTION__);
