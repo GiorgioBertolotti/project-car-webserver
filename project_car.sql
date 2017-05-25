@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 22, 2017 at 12:01 PM
--- Server version: 10.1.16-MariaDB
--- PHP Version: 5.6.24
+-- Generation Time: May 25, 2017 at 01:43 PM
+-- Server version: 10.1.13-MariaDB
+-- PHP Version: 5.6.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -49,8 +49,8 @@ INSERT INTO `user` (`id`, `Name`, `Surname`, `Mail`, `Mobile`, `Password`, `Type
 (5, 'Alessandro', 'Bertolotti', 'abc@def.com', '334338848', 'boh', 2, 10, ''),
 (6, 'Andrea', 'Quadriglia', 'abc@def.bbb', '3311', '189bbbb00c5f1fb7fba9ad9285f193d1', NULL, 10, ''),
 (8, 'Andrea', 'Ocera', 'abc@def.bbc', '3482467286', 'occy', 1, 10, ''),
-(12, 'Paolo', 'Bertolotti', 'pcbertolotti@gmail.com', '3355761144', '189bbbb00c5f1fb7fba9ad9285f193d1', 1, 100, 'C:/xampp/htdocs/pcws/propics/32.jpeg'),
-(13, 'Giorgio', 'Bertolotti', 'giorgiobertol@gmail.com', '3290358217', '189bbbb00c5f1fb7fba9ad9285f193d1', NULL, 100, 'C:/xampp/htdocs/pcws/propics/43.jpeg'),
+(12, 'Paolo', 'Bertolotti', 'pcbertolotti@gmail.com', '3355761144', '189bbbb00c5f1fb7fba9ad9285f193d1', 2, 100, 'C:/xampp/htdocs/pcws/propics/32.jpeg'),
+(13, 'Giorgio', 'Bertolotti', 'giorgiobertol@gmail.com', '3290358217', '189bbbb00c5f1fb7fba9ad9285f193d1', 1, 100, 'C:/xampp/htdocs/pcws/propics/43.jpeg'),
 (14, 'Ciao', 'Ciao', 'giongi@gio.com', '3408812553', 'e268724caade7065c48790389788a526', NULL, 10, 'C:/xampp/htdocs/pcws/propics/42.jpeg'),
 (15, 'Aziz', 'Bamba', 'abab@gmail.com', '3335556667', 'ddbb740608217cb374b93178d9d0374c', NULL, 10, 'C:/xampp/htdocs/pcws/propics/44.jpeg');
 
@@ -65,60 +65,19 @@ CREATE TABLE `user_contacts` (
   `Receiver_id` bigint(20) UNSIGNED NOT NULL,
   `Datetime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `Contact_Type` varchar(20) DEFAULT NULL,
-  `ContactSeen` tinyint(1) NOT NULL DEFAULT '0',
-  `Deleted` tinyint(1) DEFAULT '0',
-  `Feedback` int(11) DEFAULT NULL
+  `Feedback` int(11) NOT NULL DEFAULT '0',
+  `State` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `user_contacts`
 --
 
-INSERT INTO `user_contacts` (`Caller_id`, `Receiver_id`, `Datetime`, `Contact_Type`, `ContactSeen`, `Deleted`, `Feedback`) VALUES
-(12, 13, '2017-05-22 07:24:35', 'Call', 1, 0, 5),
-(12, 13, '2017-05-22 07:25:38', 'Call', 1, 0, 2),
-(12, 13, '2017-05-22 07:28:03', 'Call', 1, 0, 1),
-(12, 13, '2017-05-22 07:29:46', 'Call', 1, 0, 0),
-(12, 13, '2017-05-22 07:29:54', 'Call', 1, 0, 0),
-(12, 13, '2017-05-22 07:30:17', 'Call', 1, 0, 0),
-(12, 13, '2017-05-22 07:30:18', 'Call', 1, 0, 0),
-(12, 13, '2017-05-22 07:30:52', 'Call', 1, 0, 0),
-(12, 13, '2017-05-22 07:30:53', 'Call', 1, 0, 4),
-(12, 13, '2017-05-22 07:30:54', 'Mail', 1, 0, 0),
-(12, 13, '2017-05-22 07:30:55', 'Call', 1, 0, 1),
-(12, 13, '2017-05-22 07:30:56', 'Call', 1, 0, 1),
-(12, 13, '2017-05-22 07:30:57', 'Call', 1, 0, 1),
-(12, 13, '2017-05-22 07:30:58', 'Call', 1, 0, 1),
-(12, 13, '2017-05-22 07:30:59', 'Call', 1, 0, 0),
-(12, 13, '2017-05-22 07:31:00', 'Call', 1, 0, 0),
-(12, 13, '2017-05-22 07:31:01', 'Call', 1, 0, 0),
-(12, 13, '2017-05-22 07:31:02', 'Call', 1, 0, 0),
-(12, 13, '2017-05-22 07:31:03', 'Call', 1, 0, 0),
-(12, 13, '2017-05-22 07:31:04', 'Call', 1, 0, 0),
-(12, 13, '2017-05-22 07:31:05', 'Call', 1, 0, 0),
-(12, 13, '2017-05-22 07:31:06', 'Call', 1, 0, 0),
-(12, 13, '2017-05-22 07:31:07', 'Call', 1, 0, 0),
-(12, 13, '2017-05-22 07:31:08', 'Mail', 1, 0, 0),
-(12, 13, '2017-05-22 07:31:09', 'Call', 1, 0, 0),
-(12, 13, '2017-05-22 07:35:50', 'Call', 1, 0, 0),
-(12, 13, '2017-05-22 08:07:46', 'Call', 1, 0, 0),
-(13, 12, '2017-05-22 08:27:06', 'Call', 1, 1, 0),
-(13, 12, '2017-05-22 08:29:17', 'Call', 1, 1, 0),
-(13, 12, '2017-05-22 08:47:24', 'Call', 1, 1, 0),
-(13, 12, '2017-05-22 08:47:25', 'Call', 1, 1, 0),
-(13, 12, '2017-05-22 08:48:38', 'Call', 1, 1, 0),
-(13, 12, '2017-05-22 08:48:51', 'Call', 1, 1, 0),
-(13, 12, '2017-05-22 08:50:46', 'Call', 1, 1, 0),
-(13, 12, '2017-05-22 08:52:24', 'Call', 1, 0, 1),
-(13, 12, '2017-05-22 08:52:45', 'Call', 1, 1, 0),
-(13, 12, '2017-05-22 08:52:46', 'Call', 1, 0, 0),
-(13, 12, '2017-05-22 08:52:57', 'Call', 1, 0, 1),
-(13, 12, '2017-05-22 08:54:57', 'Call', 1, 0, 3),
-(13, 12, '2017-05-22 09:25:21', 'Call', 1, 1, 0),
-(13, 12, '2017-05-22 09:28:49', 'Call', 1, 1, 0),
-(13, 12, '2017-05-22 09:29:08', 'Call', 1, 0, 3),
-(13, 12, '2017-05-22 09:29:16', 'Call', 1, 0, 5),
-(13, 12, '2017-05-22 09:49:11', 'Call', 1, 0, 0);
+INSERT INTO `user_contacts` (`Caller_id`, `Receiver_id`, `Datetime`, `Contact_Type`, `Feedback`, `State`) VALUES
+(12, 13, '2017-05-25 11:41:36', 'Call', 0, 2),
+(12, 13, '2017-05-25 11:41:56', 'Call', 0, 2),
+(12, 13, '2017-05-25 11:42:07', 'Mail', 0, 2),
+(12, 13, '2017-05-25 11:42:14', 'Call', 0, 2);
 
 -- --------------------------------------------------------
 
@@ -139,17 +98,7 @@ CREATE TABLE `user_destination` (
 --
 
 INSERT INTO `user_destination` (`id`, `User_id`, `Datetime`, `Longitude`, `Latitude`) VALUES
-(75, 13, '2017-05-22 07:24:28', 9.624710083007812, 45.645728283964466),
-(76, 13, '2017-05-22 07:37:12', 9.601879119873047, 45.65334822590512),
-(77, 13, '2017-05-22 07:47:48', 9.589862823486328, 45.64812837751116),
-(78, 13, '2017-05-22 08:00:49', 9.60479736328125, 45.65508806726474),
-(79, 13, '2017-05-22 08:05:44', 9.597930908203125, 45.64884838552229),
-(80, 13, '2017-05-22 08:07:36', 9.613380432128906, 45.653888182456356),
-(81, 12, '2017-05-22 08:27:02', 9.5526123046875, 45.61884021048937),
-(82, 12, '2017-05-22 08:29:52', 9.603080749511719, 45.6716438522655),
-(83, 12, '2017-05-22 08:54:53', 9.632606506347656, 45.63732714672184),
-(84, 13, '2017-05-22 09:19:22', 9.666252136230469, 45.63732714672184),
-(85, 12, '2017-05-22 09:25:18', 9.621963500976562, 45.638287340450574);
+(90, 13, '2017-05-25 11:41:32', 9.853019714355469, 45.48853887327565);
 
 -- --------------------------------------------------------
 
@@ -173,8 +122,7 @@ INSERT INTO `user_position` (`id`, `User_id`, `Longitude`, `Latitude`, `Date`) V
 (1, 4, 9.6306367, 45.6754767, '2016-06-27 12:40:08'),
 (4, 5, 9.586026, 45.6424541, '2016-06-27 14:57:55'),
 (6, 8, 9.587026, 45.6425541, '2016-06-28 07:38:48'),
-(87, 12, 9.6147593, 45.6190176, '2017-05-22 09:28:16'),
-(89, 13, 0, 0, '2017-05-22 10:00:39');
+(93, 13, 9.8452433, 45.479067099999995, '2017-05-25 11:41:30');
 
 -- --------------------------------------------------------
 
@@ -368,7 +316,13 @@ INSERT INTO `user_token` (`id`, `User_id`, `Token`, `Deadline`) VALUES
 (175, 13, 'j1tcmqQCos', '2017-06-20 22:00:00'),
 (176, 12, 'P52QM5nOwz', '2017-06-20 22:00:00'),
 (177, 13, 'r99KsZyYGr', '2017-06-20 22:00:00'),
-(178, 12, 'ZmgF1xVM7i', '2017-06-20 22:00:00');
+(178, 12, 'ZmgF1xVM7i', '2017-06-20 22:00:00'),
+(179, 12, 'liZ4d3Q4ql', '2017-06-20 22:00:00'),
+(180, 13, 'X7GxMibthc', '2017-06-20 22:00:00'),
+(181, 12, 'GuXVnqJ3ZE', '2017-06-20 22:00:00'),
+(182, 13, 'liuwvFmu4Y', '2017-06-20 22:00:00'),
+(183, 12, 'w39qMbkIwl', '2017-06-20 22:00:00'),
+(184, 13, 'YC70v852eS', '2017-06-23 22:00:00');
 
 -- --------------------------------------------------------
 
@@ -455,17 +409,17 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `user_destination`
 --
 ALTER TABLE `user_destination`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=86;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
 --
 -- AUTO_INCREMENT for table `user_position`
 --
 ALTER TABLE `user_position`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=90;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
 --
 -- AUTO_INCREMENT for table `user_token`
 --
 ALTER TABLE `user_token`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=179;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=185;
 --
 -- AUTO_INCREMENT for table `user_type`
 --

@@ -7,7 +7,7 @@ require_once 'class.smtp.php';
 // Database connection data
 define('db_name','project_car');
 define('db_user','root');
-define('db_pwd','');
+define('db_pwd','usbw');
 define('db_host','localhost');
 
 // Load Request
