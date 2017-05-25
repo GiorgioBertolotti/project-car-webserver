@@ -7,7 +7,7 @@ require_once 'class.smtp.php';
 // Database connection data
 define('db_name','project_car');
 define('db_user','root');
-define('db_pwd','usbw');
+define('db_pwd','');
 define('db_host','localhost');
 
 // Load Request
@@ -89,7 +89,7 @@ function loginUser($data){
 			if($row['Password']==$login_data->password){
 				$token = authorizationToken($data);
 				// Evaluate average rating
-				$query2="SELECT AVG(Feedback) as rating from user_contacts WHERE caller_id = ".$id." GROUP BY caller_id";
+				$query2="SELECT AVG(Feedback) as rating from user_contacts WHERE caller_id = ".$id." AND State=3 GROUP BY caller_id";
 				$result = mysql_query($query2,$conn);
 				if(!$result)
 					API_Response(true,"Errore nella query",__FUNCTION__);
@@ -142,7 +142,7 @@ function loginWToken($data){
 		$temp = array();
 		if($row = mysql_fetch_array($result)){
 			// Evaluate average rating
-			$query2="SELECT AVG(Feedback) as rating from user_contacts WHERE caller_id = ".$row['id']." GROUP BY caller_id";
+			$query2="SELECT AVG(Feedback) as rating from user_contacts WHERE caller_id = ".$row['id']." AND State=3 GROUP BY caller_id";
 			$result = mysql_query($query2,$conn);
 			if(!$result)
 				API_Response(true,"Errore nella query",__FUNCTION__);
@@ -259,7 +259,7 @@ function getAS($data){
 		while($utente = mysql_fetch_array($utenti)){
 			if($utente['Distance']<$data->range){
 				// Evaluate average rating
-				$query2="SELECT AVG(Feedback) as rating from user_contacts WHERE caller_id = ".$utente['id']." GROUP BY caller_id";
+				$query2="SELECT AVG(Feedback) as rating from user_contacts WHERE caller_id = ".$utente['id']." AND State=3 GROUP BY caller_id";
 				$result = mysql_query($query2,$conn);
 				if(!$result)
 					API_Response(true,"Errore nella query",__FUNCTION__);
@@ -317,7 +317,7 @@ function getActiveUsers($data){
 		$lista = array();
 		while($utente = mysql_fetch_array($utenti)){
 			// Evaluate average rating
-			$query2="SELECT AVG(Feedback) as rating from user_contacts WHERE caller_id = ".$utente['id']." GROUP BY caller_id";
+			$query2="SELECT AVG(Feedback) as rating from user_contacts WHERE caller_id = ".$utente['id']." AND State=3 GROUP BY caller_id";
 			$result = mysql_query($query2,$conn);
 			if(!$result)
 				API_Response(true,"Errore nella query",__FUNCTION__);
@@ -358,8 +358,9 @@ function getActiveUsers($data){
 		API_Response(true,"Errore di connessione",__FUNCTION__);
 }
 
-// Set Feedback for a contact
-function updateFeedback($data){
+// Add a contact between two users
+function addContact($data){
+	// Connect to db
 	$conn = mysql_connect(db_host, db_user, db_pwd);
 	if(checkConnection($conn,db_name)){
 		$data = json_decode($data);
@@ -377,56 +378,11 @@ function updateFeedback($data){
 		if($riga = mysql_fetch_array($result)){
 			$id2 = $riga['id'];
 		}
-		$query = "UPDATE user_contacts SET Feedback=".$data->feedback." WHERE Caller_id = ".$id1." AND Receiver_id = ".$id2." AND Datetime = '".$data->datetime."'";
+		$query = "INSERT INTO user_contacts (Caller_id,Receiver_id,Contact_Type,Feedback,State) VALUES (".$id1.",".$id2.",'".$data->type."',0,0)";
 		if(mysql_query($query,$conn) == true)
-				API_Response(false,"Feedback inserito",__FUNCTION__);
-			else
-				API_Response(true,"Errore nella query",__FUNCTION__);
-	}
-	else
-		API_Response(true,"Errore di connessione",__FUNCTION__);
-}
-
-// Delete a contact
-function notificationSeen($data){
-	$conn = mysql_connect(db_host, db_user, db_pwd);
-	if(checkConnection($conn,db_name)){
-		$id = getIDbyMobile($data,$conn);
-		$query = "UPDATE user_contacts SET ContactSeen = 1 WHERE Receiver_id = ".$id." AND ContactSeen = 0";
-		$result = mysql_query($query,$conn);
-		if(!$result)
-			API_Response(true,"Errore nella query",__FUNCTION__);
+			API_Response(false,"Contatto memorizzato",__FUNCTION__);
 		else
-			API_Response(false,"Ok",__FUNCTION__);
-	}
-	else
-		API_Response(true,"Errore di connessione",__FUNCTION__);
-}
-
-// Delete a contact
-function deleteContact($data){
-	$conn = mysql_connect(db_host, db_user, db_pwd);
-	if(checkConnection($conn,db_name)){
-		$data = json_decode($data);
-		$query = "SELECT id FROM user WHERE Mobile = '".$data->caller."'";
-		$result = mysql_query($query,$conn);
-		if(!$result)
 			API_Response(true,"Errore nella query",__FUNCTION__);
-		if($riga = mysql_fetch_array($result)){
-			$id1 = $riga['id'];
-		}
-		$query = "SELECT id FROM user WHERE Mobile = '".$data->receiver."'";
-		$result = mysql_query($query,$conn);
-		if(!$result)
-			API_Response(true,"Errore nella query",__FUNCTION__);
-		if($riga = mysql_fetch_array($result)){
-			$id2 = $riga['id'];
-		}
-		$query = "UPDATE user_contacts SET Deleted=1 WHERE Caller_id = ".$id1." AND Receiver_id = ".$id2." AND Datetime = '".$data->datetime."'";
-		if(mysql_query($query,$conn) == true)
-				API_Response(false,"Contatto eliminato",__FUNCTION__);
-			else
-				API_Response(true,"Errore nella query",__FUNCTION__);
 	}
 	else
 		API_Response(true,"Errore di connessione",__FUNCTION__);
@@ -439,12 +395,16 @@ function checkContacts($data){
 	if(checkConnection($conn,db_name)){
 		$id = getIDbyMobile($data,$conn);
 		$data = json_decode($data);
-		$query="SELECT count(*) as tot FROM user_contacts as uc WHERE Receiver_id = ".$id." AND ContactSeen = 0";
+		$query="SELECT count(*) as tot FROM user_contacts WHERE Receiver_id = ".$id." AND State = 0";
 		$result = mysql_query($query,$conn);
 		if(!$result)
 			API_Response(true,"Errore nella query",__FUNCTION__);
 		if($riga = mysql_fetch_array($result)){
-			API_Response(false,$riga['tot'],__FUNCTION__);
+			$query2 = "UPDATE user_contacts SET State=1 WHERE Receiver_id = ".$id." AND State = 0";
+			if(mysql_query($query2,$conn) == true)
+					API_Response(false,$riga['tot'],__FUNCTION__);
+				else
+					API_Response(true,"Errore nella query",__FUNCTION__);
 		}else{
 			API_Response(false,"0",__FUNCTION__);
 		}
@@ -454,13 +414,13 @@ function checkContacts($data){
 }
 
 // Get contacts received for a user
-function getNewContacts($data){
+function getContacts($data){
 	// Connect to db
 	$conn = mysql_connect(db_host, db_user, db_pwd);
 	if(checkConnection($conn,db_name)){
 		$id = getIDbyMobile($data,$conn);
 		$data = json_decode($data);
-		$query="SELECT u.Mobile, u.Name, u.Surname, uc.Datetime, uc.Contact_Type FROM user_contacts as uc INNER JOIN user as u ON uc.Caller_id = u.id WHERE Receiver_id = ".$id." AND Deleted = 0 AND Feedback = 0";
+		$query="SELECT u.Mobile, u.Name, u.Surname, uc.Datetime, uc.Contact_Type FROM user_contacts as uc INNER JOIN user as u ON uc.Caller_id = u.id WHERE Receiver_id = ".$id." AND State = 1";
 		$result = mysql_query($query,$conn);
 		if(!$result)
 			API_Response(true,"Errore nella query",__FUNCTION__);
@@ -488,30 +448,8 @@ function getNewContacts($data){
 		API_Response(true,"Errore di connessione",__FUNCTION__);
 }
 
-// Evaluate rating of a user
-function getRating($data){
-	// Connect to db
-	$conn = mysql_connect(db_host, db_user, db_pwd);
-	if(checkConnection($conn,db_name)){
-		$id = getIDbyMobile($data,$conn);
-		$data = json_decode($data);
-		$query="SELECT AVG(Feedback) as rating from user_contacts WHERE caller_id = ".$id." AND ContactSeen = 1 AND Deleted = 0 AND Feedback > 0 GROUP BY caller_id";
-		$result = mysql_query($query,$conn);
-		if(!$result)
-			API_Response(true,"Errore nella query",__FUNCTION__);
-		if($riga = mysql_fetch_array($result)){
-			API_Response(false,$riga['rating'],__FUNCTION__);
-		}else{
-			API_Response(false,"0",__FUNCTION__);
-		}
-	}
-	else
-		API_Response(true,"Errore di connessione",__FUNCTION__);
-}
-
-// Add a contact between two users
-function addContact($data){
-	// Connect to db
+// Delete a contact
+function deleteContact($data){
 	$conn = mysql_connect(db_host, db_user, db_pwd);
 	if(checkConnection($conn,db_name)){
 		$data = json_decode($data);
@@ -529,11 +467,61 @@ function addContact($data){
 		if($riga = mysql_fetch_array($result)){
 			$id2 = $riga['id'];
 		}
-		$query = "INSERT INTO user_contacts (Caller_id,Receiver_id,Contact_Type,ContactSeen,Feedback) VALUES (".$id1.",".$id2.",'".$data->type."',0,0)";
+		$query = "UPDATE user_contacts SET State=2 WHERE Caller_id = ".$id1." AND Receiver_id = ".$id2." AND Datetime = '".$data->datetime."'";
 		if(mysql_query($query,$conn) == true)
-			API_Response(false,"Contatto memorizzato",__FUNCTION__);
-		else
+				API_Response(false,"Contatto eliminato",__FUNCTION__);
+			else
+				API_Response(true,"Errore nella query",__FUNCTION__);
+	}
+	else
+		API_Response(true,"Errore di connessione",__FUNCTION__);
+}
+
+// Set Feedback for a contact
+function setFeedback($data){
+	$conn = mysql_connect(db_host, db_user, db_pwd);
+	if(checkConnection($conn,db_name)){
+		$data = json_decode($data);
+		$query = "SELECT id FROM user WHERE Mobile = '".$data->caller."'";
+		$result = mysql_query($query,$conn);
+		if(!$result)
 			API_Response(true,"Errore nella query",__FUNCTION__);
+		if($riga = mysql_fetch_array($result)){
+			$id1 = $riga['id'];
+		}
+		$query = "SELECT id FROM user WHERE Mobile = '".$data->receiver."'";
+		$result = mysql_query($query,$conn);
+		if(!$result)
+			API_Response(true,"Errore nella query",__FUNCTION__);
+		if($riga = mysql_fetch_array($result)){
+			$id2 = $riga['id'];
+		}
+		$query = "UPDATE user_contacts SET Feedback=".$data->feedback.", State=3 WHERE Caller_id = ".$id1." AND Receiver_id = ".$id2." AND Datetime = '".$data->datetime."'";
+		if(mysql_query($query,$conn) == true)
+				API_Response(false,"Feedback inserito",__FUNCTION__);
+			else
+				API_Response(true,"Errore nella query",__FUNCTION__);
+	}
+	else
+		API_Response(true,"Errore di connessione",__FUNCTION__);
+}
+
+// Evaluate rating of a user
+function getRating($data){
+	// Connect to db
+	$conn = mysql_connect(db_host, db_user, db_pwd);
+	if(checkConnection($conn,db_name)){
+		$id = getIDbyMobile($data,$conn);
+		$data = json_decode($data);
+		$query="SELECT AVG(Feedback) as rating from user_contacts WHERE caller_id = ".$id." AND State=3 AND Feedback > 0 GROUP BY caller_id";
+		$result = mysql_query($query,$conn);
+		if(!$result)
+			API_Response(true,"Errore nella query",__FUNCTION__);
+		if($riga = mysql_fetch_array($result)){
+			API_Response(false,$riga['rating'],__FUNCTION__);
+		}else{
+			API_Response(false,"0",__FUNCTION__);
+		}
 	}
 	else
 		API_Response(true,"Errore di connessione",__FUNCTION__);
