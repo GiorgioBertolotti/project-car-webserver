@@ -192,6 +192,10 @@ function logoutUser($data){
 		$queryt = "UPDATE user SET Type_id = NULL WHERE id = '".$id."'";
 		if(!mysql_query($queryt,$conn))
 			API_Response(true,"Errore nella query",__FUNCTION__);
+		// Delete user's token
+		$queryto = "DELETE FROM user_token WHERE User_id = '".$id."'";
+		if(!mysql_query($queryto,$conn))
+			API_Response(true,"Errore nella query",__FUNCTION__);
 		API_Response(false,"Logout eseguito con successo",__FUNCTION__);
 	}
 	else
