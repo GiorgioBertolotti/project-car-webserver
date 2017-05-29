@@ -362,6 +362,36 @@ function getActiveUsers($data){
 		API_Response(true,"Errore di connessione",__FUNCTION__);
 }
 
+// Track the selection of an user in autostoppisti list
+function selectAutostoppista($data){
+	// Connect to db
+	$conn = mysql_connect(db_host, db_user, db_pwd);
+	if(checkConnection($conn,db_name)){
+		$data = json_decode($data);
+		$query = "SELECT id FROM user WHERE Mobile = '".$data->caller."'";
+		$result = mysql_query($query,$conn);
+		if(!$result)
+			API_Response(true,"Errore nella query",__FUNCTION__);
+		if($riga = mysql_fetch_array($result)){
+			$id1 = $riga['id'];
+		}
+		$query = "SELECT id FROM user WHERE Mobile = '".$data->receiver."'";
+		$result = mysql_query($query,$conn);
+		if(!$result)
+			API_Response(true,"Errore nella query",__FUNCTION__);
+		if($riga = mysql_fetch_array($result)){
+			$id2 = $riga['id'];
+		}
+		$query = "INSERT INTO user_contacts (Caller_id,Receiver_id,Feedback,State) VALUES (".$id1.",".$id2.",0,4)";
+		if(mysql_query($query,$conn) == true)
+			API_Response(false,"Contatto memorizzato",__FUNCTION__);
+		else
+			API_Response(true,"Errore nella query",__FUNCTION__);
+	}
+	else
+		API_Response(true,"Errore di connessione",__FUNCTION__);
+}
+
 // Add a contact between two users
 function addContact($data){
 	// Connect to db
