@@ -14,6 +14,11 @@ define('db_host','localhost');
 $api_method = isset($_POST['api_method']) ? $_POST['api_method'] : '';
 $api_data = isset($_POST['api_data']) ? $_POST['api_data'] : '';
 
+// Log Request
+$myFile = "requestslog.txt";
+$fh = fopen($myFile, 'a') or die("can't open file");
+fwrite($fh, date("Y-m-d H:i:s")." ".$api_method.": ".$api_data . PHP_EOL);
+
 // Validate Request
 if (empty($api_method) || empty($api_data)) {
     API_Response(true, 'Invalid Request',"");
