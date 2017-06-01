@@ -387,7 +387,7 @@ function selectAutostoppista($data){
 		if($riga = mysql_fetch_array($result)){
 			$id2 = $riga['id'];
 		}
-		$query = "INSERT INTO user_contacts (Caller_id,Receiver_id,Feedback,State) VALUES (".$id1.",".$id2.",0,4)";
+		$query = "INSERT INTO user_contacts (Caller_id,Receiver_id,Feedback,State) VALUES (".$id1.",".$id2.",0,0)";
 		if(mysql_query($query,$conn) == true)
 			API_Response(false,"Contatto memorizzato",__FUNCTION__);
 		else
@@ -417,7 +417,7 @@ function addContact($data){
 		if($riga = mysql_fetch_array($result)){
 			$id2 = $riga['id'];
 		}
-		$query = "INSERT INTO user_contacts (Caller_id,Receiver_id,Contact_Type,Feedback,State) VALUES (".$id1.",".$id2.",'".$data->type."',0,0)";
+		$query = "INSERT INTO user_contacts (Caller_id,Receiver_id,Contact_Type,Feedback,State) VALUES (".$id1.",".$id2.",'".$data->type."',0,1)";
 		if(mysql_query($query,$conn) == true)
 			API_Response(false,"Contatto memorizzato",__FUNCTION__);
 		else
@@ -434,16 +434,37 @@ function checkContacts($data){
 	if(checkConnection($conn,db_name)){
 		$id = getIDbyMobile($data,$conn);
 		$data = json_decode($data);
-		$query="SELECT count(*) as tot FROM user_contacts WHERE Receiver_id = ".$id." AND State = 0";
+		$query="SELECT count(*) as tot FROM user_contacts WHERE Receiver_id = ".$id." AND State = 1";
 		$result = mysql_query($query,$conn);
 		if(!$result)
 			API_Response(true,"Errore nella query",__FUNCTION__);
 		if($riga = mysql_fetch_array($result)){
-			$query2 = "UPDATE user_contacts SET State=1 WHERE Receiver_id = ".$id." AND State = 0";
+			$query2 = "UPDATE user_contacts SET State=2 WHERE Receiver_id = ".$id." AND State = 1";
 			if(mysql_query($query2,$conn) == true)
 					API_Response(false,$riga['tot'],__FUNCTION__);
 				else
 					API_Response(true,"Errore nella query",__FUNCTION__);
+		}else{
+			API_Response(false,"0",__FUNCTION__);
+		}
+	}
+	else
+		API_Response(true,"Errore di connessione",__FUNCTION__);
+}
+
+// Get number of contacts received and not seen by a user
+function getUnseenContactsCount($data){
+	// Connect to db
+	$conn = mysql_connect(db_host, db_user, db_pwd);
+	if(checkConnection($conn,db_name)){
+		$id = getIDbyMobile($data,$conn);
+		$data = json_decode($data);
+		$query="SELECT count(*) as tot FROM user_contacts WHERE Receiver_id = ".$id." AND State = 2";
+		$result = mysql_query($query,$conn);
+		if(!$result)
+			API_Response(true,"Errore nella query",__FUNCTION__);
+		if($riga = mysql_fetch_array($result)){
+			API_Response(false,$riga['tot'],__FUNCTION__);
 		}else{
 			API_Response(false,"0",__FUNCTION__);
 		}
@@ -459,7 +480,7 @@ function getContacts($data){
 	if(checkConnection($conn,db_name)){
 		$id = getIDbyMobile($data,$conn);
 		$data = json_decode($data);
-		$query="SELECT u.Mobile, u.Name, u.Surname, uc.Datetime, uc.Contact_Type FROM user_contacts as uc INNER JOIN user as u ON uc.Caller_id = u.id WHERE Receiver_id = ".$id." AND State = 1";
+		$query="SELECT u.Mobile, u.Name, u.Surname, uc.Datetime, uc.Contact_Type FROM user_contacts as uc INNER JOIN user as u ON uc.Caller_id = u.id WHERE Receiver_id = ".$id." AND (State = 2 OR State = 3)";
 		$result = mysql_query($query,$conn);
 		if(!$result)
 			API_Response(true,"Errore nella query",__FUNCTION__);
@@ -481,7 +502,11 @@ function getContacts($data){
 		$json_result = json_encode($lista);
 		if(!$json_result)
 			API_Response(true,"Errore nella codifica JSON",__FUNCTION__);
-		API_Response_JSON(false,$json_result,__FUNCTION__);
+		$query2 = "UPDATE user_contacts SET State=3 WHERE Receiver_id = ".$id." AND State = 2";
+		if(mysql_query($query2,$conn) == true)
+				API_Response_JSON(false,$json_result,__FUNCTION__);
+			else
+				API_Response(true,"Errore nella query",__FUNCTION__);
 	}
 	else
 		API_Response(true,"Errore di connessione",__FUNCTION__);
@@ -506,7 +531,7 @@ function deleteContact($data){
 		if($riga = mysql_fetch_array($result)){
 			$id2 = $riga['id'];
 		}
-		$query = "UPDATE user_contacts SET State=2 WHERE Caller_id = ".$id1." AND Receiver_id = ".$id2." AND Datetime = '".$data->datetime."'";
+		$query = "UPDATE user_contacts SET State=4 WHERE Caller_id = ".$id1." AND Receiver_id = ".$id2." AND Datetime = '".$data->datetime."'";
 		if(mysql_query($query,$conn) == true)
 				API_Response(false,"Contatto eliminato",__FUNCTION__);
 			else
@@ -535,7 +560,7 @@ function setFeedback($data){
 		if($riga = mysql_fetch_array($result)){
 			$id2 = $riga['id'];
 		}
-		$query = "UPDATE user_contacts SET Feedback=".$data->feedback.", State=3 WHERE Caller_id = ".$id1." AND Receiver_id = ".$id2." AND Datetime = '".$data->datetime."'";
+		$query = "UPDATE user_contacts SET Feedback=".$data->feedback.", State=5 WHERE Caller_id = ".$id1." AND Receiver_id = ".$id2." AND Datetime = '".$data->datetime."'";
 		if(mysql_query($query,$conn) == true)
 				API_Response(false,"Feedback inserito",__FUNCTION__);
 			else
@@ -552,7 +577,7 @@ function getRating($data){
 	if(checkConnection($conn,db_name)){
 		$id = getIDbyMobile($data,$conn);
 		$data = json_decode($data);
-		$query="SELECT AVG(Feedback) as rating from user_contacts WHERE caller_id = ".$id." AND State=3 AND Feedback > 0 GROUP BY caller_id";
+		$query="SELECT AVG(Feedback) as rating from user_contacts WHERE caller_id = ".$id." AND State=5 AND Feedback > 0 GROUP BY caller_id";
 		$result = mysql_query($query,$conn);
 		if(!$result)
 			API_Response(true,"Errore nella query",__FUNCTION__);
