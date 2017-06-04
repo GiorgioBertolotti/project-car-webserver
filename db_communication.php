@@ -94,7 +94,7 @@ function loginUser($data){
 			if($row['Password']==$login_data->password){
 				$token = authorizationToken($data);
 				// Evaluate average rating
-				$query2="SELECT AVG(Feedback) as rating from user_contacts WHERE caller_id = ".$id." AND State=3 GROUP BY caller_id";
+				$query2="SELECT AVG(Feedback) as rating from user_contacts WHERE caller_id = ".$id." AND State=5 GROUP BY caller_id";
 				$result = mysql_query($query2,$conn);
 				if(!$result)
 					API_Response(true,"Errore nella query",__FUNCTION__);
@@ -147,7 +147,7 @@ function loginWToken($data){
 		$temp = array();
 		if($row = mysql_fetch_array($result)){
 			// Evaluate average rating
-			$query2="SELECT AVG(Feedback) as rating from user_contacts WHERE caller_id = ".$row['id']." AND State=3 GROUP BY caller_id";
+			$query2="SELECT AVG(Feedback) as rating from user_contacts WHERE caller_id = ".$row['id']." AND State=5 GROUP BY caller_id";
 			$result = mysql_query($query2,$conn);
 			if(!$result)
 				API_Response(true,"Errore nella query",__FUNCTION__);
@@ -326,7 +326,7 @@ function getActiveUsers($data){
 		$lista = array();
 		while($utente = mysql_fetch_array($utenti)){
 			// Evaluate average rating
-			$query2="SELECT AVG(Feedback) as rating from user_contacts WHERE caller_id = ".$utente['id']." AND State=3 GROUP BY caller_id";
+			$query2="SELECT AVG(Feedback) as rating from user_contacts WHERE caller_id = ".$utente['id']." AND State=5 GROUP BY caller_id";
 			$result = mysql_query($query2,$conn);
 			if(!$result)
 				API_Response(true,"Errore nella query",__FUNCTION__);
@@ -748,10 +748,6 @@ function removeUser_Type($data){
 		// Set user's type_id to null
 		$query = "UPDATE user SET Type_id = NULL WHERE id = '".$id."'";
 		if(!mysql_query($query))
-			API_Response(true,"Errore nella query",__FUNCTION__);
-		// Delete user's record from the position table
-		$query2 = "DELETE FROM user_position WHERE User_id = '".$id."'";
-		if(!mysql_query($query2))
 			API_Response(true,"Errore nella query",__FUNCTION__);
 		API_Response(false,"Utente dissociato al tipo",__FUNCTION__);
 	}

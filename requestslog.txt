@@ -1191,3 +1191,1892 @@
 2017-06-01 14:27:38 checkContacts: {"mobile":"3290358217"}
 2017-06-01 14:27:41 loginUser: {"mobile":"3290358217","password":"189bbbb00c5f1fb7fba9ad9285f193d1"}
 2017-06-01 14:27:41 getUnseenContactsCount: {"mobile":"3290358217"}
+2017-06-01 14:33:13 loginUser: {"mobile":"3290358217","password":"189bbbb00c5f1fb7fba9ad9285f193d1"}
+2017-06-01 14:33:14 checkContacts: {"mobile":"3290358217"}
+2017-06-01 14:33:14 checkContacts: {"mobile":"3290358217"}
+2017-06-01 14:33:17 getContacts: {"mobile":"3290358217"}
+2017-06-01 15:24:48 registerUser: {"name":"Mattia","surname":"Pozzi","email":"pozzi.mattia98@gmail.com","mobile":"3347581938","password":"18bd309054afe1ef98bff8422b5b9271"}
+2017-06-01 15:24:56 loginUser: {"mobile":"3347581938","password":"18bd309054afe1ef98bff8422b5b9271"}
+2017-06-01 15:24:58 getUnseenContactsCount: {"mobile":"3347581938"}
+2017-06-01 15:24:58 getUnseenContactsCount: {"mobile":"3347581938"}
+2017-06-01 15:25:09 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:25:09 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:25:18 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:25:18 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:25:28 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:25:28 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:25:38 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:25:38 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:25:48 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:25:48 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:25:56 setRange: {"mobile":"3347581938","range":40}
+2017-06-01 15:25:58 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:25:58 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:25:59 countRides: {"mobile":"3347581938"}
+2017-06-01 15:25:59 getRating: {"mobile":"3347581938"}
+2017-06-01 15:25:59 countContacts: {"mobile":"3347581938"}
+2017-06-01 15:26:08 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:26:08 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:26:18 User_Type: {"mobile":"3347581938","type":"Autista"}
+2017-06-01 15:26:18 getAS: {"mobile":"3347581938","lat":"0","lon":"0","range":"10"}
+2017-06-01 15:26:18 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:26:18 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:26:25 removeUser_Type: {"mobile":"3347581938"}
+2017-06-01 15:26:28 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:26:28 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:26:36 getContacts: {"mobile":"3347581938"}
+2017-06-01 15:26:38 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:26:38 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:26:48 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:26:48 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:26:58 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:26:58 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:27:08 User_Type: {"mobile":"3347581938","type":"Autista"}
+2017-06-01 15:27:08 getAS: {"mobile":"3347581938","lat":"0","lon":"0","range":"10"}
+2017-06-01 15:27:08 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:27:08 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:27:13 removeUser_Type: {"mobile":"3347581938"}
+2017-06-01 15:27:18 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:27:18 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:27:29 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:27:29 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:27:39 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:27:39 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:27:49 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:27:49 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:27:59 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:27:59 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:28:08 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:28:08 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:28:19 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:28:19 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:28:28 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:28:28 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:28:29 countRides: {"mobile":"3347581938"}
+2017-06-01 15:28:29 countContacts: {"mobile":"3347581938"}
+2017-06-01 15:28:29 getRating: {"mobile":"3347581938"}
+2017-06-01 15:28:38 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:28:38 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:28:49 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:28:49 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:28:59 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:28:59 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:29:09 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:29:09 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:29:20 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:29:20 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:29:34 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:29:34 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:31:16 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:31:16 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:32:45 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:32:55 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:32:55 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:33:17 loginUser: {"mobile":"3347581938","password":"18bd309054afe1ef98bff8422b5b9271"}
+2017-06-01 15:33:19 getUnseenContactsCount: {"mobile":"3347581938"}
+2017-06-01 15:33:19 getUnseenContactsCount: {"mobile":"3347581938"}
+2017-06-01 15:33:28 countRides: {"mobile":"3347581938"}
+2017-06-01 15:33:28 countContacts: {"mobile":"3347581938"}
+2017-06-01 15:33:28 getRating: {"mobile":"3347581938"}
+2017-06-01 15:33:29 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:33:29 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:33:39 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:33:39 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:33:49 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:33:49 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:33:52 User_Type: {"mobile":"3347581938","type":"Autista"}
+2017-06-01 15:33:52 getAS: {"mobile":"3347581938","lat":"0","lon":"0","range":"40"}
+2017-06-01 15:33:56 removeUser_Type: {"mobile":"3347581938"}
+2017-06-01 15:33:59 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:33:59 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:34:09 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:34:09 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:34:19 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:34:19 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:34:29 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:34:30 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:34:39 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:34:40 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:34:49 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:34:50 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:34:59 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:35:00 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:35:09 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:35:10 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:35:19 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:35:20 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:35:29 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:35:30 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:36:05 loginWToken: {"token":"DnkMyIEUZJ"}
+2017-06-01 15:36:10 getUnseenContactsCount: {"mobile":"3347581938"}
+2017-06-01 15:36:23 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:36:29 countRides: {"mobile":"3347581938"}
+2017-06-01 15:36:29 countContacts: {"mobile":"3347581938"}
+2017-06-01 15:36:29 getRating: {"mobile":"3347581938"}
+2017-06-01 15:36:30 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:36:37 setGPSLocation: {"mobile":"3347581938","lat":"45.6483047","lon":"9.6060184","date":"2017-06-01 15:36:37"}
+2017-06-01 15:36:40 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:36:51 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:37:01 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:37:10 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:37:14 User_Type: {"mobile":"3347581938","type":"Autista"}
+2017-06-01 15:37:15 getAS: {"mobile":"3347581938","lat":"45.6483088","lon":"9.6060255","range":"40"}
+2017-06-01 15:37:18 removeUser_Type: {"mobile":"3347581938"}
+2017-06-01 15:37:20 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:37:25 User_Type: {"mobile":"3347581938","type":"Autostoppista"}
+2017-06-01 15:37:25 User_Destination: {"mobile":"3347581938","Latitude":"45.69802700880466","Longitude":"9.674835205078125"}
+2017-06-01 15:39:31 loginWToken: {"token":"Ir6kYWavwT"}
+2017-06-01 15:39:31 getUnseenContactsCount: {"mobile":"3290358217"}
+2017-06-01 15:39:35 User_Type: {"mobile":"3290358217","type":"Autista"}
+2017-06-01 15:39:35 getAS: {"mobile":"3290358217","lat":"45.6443598","lon":"9.585122499999999","range":"60"}
+2017-06-01 15:39:37 removeUser_Type: {"mobile":"3290358217"}
+2017-06-01 15:39:37 setGPSLocation: {"mobile":"3290358217","lat":"45.6443598","lon":"9.585122499999999","date":"2017-06-01 15:39:37"}
+2017-06-01 15:39:37 getActiveUsers: {}
+2017-06-01 15:39:41 User_Type: {"mobile":"3290358217","type":"Autista"}
+2017-06-01 15:39:41 getAS: {"mobile":"3290358217","lat":"45.6443598","lon":"9.585122499999999","range":"60"}
+2017-06-01 15:39:41 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:39:56 loginUser: {"mobile":"3290358217","password":"189bbbb00c5f1fb7fba9ad9285f193d1"}
+2017-06-01 15:39:57 getUnseenContactsCount: {"mobile":"3290358217"}
+2017-06-01 15:39:57 getUnseenContactsCount: {"mobile":"3290358217"}
+2017-06-01 15:40:01 User_Type: {"mobile":"3290358217","type":"Autista"}
+2017-06-01 15:40:03 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"60"}
+2017-06-01 15:40:07 removeUser_Type: {"mobile":"3290358217"}
+2017-06-01 15:40:07 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-01 15:40:07"}
+2017-06-01 15:40:07 getActiveUsers: {}
+2017-06-01 15:40:07 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:40:07 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:40:17 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:40:17 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:40:18 User_Type: {"mobile":"3290358217","type":"Autista"}
+2017-06-01 15:40:20 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"60"}
+2017-06-01 15:40:27 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:40:27 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:40:37 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:40:38 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:40:47 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:40:48 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:40:57 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:40:58 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:41:07 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:41:08 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:41:17 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:41:18 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:41:22 User_Type: {"mobile":"3290358217","type":"Autista"}
+2017-06-01 15:41:24 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"60"}
+2017-06-01 15:41:27 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:41:28 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:41:43 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:41:44 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:42:30 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:42:31 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:42:40 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:42:40 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:42:53 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:42:54 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:43:55 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:43:55 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:44:53 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:44:54 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:45:03 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:45:04 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:45:13 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:45:14 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:45:23 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:45:24 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:45:33 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:45:34 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:45:43 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:45:44 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:45:53 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:45:54 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:46:12 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:46:13 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:46:26 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:46:27 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:46:36 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:46:37 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:46:46 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:46:47 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:46:52 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:46:53 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:47:02 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:47:03 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:47:12 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:47:13 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:47:22 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:47:23 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:47:32 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:47:33 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:47:42 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:47:43 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:47:52 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:47:53 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:48:02 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:48:03 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:48:12 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:48:13 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:48:22 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:48:23 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:48:32 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:48:33 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:48:42 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:48:43 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:48:52 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:48:53 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:49:16 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:49:16 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:49:17 User_Type: {"mobile":"3290358217","type":"Autista"}
+2017-06-01 15:49:19 getAS: {"mobile":"3290358217","lat":"45.6425159","lon":"9.5859977","range":"60"}
+2017-06-01 15:49:20 removeUser_Type: {"mobile":"3290358217"}
+2017-06-01 15:49:22 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:49:22 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:49:29 User_Type: {"mobile":"3290358217","type":"Autista"}
+2017-06-01 15:49:31 getAS: {"mobile":"3290358217","lat":"45.6425078","lon":"9.5859835","range":"60"}
+2017-06-01 15:49:32 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:49:32 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:49:33 removeUser_Type: {"mobile":"3290358217"}
+2017-06-01 15:49:35 setRange: {"mobile":"3290358217","range":100}
+2017-06-01 15:49:37 countRides: {"mobile":"3290358217"}
+2017-06-01 15:49:37 countContacts: {"mobile":"3290358217"}
+2017-06-01 15:49:37 getRating: {"mobile":"3290358217"}
+2017-06-01 15:49:41 getContacts: {"mobile":"3290358217"}
+2017-06-01 15:49:42 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:49:42 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:49:43 User_Type: {"mobile":"3290358217","type":"Autista"}
+2017-06-01 15:49:44 getAS: {"mobile":"3290358217","lat":"45.6425159","lon":"9.5859977","range":"60"}
+2017-06-01 15:49:44 setGPSLocation: {"mobile":"3290358217","lat":"45.6425159","lon":"9.5859977","date":"2017-06-01 15:49:44"}
+2017-06-01 15:49:45 removeUser_Type: {"mobile":"3290358217"}
+2017-06-01 15:49:52 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:49:52 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:49:56 User_Type: {"mobile":"3290358217","type":"Autostoppista"}
+2017-06-01 15:49:56 User_Destination: {"mobile":"3290358217","Latitude":"45.652988251978755","Longitude":"9.603595733642578"}
+2017-06-01 15:50:02 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:50:03 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:50:12 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:50:13 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:50:22 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:50:23 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:50:32 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:50:33 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:50:42 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:50:43 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:50:52 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:50:53 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:51:02 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:51:03 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:51:12 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:51:13 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:51:22 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:51:23 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:51:29 loginWToken: {"token":"DnkMyIEUZJ"}
+2017-06-01 15:51:32 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:51:33 getUnseenContactsCount: {"mobile":"3347581938"}
+2017-06-01 15:51:33 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:51:42 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:51:43 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:51:45 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:51:52 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:51:52 setGPSLocation: {"mobile":"3347581938","lat":"45.6298629","lon":"9.592965","date":"2017-06-01 15:51:52"}
+2017-06-01 15:51:53 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:51:53 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:52:00 User_Type: {"mobile":"3347581938","type":"Autista"}
+2017-06-01 15:52:01 getAS: {"mobile":"3347581938","lat":"45.6298629","lon":"9.592965","range":"40"}
+2017-06-01 15:52:02 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:52:03 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:52:03 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:52:04 removeUser_Type: {"mobile":"3347581938"}
+2017-06-01 15:52:11 User_Type: {"mobile":"3347581938","type":"Autostoppista"}
+2017-06-01 15:52:11 User_Destination: {"mobile":"3347581938","Latitude":"45.64860838388028","Longitude":"9.602737426757812"}
+2017-06-01 15:52:12 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:52:13 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:52:13 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:52:22 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:52:23 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:52:23 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:52:27 removeUser_Type: {"mobile":"3347581938"}
+2017-06-01 15:52:27 countRides: {"mobile":"3347581938"}
+2017-06-01 15:52:27 getRating: {"mobile":"3347581938"}
+2017-06-01 15:52:27 countContacts: {"mobile":"3347581938"}
+2017-06-01 15:52:28 removeUser_Type: {"mobile":"3290358217"}
+2017-06-01 15:52:28 User_Type: {"mobile":"3290358217","type":"Autista"}
+2017-06-01 15:52:28 getAS: {"mobile":"3290358217","lat":"45.6425078","lon":"9.5859835","range":"60"}
+2017-06-01 15:52:30 User_Type: {"mobile":"3290358217","type":"Autista"}
+2017-06-01 15:52:30 getAS: {"mobile":"3290358217","lat":"45.6425078","lon":"9.5859835","range":"60"}
+2017-06-01 15:52:31 removeUser_Type: {"mobile":"3290358217"}
+2017-06-01 15:52:32 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:52:32 setRange: {"mobile":"3347581938","range":61}
+2017-06-01 15:52:32 getActiveUsers: {}
+2017-06-01 15:52:32 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:52:33 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:52:34 User_Type: {"mobile":"3347581938","type":"Autista"}
+2017-06-01 15:52:35 getAS: {"mobile":"3347581938","lat":"45.6298629","lon":"9.592965","range":"40"}
+2017-06-01 15:52:36 removeUser_Type: {"mobile":"3347581938"}
+2017-06-01 15:52:42 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:52:42 User_Type: {"mobile":"3347581938","type":"Autostoppista"}
+2017-06-01 15:52:42 User_Destination: {"mobile":"3347581938","Latitude":"45.64932838572134","Longitude":"9.605484008789062"}
+2017-06-01 15:52:42 setGPSLocation: {"mobile":"3290358217","lat":"45.6425159","lon":"9.5859977","date":"2017-06-01 15:52:42"}
+2017-06-01 15:52:42 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:52:43 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:52:52 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:52:52 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:52:53 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:52:53 setGPSLocation: {"mobile":"3347581938","lat":"45.6298746","lon":"9.5929711","date":"2017-06-01 15:52:53"}
+2017-06-01 15:53:02 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:53:03 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:53:23 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:53:23 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:53:23 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:53:33 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:53:43 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:53:52 loginWToken: {"token":"QgCqXacYkY"}
+2017-06-01 15:53:53 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:53:54 getUnseenContactsCount: {"mobile":"3290358217"}
+2017-06-01 15:53:56 User_Type: {"mobile":"3290358217","type":"Autista"}
+2017-06-01 15:53:58 getAS: {"mobile":"3290358217","lat":"45.6425159","lon":"9.5859977","range":"100"}
+2017-06-01 15:54:01 selectAutostoppista: {"caller":"3290358217","receiver":"3347581938"}
+2017-06-01 15:54:03 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:54:03 addContact: {"caller":"3290358217","receiver":"3347581938","type":"Call"}
+2017-06-01 15:54:04 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:54:14 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:54:24 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:54:34 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:54:36 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:54:37 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:54:38 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:54:44 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:54:47 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:54:54 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:54:58 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:55:04 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:55:09 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:55:12 User_Type: {"mobile":"3290358217","type":"Autista"}
+2017-06-01 15:55:13 selectAutostoppista: {"caller":"3290358217","receiver":"3347581938"}
+2017-06-01 15:55:14 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:55:14 getAS: {"mobile":"3290358217","lat":"45.6425159","lon":"9.5859977","range":"100"}
+2017-06-01 15:55:17 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:55:22 User_Type: {"mobile":"3290358217","type":"Autista"}
+2017-06-01 15:55:23 selectAutostoppista: {"caller":"3290358217","receiver":"3347581938"}
+2017-06-01 15:55:24 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:55:24 countRides: {"mobile":"3347581938"}
+2017-06-01 15:55:24 countContacts: {"mobile":"3347581938"}
+2017-06-01 15:55:24 getAS: {"mobile":"3290358217","lat":"45.6424978","lon":"9.5859916","range":"100"}
+2017-06-01 15:55:28 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:55:28 getAS: {"mobile":"3290358217","lat":"45.6424978","lon":"9.5859916","range":"100"}
+2017-06-01 15:55:30 removeUser_Type: {"mobile":"3290358217"}
+2017-06-01 15:55:34 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:55:37 loginWToken: {"token":"QgCqXacYkY"}
+2017-06-01 15:55:38 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:55:38 getContacts: {"mobile":"3347581938"}
+2017-06-01 15:55:39 getUnseenContactsCount: {"mobile":"3290358217"}
+2017-06-01 15:55:45 setFeedback: {"caller":"3290358217","receiver":"3347581938","datetime":"2017-06-01 15:54:03","feedback":5}
+2017-06-01 15:55:47 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:55:49 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:55:51 removeUser_Type: {"mobile":"3347581938"}
+2017-06-01 15:55:59 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:56:03 setGPSLocation: {"mobile":"3290358217","lat":"45.6425159","lon":"9.5859977","date":"2017-06-01 15:56:03"}
+2017-06-01 15:56:03 getActiveUsers: {}
+2017-06-01 15:56:09 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:56:15 User_Type: {"mobile":"3290358217","type":"Autista"}
+2017-06-01 15:56:17 getAS: {"mobile":"3290358217","lat":"45.6425159","lon":"9.5859977","range":"100"}
+2017-06-01 15:56:19 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:56:29 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:56:39 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:56:49 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:56:56 removeUser_Type: {"mobile":"3290358217"}
+2017-06-01 15:56:56 countRides: {"mobile":"3290358217"}
+2017-06-01 15:56:56 countContacts: {"mobile":"3290358217"}
+2017-06-01 15:56:56 getRating: {"mobile":"3290358217"}
+2017-06-01 15:56:58 getContacts: {"mobile":"3290358217"}
+2017-06-01 15:56:59 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:57:05 setGPSLocation: {"mobile":"3290358217","lat":"45.6425159","lon":"9.5859977","date":"2017-06-01 15:57:05"}
+2017-06-01 15:57:05 getContacts: {"mobile":"3290358217"}
+2017-06-01 15:57:07 User_Type: {"mobile":"3290358217","type":"Autista"}
+2017-06-01 15:57:08 getAS: {"mobile":"3290358217","lat":"45.6425159","lon":"9.5859977","range":"100"}
+2017-06-01 15:57:09 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:57:19 loginWToken: {"token":"DnkMyIEUZJ"}
+2017-06-01 15:57:20 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:57:23 getUnseenContactsCount: {"mobile":"3347581938"}
+2017-06-01 15:57:29 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:57:31 User_Type: {"mobile":"3290358217","type":"Autista"}
+2017-06-01 15:57:33 getAS: {"mobile":"3290358217","lat":"45.6425159","lon":"9.5859977","range":"100"}
+2017-06-01 15:57:34 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:57:34 removeUser_Type: {"mobile":"3290358217"}
+2017-06-01 15:57:37 countRides: {"mobile":"3347581938"}
+2017-06-01 15:57:37 countContacts: {"mobile":"3347581938"}
+2017-06-01 15:57:37 getRating: {"mobile":"3347581938"}
+2017-06-01 15:57:39 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:57:43 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:57:49 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:57:52 setImage: {"mobile":"3347581938","img":"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"}
+2017-06-01 15:57:55 User_Type: {"mobile":"3290358217","type":"Autostoppista"}
+2017-06-01 15:57:55 User_Destination: {"mobile":"3290358217","Latitude":"45.64865630000001","Longitude":"9.601640800000041"}
+2017-06-01 15:57:57 removeUser_Type: {"mobile":"3290358217"}
+2017-06-01 15:57:59 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:57:59 getActiveUsers: {}
+2017-06-01 15:58:00 loginWToken: {"token":"DnkMyIEUZJ"}
+2017-06-01 15:58:03 setGPSLocation: {"mobile":"3290358217","lat":"45.6425159","lon":"9.5859977","date":"2017-06-01 15:58:03"}
+2017-06-01 15:58:04 getRating: {"mobile":"3347581938"}
+2017-06-01 15:58:04 countContacts: {"mobile":"3347581938"}
+2017-06-01 15:58:04 countRides: {"mobile":"3347581938"}
+2017-06-01 15:58:04 getUnseenContactsCount: {"mobile":"3347581938"}
+2017-06-01 15:58:09 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:58:14 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:58:19 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:58:22 User_Type: {"mobile":"3347581938","type":"Autista"}
+2017-06-01 15:58:23 getAS: {"mobile":"3347581938","lat":"0","lon":"0","range":"61"}
+2017-06-01 15:58:24 checkContacts: {"mobile":"3347581938"}
+2017-06-01 15:58:24 User_Type: {"mobile":"3290358217","type":"Autista"}
+2017-06-01 15:58:26 getAS: {"mobile":"3290358217","lat":"45.6425159","lon":"9.5859977","range":"100"}
+2017-06-01 15:58:27 getContacts: {"mobile":"3290358217"}
+2017-06-01 15:58:28 removeUser_Type: {"mobile":"3290358217"}
+2017-06-01 15:58:28 countRides: {"mobile":"3290358217"}
+2017-06-01 15:58:28 getRating: {"mobile":"3290358217"}
+"}
+2017-06-01 15:58:29 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:58:40 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:58:50 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:59:00 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:59:10 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:59:20 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:59:30 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:59:40 checkContacts: {"mobile":"3290358217"}
+2017-06-01 15:59:50 checkContacts: {"mobile":"3290358217"}
+2017-06-01 16:00:00 checkContacts: {"mobile":"3290358217"}
+2017-06-01 16:00:10 checkContacts: {"mobile":"3290358217"}
+2017-06-01 16:00:20 checkContacts: {"mobile":"3290358217"}
+2017-06-01 16:00:31 checkContacts: {"mobile":"3290358217"}
+2017-06-01 16:00:50 checkContacts: {"mobile":"3290358217"}
+2017-06-01 16:01:41 checkContacts: {"mobile":"3290358217"}
+2017-06-01 16:03:04 checkContacts: {"mobile":"3290358217"}
+2017-06-01 16:03:14 checkContacts: {"mobile":"3290358217"}
+2017-06-01 16:03:24 checkContacts: {"mobile":"3290358217"}
+2017-06-01 16:03:33 checkContacts: {"mobile":"3290358217"}
+2017-06-01 16:03:44 checkContacts: {"mobile":"3290358217"}
+2017-06-01 16:03:54 checkContacts: {"mobile":"3290358217"}
+2017-06-01 16:04:04 checkContacts: {"mobile":"3290358217"}
+2017-06-01 16:04:14 checkContacts: {"mobile":"3290358217"}
+2017-06-01 16:04:24 checkContacts: {"mobile":"3290358217"}
+2017-06-01 16:04:34 checkContacts: {"mobile":"3290358217"}
+2017-06-01 16:04:44 checkContacts: {"mobile":"3290358217"}
+2017-06-01 16:04:54 checkContacts: {"mobile":"3290358217"}
+2017-06-01 16:05:04 checkContacts: {"mobile":"3290358217"}
+2017-06-01 16:05:14 checkContacts: {"mobile":"3290358217"}
+2017-06-01 16:05:24 checkContacts: {"mobile":"3290358217"}
+2017-06-01 16:05:34 checkContacts: {"mobile":"3290358217"}
+2017-06-01 16:05:44 checkContacts: {"mobile":"3290358217"}
+2017-06-01 16:05:57 checkContacts: {"mobile":"3290358217"}
+2017-06-01 16:06:08 checkContacts: {"mobile":"3290358217"}
+2017-06-01 16:07:04 checkContacts: {"mobile":"3290358217"}
+2017-06-01 16:08:16 checkContacts: {"mobile":"3290358217"}
+2017-06-01 16:09:18 checkContacts: {"mobile":"3290358217"}
+2017-06-01 16:10:59 checkContacts: {"mobile":"3290358217"}
+2017-06-01 16:16:21 checkContacts: {"mobile":"3290358217"}
+2017-06-01 16:16:21 checkContacts: {"mobile":"3290358217"}
+2017-06-01 16:16:21 checkContacts: {"mobile":"3290358217"}
+2017-06-01 16:26:30 checkContacts: {"mobile":"3290358217"}
+2017-06-01 16:26:30 checkContacts: {"mobile":"3290358217"}
+2017-06-01 16:26:35 checkContacts: {"mobile":"3290358217"}
+2017-06-01 16:26:45 checkContacts: {"mobile":"3290358217"}
+2017-06-01 16:26:55 checkContacts: {"mobile":"3290358217"}
+2017-06-01 16:27:05 checkContacts: {"mobile":"3290358217"}
+2017-06-01 16:27:15 checkContacts: {"mobile":"3290358217"}
+2017-06-01 16:27:25 checkContacts: {"mobile":"3290358217"}
+2017-06-02 21:22:05 loginUser: {"mobile":"3290358217","password":"189bbbb00c5f1fb7fba9ad9285f193d1"}
+2017-06-02 21:22:05 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 21:22:04"}
+2017-06-02 21:22:05 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-02 21:22:36 User_Type: {"mobile":"3290358217","type":"autostoppista"}
+2017-06-02 21:22:36 User_Destination: {"mobile":"3290358217","Latitude":"45.6423491","Longitude":"9.5859875"}
+2017-06-02 21:22:39 removeUser_Type: {"mobile":"3290358217"}
+2017-06-02 21:23:05 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 21:23:03"}
+2017-06-02 21:24:05 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 21:24:03"}
+2017-06-02 21:25:05 setGPSLocation: {"mobile":"3290358217","lat":"45.6424483","lon":"9.5859927","date":"2017-06-02 21:25:03"}
+2017-06-02 21:26:05 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 21:26:03"}
+2017-06-02 21:27:05 setGPSLocation: {"mobile":"3290358217","lat":"45.642442","lon":"9.5859552","date":"2017-06-02 21:27:04"}
+2017-06-02 21:28:05 setGPSLocation: {"mobile":"3290358217","lat":"45.6424242","lon":"9.5859472","date":"2017-06-02 21:28:04"}
+2017-06-02 21:28:29 loginWToken: {"token":"ur37uER9X3"}
+2017-06-02 21:28:30 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 21:28:28"}
+2017-06-02 21:28:30 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-02 21:29:00 loginWToken: {"token":"ur37uER9X3"}
+2017-06-02 21:29:01 setGPSLocation: {"mobile":"3290358217","lat":"45.6424055","lon":"9.5859221","date":"2017-06-02 21:29:00"}
+2017-06-02 21:29:01 getAS: {"mobile":"3290358217","lat":"45.6424055","lon":"9.5859221","range":"10"}
+2017-06-02 21:29:57 loginWToken: {"token":"ur37uER9X3"}
+2017-06-02 21:29:58 setGPSLocation: {"mobile":"3290358217","lat":"45.6424199","lon":"9.5859267","date":"2017-06-02 21:29:56"}
+2017-06-02 21:29:58 getAS: {"mobile":"3290358217","lat":"45.6424199","lon":"9.5859267","range":"10"}
+2017-06-02 21:30:12 User_Type: {"mobile":"3290358217","type":"autostoppista"}
+2017-06-02 21:30:12 User_Destination: {"mobile":"3290358217","Latitude":"45.6424205","Longitude":"9.5859427"}
+2017-06-02 21:30:17 removeUser_Type: {"mobile":"3290358217"}
+2017-06-02 21:30:58 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 21:30:56"}
+2017-06-02 21:31:58 setGPSLocation: {"mobile":"3290358217","lat":"45.6424197","lon":"9.5859504","date":"2017-06-02 21:31:56"}
+2017-06-02 21:32:58 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 21:32:56"}
+2017-06-02 21:33:58 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 21:33:56"}
+2017-06-02 21:34:58 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 21:34:56"}
+2017-06-02 21:35:58 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 21:35:56"}
+2017-06-02 21:36:58 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 21:36:56"}
+2017-06-02 21:37:58 setGPSLocation: {"mobile":"3290358217","lat":"45.6424108","lon":"9.5859311","date":"2017-06-02 21:37:56"}
+2017-06-02 21:38:58 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 21:38:56"}
+2017-06-02 21:39:58 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 21:39:56"}
+2017-06-02 21:40:58 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 21:40:56"}
+2017-06-02 21:41:58 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 21:41:56"}
+2017-06-02 21:42:58 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 21:42:57"}
+2017-06-02 21:43:40 loginWToken: {"token":"ur37uER9X3"}
+2017-06-02 21:43:40 setGPSLocation: {"mobile":"3290358217","lat":"45.6424113","lon":"9.585935","date":"2017-06-02 21:43:39"}
+2017-06-02 21:43:40 getAS: {"mobile":"3290358217","lat":"45.6424113","lon":"9.585935","range":"10"}
+2017-06-02 21:44:45 loginWToken: {"token":"ur37uER9X3"}
+2017-06-02 21:44:46 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 21:44:44"}
+2017-06-02 21:44:46 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-02 21:47:56 loginWToken: {"token":"ur37uER9X3"}
+2017-06-02 21:47:56 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 21:47:55"}
+2017-06-02 21:47:56 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-02 21:48:56 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 21:48:55"}
+2017-06-02 21:49:56 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 21:49:55"}
+2017-06-02 21:50:56 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 21:50:55"}
+2017-06-02 21:51:56 setGPSLocation: {"mobile":"3290358217","lat":"45.6424427","lon":"9.585965","date":"2017-06-02 21:51:55"}
+2017-06-02 22:01:51 loginWToken: {"token":"ur37uER9X3"}
+2017-06-02 22:01:52 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 22:01:50"}
+2017-06-02 22:01:52 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-02 22:03:34 loginWToken: {"token":"ur37uER9X3"}
+2017-06-02 22:03:35 setGPSLocation: {"mobile":"3290358217","lat":"45.6422992","lon":"9.5857657","date":"2017-06-02 22:03:33"}
+2017-06-02 22:03:35 getAS: {"mobile":"3290358217","lat":"45.6422992","lon":"9.5857657","range":"10"}
+2017-06-02 22:06:17 loginWToken: {"token":"ur37uER9X3"}
+2017-06-02 22:06:18 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 22:06:16"}
+2017-06-02 22:06:18 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-02 22:06:50 loginWToken: {"token":"ur37uER9X3"}
+2017-06-02 22:06:50 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 22:06:49"}
+2017-06-02 22:06:50 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-02 22:07:07 loginWToken: {"token":"ur37uER9X3"}
+2017-06-02 22:07:08 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 22:07:06"}
+2017-06-02 22:07:08 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-02 22:07:21 loginWToken: {"token":"ur37uER9X3"}
+2017-06-02 22:07:22 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 22:07:20"}
+2017-06-02 22:07:22 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-02 22:15:20 loginWToken: {"token":"ur37uER9X3"}
+2017-06-02 22:15:20 setGPSLocation: {"mobile":"3290358217","lat":"45.6425775","lon":"9.585675","date":"2017-06-02 22:15:19"}
+2017-06-02 22:15:20 getAS: {"mobile":"3290358217","lat":"45.6425775","lon":"9.585675","range":"10"}
+2017-06-02 22:15:48 loginWToken: {"token":"ur37uER9X3"}
+2017-06-02 22:15:49 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 22:15:47"}
+2017-06-02 22:15:49 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-02 22:16:48 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 22:16:47"}
+2017-06-02 22:17:47 loginWToken: {"token":"ur37uER9X3"}
+2017-06-02 22:17:47 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 22:17:46"}
+2017-06-02 22:17:47 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-02 22:18:47 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 22:18:45"}
+2017-06-02 22:19:05 loginWToken: {"token":"ur37uER9X3"}
+2017-06-02 22:19:06 setGPSLocation: {"mobile":"3290358217","lat":"45.642511","lon":"9.5859939","date":"2017-06-02 22:19:04"}
+2017-06-02 22:19:06 getAS: {"mobile":"3290358217","lat":"45.642511","lon":"9.5859939","range":"10"}
+2017-06-02 22:19:23 User_Type: {"mobile":"3290358217","type":"autostoppista"}
+2017-06-02 22:19:23 User_Destination: {"mobile":"3290358217","Latitude":"45.6423491","Longitude":"9.5859875"}
+2017-06-02 22:19:24 removeUser_Type: {"mobile":"3290358217"}
+2017-06-02 22:20:05 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 22:20:04"}
+2017-06-02 22:21:57 loginWToken: {"token":"ur37uER9X3"}
+2017-06-02 22:21:58 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 22:21:56"}
+2017-06-02 22:21:58 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-02 22:22:56 loginWToken: {"token":"ur37uER9X3"}
+2017-06-02 22:22:56 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 22:22:55"}
+2017-06-02 22:22:56 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-02 22:23:40 loginWToken: {"token":"ur37uER9X3"}
+2017-06-02 22:23:41 setGPSLocation: {"mobile":"3290358217","lat":"45.6422759","lon":"9.585757","date":"2017-06-02 22:23:39"}
+2017-06-02 22:23:41 getAS: {"mobile":"3290358217","lat":"45.6422759","lon":"9.585757","range":"10"}
+2017-06-02 22:23:56 loginWToken: {"token":"ur37uER9X3"}
+2017-06-02 22:23:56 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 22:23:55"}
+2017-06-02 22:23:56 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-02 22:24:10 loginWToken: {"token":"ur37uER9X3"}
+2017-06-02 22:24:10 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 22:24:09"}
+2017-06-02 22:24:10 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-02 22:24:45 User_Type: {"mobile":"3290358217","type":"autostoppista"}
+2017-06-02 22:24:45 User_Destination: {"mobile":"3290358217","Latitude":"45.6423491","Longitude":"9.5859875"}
+2017-06-02 22:24:47 removeUser_Type: {"mobile":"3290358217"}
+2017-06-02 22:25:17 loginWToken: {"token":"ur37uER9X3"}
+2017-06-02 22:25:17 setGPSLocation: {"mobile":"3290358217","lat":"45.642511","lon":"9.5859939","date":"2017-06-02 22:25:16"}
+2017-06-02 22:25:17 getAS: {"mobile":"3290358217","lat":"45.642511","lon":"9.5859939","range":"10"}
+2017-06-02 22:31:49 loginWToken: {"token":"Ir6kYWavwT"}
+2017-06-02 22:31:50 getUnseenContactsCount: {"mobile":"3290358217"}
+2017-06-02 22:31:51 setGPSLocation: {"mobile":"3290358217","lat":"45.644373699999996","lon":"9.5831913","date":"2017-06-02 22:31:51"}
+2017-06-02 22:31:52 User_Destination: {"mobile":"3290358217","Latitude":"45.676441715308535","Longitude":"9.567031860351562"}
+2017-06-02 22:31:52 User_Type: {"mobile":"3290358217","type":"Autostoppista"}
+2017-06-02 22:39:16 loginWToken: {"token":"ur37uER9X3"}
+2017-06-02 22:39:16 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 22:39:15"}
+2017-06-02 22:39:16 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-02 22:39:22 User_Type: {"mobile":"3290358217","type":"autostoppista"}
+2017-06-02 22:39:22 User_Destination: {"mobile":"3290358217","Latitude":"45.6423491","Longitude":"9.5859875"}
+2017-06-02 22:40:16 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 22:40:15"}
+2017-06-02 22:40:17 getAS2: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-02 22:41:16 setGPSLocation: {"mobile":"3290358217","lat":"45.6424158","lon":"9.5857967","date":"2017-06-02 22:41:15"}
+2017-06-02 22:41:17 getAS2: {"mobile":"3290358217","lat":"45.6424158","lon":"9.5857967","range":"10"}
+2017-06-02 22:42:16 setGPSLocation: {"mobile":"3290358217","lat":"45.6423435","lon":"9.585888","date":"2017-06-02 22:42:15"}
+2017-06-02 22:42:17 getAS2: {"mobile":"3290358217","lat":"45.6423435","lon":"9.585888","range":"10"}
+2017-06-02 22:43:07 loginWToken: {"token":"ur37uER9X3"}
+2017-06-02 22:43:07 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 22:43:06"}
+2017-06-02 22:43:07 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-02 22:43:18 User_Type: {"mobile":"3290358217","type":"autostoppista"}
+2017-06-02 22:43:18 User_Destination: {"mobile":"3290358217","Latitude":"45.6423491","Longitude":"9.5859875"}
+2017-06-02 22:43:21 removeUser_Type: {"mobile":"3290358217"}
+2017-06-02 22:43:24 User_Type: {"mobile":"3290358217","type":"autostoppista"}
+2017-06-02 22:43:24 User_Destination: {"mobile":"3290358217","Latitude":"45.6423491","Longitude":"9.5859875"}
+2017-06-02 22:43:27 removeUser_Type: {"mobile":"3290358217"}
+2017-06-02 22:47:48 loginWToken: {"token":"ur37uER9X3"}
+2017-06-02 22:47:49 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 22:47:47"}
+2017-06-02 22:47:49 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-02 22:48:05 User_Type: {"mobile":"3290358217","type":"autostoppista"}
+2017-06-02 22:48:05 User_Destination: {"mobile":"3290358217","Latitude":"45.6423299","Longitude":"9.5859477"}
+2017-06-02 22:48:39 loginWToken: {"token":"ur37uER9X3"}
+2017-06-02 22:48:40 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 22:48:38"}
+2017-06-02 22:48:40 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-02 22:48:48 User_Type: {"mobile":"3290358217","type":"autostoppista"}
+2017-06-02 22:48:48 User_Destination: {"mobile":"3290358217","Latitude":"45.6423491","Longitude":"9.5859875"}
+2017-06-02 22:49:40 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 22:49:38"}
+2017-06-02 22:49:40 getAS2: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-02 22:50:09 loginWToken: {"token":"ur37uER9X3"}
+2017-06-02 22:50:10 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 22:50:08"}
+2017-06-02 22:50:10 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-02 22:50:15 User_Type: {"mobile":"3290358217","type":"autostoppista"}
+2017-06-02 22:50:15 User_Destination: {"mobile":"3290358217","Latitude":"45.6423491","Longitude":"9.5859875"}
+2017-06-02 22:52:19 loginWToken: {"token":"ur37uER9X3"}
+2017-06-02 22:52:20 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 22:52:18"}
+2017-06-02 22:52:20 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-02 22:52:42 User_Type: {"mobile":"3290358217","type":"autostoppista"}
+2017-06-02 22:52:42 User_Destination: {"mobile":"3290358217","Latitude":"45.6423491","Longitude":"9.5859875"}
+2017-06-02 22:52:49 removeUser_Type: {"mobile":"3290358217"}
+2017-06-02 22:53:19 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-02 22:53:18"}
+2017-06-02 22:53:20 getAS2: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-03 15:03:47 loginUser: {"mobile":"3290358217","password":"189bbbb00c5f1fb7fba9ad9285f193d1"}
+2017-06-03 15:03:47 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-03 15:03:42"}
+2017-06-03 15:03:47 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-03 15:03:56 User_Type: {"mobile":"3290358217","type":"autostoppista"}
+2017-06-03 15:03:56 User_Destination: {"mobile":"3290358217","Latitude":"45.6423491","Longitude":"9.5859875"}
+2017-06-03 15:03:58 removeUser_Type: {"mobile":"3290358217"}
+2017-06-03 15:04:47 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-03 15:04:42"}
+2017-06-03 15:05:47 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-03 15:05:42"}
+2017-06-03 15:06:47 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-03 15:06:42"}
+2017-06-03 15:07:47 setGPSLocation: {"mobile":"3290358217","lat":"45.6425118","lon":"9.5859584","date":"2017-06-03 15:07:42"}
+2017-06-03 15:08:47 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-03 15:08:42"}
+2017-06-03 15:09:47 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-03 15:09:42"}
+2017-06-03 15:10:05 loginWToken: {"token":"10gdOWb14B"}
+2017-06-03 15:10:06 setGPSLocation: {"mobile":"3290358217","lat":"45.6423648","lon":"9.5857726","date":"2017-06-03 15:10:01"}
+2017-06-03 15:10:06 getAS: {"mobile":"3290358217","lat":"45.6423648","lon":"9.5857726","range":"10"}
+2017-06-03 15:10:10 User_Type: {"mobile":"3290358217","type":"autostoppista"}
+2017-06-03 15:10:10 User_Destination: {"mobile":"3290358217","Latitude":"45.6423648","Longitude":"9.5857726"}
+2017-06-03 15:17:22 loginWToken: {"token":"10gdOWb14B"}
+2017-06-03 15:17:23 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-03 15:17:18"}
+2017-06-03 15:17:23 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-03 15:17:30 User_Type: {"mobile":"3290358217","type":"autostoppista"}
+2017-06-03 15:17:30 User_Destination: {"mobile":"3290358217","Latitude":"45.6423491","Longitude":"9.5859875"}
+2017-06-03 15:21:37 loginWToken: {"token":"10gdOWb14B"}
+2017-06-03 15:21:37 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-03 15:21:32"}
+2017-06-03 15:21:37 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-03 15:21:42 User_Type: {"mobile":"3290358217","type":"autostoppista"}
+2017-06-03 15:21:42 User_Destination: {"mobile":"3290358217","Latitude":"45.6423491","Longitude":"9.5859875"}
+2017-06-03 15:22:07 loginWToken: {"token":"10gdOWb14B"}
+2017-06-03 15:22:07 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-03 15:22:03"}
+2017-06-03 15:22:07 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-03 15:22:12 User_Type: {"mobile":"3290358217","type":"autostoppista"}
+2017-06-03 15:22:12 User_Destination: {"mobile":"3290358217","Latitude":"45.6423491","Longitude":"9.5859875"}
+2017-06-03 15:22:19 removeUser_Type: {"mobile":"3290358217"}
+2017-06-03 15:23:07 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-03 15:23:03"}
+2017-06-03 15:23:08 getAS2: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-03 15:24:14 loginWToken: {"token":"10gdOWb14B"}
+2017-06-03 15:24:15 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-03 15:24:10"}
+2017-06-03 15:24:15 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-03 15:24:21 User_Type: {"mobile":"3290358217","type":"autostoppista"}
+2017-06-03 15:24:21 User_Destination: {"mobile":"3290358217","Latitude":"45.6423491","Longitude":"9.5859875"}
+2017-06-03 15:24:25 removeUser_Type: {"mobile":"3290358217"}
+2017-06-03 15:24:34 User_Type: {"mobile":"3290358217","type":"autostoppista"}
+2017-06-03 15:24:35 User_Destination: {"mobile":"3290358217","Latitude":"45.6423491","Longitude":"9.5859875"}
+2017-06-03 15:24:37 removeUser_Type: {"mobile":"3290358217"}
+2017-06-03 15:25:14 setGPSLocation: {"mobile":"3290358217","lat":"45.6424152","lon":"9.585953","date":"2017-06-03 15:25:10"}
+2017-06-03 15:26:14 setGPSLocation: {"mobile":"3290358217","lat":"45.6425375","lon":"9.5859165","date":"2017-06-03 15:26:10"}
+2017-06-03 15:27:14 setGPSLocation: {"mobile":"3290358217","lat":"45.6424438","lon":"9.5859351","date":"2017-06-03 15:27:10"}
+2017-06-03 15:28:14 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-03 15:28:10"}
+2017-06-03 15:29:14 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-03 15:29:10"}
+2017-06-03 15:30:14 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-03 15:30:10"}
+2017-06-03 15:31:14 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-03 15:31:10"}
+2017-06-03 15:31:23 loginWToken: {"token":"10gdOWb14B"}
+2017-06-03 15:31:24 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-03 15:31:19"}
+2017-06-03 15:31:24 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-03 15:31:38 User_Type: {"mobile":"3290358217","type":"autostoppista"}
+2017-06-03 15:31:38 User_Destination: {"mobile":"3290358217","Latitude":"45.6424243","Longitude":"9.5859183"}
+2017-06-03 15:31:46 removeUser_Type: {"mobile":"3290358217"}
+2017-06-03 15:33:20 loginWToken: {"token":"10gdOWb14B"}
+2017-06-03 15:33:21 setGPSLocation: {"mobile":"3290358217","lat":"45.6424264","lon":"9.5859211","date":"2017-06-03 15:33:16"}
+2017-06-03 15:33:21 getAS: {"mobile":"3290358217","lat":"45.6424264","lon":"9.5859211","range":"10"}
+2017-06-03 15:33:26 User_Type: {"mobile":"3290358217","type":"autostoppista"}
+2017-06-03 15:33:26 User_Destination: {"mobile":"3290358217","Latitude":"45.6424264","Longitude":"9.5859211"}
+2017-06-03 15:33:30 removeUser_Type: {"mobile":"3290358217"}
+2017-06-03 15:36:07 loginWToken: {"token":"10gdOWb14B"}
+2017-06-03 15:36:08 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-03 15:36:03"}
+2017-06-03 15:36:08 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-03 15:36:14 User_Type: {"mobile":"3290358217","type":"autostoppista"}
+2017-06-03 15:36:14 User_Destination: {"mobile":"3290358217","Latitude":"45.6423491","Longitude":"9.5859875"}
+2017-06-03 15:36:17 removeUser_Type: {"mobile":"3290358217"}
+2017-06-03 15:44:30 loginWToken: {"token":"10gdOWb14B"}
+2017-06-03 15:44:31 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-03 15:44:27"}
+2017-06-03 15:44:31 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-03 15:44:45 User_Type: {"mobile":"3290358217","type":"autostoppista"}
+2017-06-03 15:44:45 User_Destination: {"mobile":"3290358217","Latitude":"45.6423491","Longitude":"9.5859875"}
+2017-06-03 15:44:51 removeUser_Type: {"mobile":"3290358217"}
+2017-06-03 15:50:43 loginWToken: {"token":"10gdOWb14B"}
+2017-06-03 15:50:44 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-03 15:50:39"}
+2017-06-03 15:50:44 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-03 15:52:21 loginWToken: {"token":"10gdOWb14B"}
+2017-06-03 15:52:22 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-03 15:52:17"}
+2017-06-03 15:52:22 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-03 15:52:28 User_Type: {"mobile":"3290358217","type":"autostoppista"}
+2017-06-03 15:52:28 User_Destination: {"mobile":"3290358217","Latitude":"45.6423491","Longitude":"9.5859875"}
+2017-06-03 15:53:04 loginWToken: {"token":"10gdOWb14B"}
+2017-06-03 15:53:05 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-03 15:53:00"}
+2017-06-03 15:53:05 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-03 15:53:10 User_Type: {"mobile":"3290358217","type":"autostoppista"}
+2017-06-03 15:53:10 User_Destination: {"mobile":"3290358217","Latitude":"45.6423491","Longitude":"9.5859875"}
+2017-06-03 15:53:27 removeUser_Type: {"mobile":"3290358217"}
+2017-06-03 16:04:10 loginWToken: {"token":"10gdOWb14B"}
+2017-06-03 16:04:10 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-03 16:04:06"}
+2017-06-03 16:04:10 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-03 16:04:20 User_Type: {"mobile":"3290358217","type":"autostoppista"}
+2017-06-03 16:04:20 User_Destination: {"mobile":"3290358217","Latitude":"45.6423491","Longitude":"9.5859875"}
+2017-06-03 16:04:21 logoutUser: {"mobile":"3290358217","token":"10gdOWb14B"}
+2017-06-03 16:04:36 loginUser: {"mobile":"3290358217","password":"189bbbb00c5f1fb7fba9ad9285f193d1"}
+2017-06-03 16:04:36 setGPSLocation: {"mobile":"3290358217","lat":"45.6426415","lon":"9.5862724","date":"2017-06-03 16:04:32"}
+2017-06-03 16:04:36 getAS: {"mobile":"3290358217","lat":"45.6426415","lon":"9.5862724","range":"10"}
+2017-06-03 16:04:48 User_Type: {"mobile":"3290358217","type":"autostoppista"}
+2017-06-03 16:04:48 User_Destination: {"mobile":"3290358217","Latitude":"45.6426415","Longitude":"9.5862724"}
+2017-06-03 16:04:51 logoutUser: {"mobile":"3290358217","token":"WJTdmjTvOe"}
+2017-06-03 16:05:22 loginUser: {"mobile":"3290358217","password":"189bbbb00c5f1fb7fba9ad9285f193d1"}
+2017-06-03 16:05:22 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-03 16:05:18"}
+2017-06-03 16:05:22 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-03 16:05:27 User_Type: {"mobile":"3290358217","type":"autostoppista"}
+2017-06-03 16:05:27 User_Destination: {"mobile":"3290358217","Latitude":"45.6423491","Longitude":"9.5859875"}
+2017-06-03 16:05:29 removeUser_Type: {"mobile":"3290358217"}
+2017-06-03 16:07:48 loginWToken: {"token":"3IIJ9W9oGW"}
+2017-06-03 16:07:48 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-03 16:07:44"}
+2017-06-03 16:07:48 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-03 16:08:12 loginWToken: {"token":"3IIJ9W9oGW"}
+2017-06-03 16:08:13 setGPSLocation: {"mobile":"3290358217","lat":"45.6423748","lon":"9.5859476","date":"2017-06-03 16:08:08"}
+2017-06-03 16:08:13 getAS: {"mobile":"3290358217","lat":"45.6423748","lon":"9.5859476","range":"10"}
+2017-06-03 16:08:18 User_Type: {"mobile":"3290358217","type":"autostoppista"}
+2017-06-03 16:08:18 User_Destination: {"mobile":"3290358217","Latitude":"45.6423748","Longitude":"9.5859476"}
+2017-06-03 16:08:19 removeUser_Type: {"mobile":"3290358217"}
+2017-06-03 16:08:21 User_Type: {"mobile":"3290358217","type":"autista"}
+2017-06-03 16:08:21 getAS: {"mobile":"3290358217","lat":"45.6423748","lon":"9.5859476","range":"10"}
+2017-06-03 16:08:25 removeUser_Type: {"mobile":"3290358217"}
+2017-06-03 16:08:26 User_Type: {"mobile":"3290358217","type":"autista"}
+2017-06-03 16:08:26 getAS: {"mobile":"3290358217","lat":"45.642413","lon":"9.5859636","range":"10"}
+2017-06-03 16:08:32 User_Type: {"mobile":"3290358217","type":"autostoppista"}
+2017-06-03 16:08:32 User_Destination: {"mobile":"3290358217","Latitude":"45.642413","Longitude":"9.5859636"}
+2017-06-03 16:08:33 removeUser_Type: {"mobile":"3290358217"}
+2017-06-03 16:08:57 loginWToken: {"token":"3IIJ9W9oGW"}
+2017-06-03 16:08:58 setGPSLocation: {"mobile":"3290358217","lat":"45.6424033","lon":"9.5859497","date":"2017-06-03 16:08:53"}
+2017-06-03 16:08:58 getAS: {"mobile":"3290358217","lat":"45.6424033","lon":"9.5859497","range":"10"}
+2017-06-03 16:09:03 User_Type: {"mobile":"3290358217","type":"autostoppista"}
+2017-06-03 16:09:03 User_Destination: {"mobile":"3290358217","Latitude":"45.6424033","Longitude":"9.5859497"}
+2017-06-03 16:09:06 removeUser_Type: {"mobile":"3290358217"}
+2017-06-03 16:10:37 loginWToken: {"token":"3IIJ9W9oGW"}
+2017-06-03 16:10:38 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-03 16:10:34"}
+2017-06-03 16:10:38 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-03 16:10:41 logoutUser: {"mobile":"3290358217","token":"3IIJ9W9oGW"}
+2017-06-03 16:10:47 loginUser: {"mobile":"3290358217","password":"189bbbb00c5f1fb7fba9ad9285f193d1"}
+2017-06-03 16:10:48 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-03 16:10:43"}
+2017-06-03 16:10:48 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-03 16:13:10 loginWToken: {"token":"8G8tetEug4"}
+2017-06-03 16:13:10 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-03 16:13:06"}
+2017-06-03 16:13:10 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-03 16:13:12 logoutUser: {"mobile":"3290358217","token":"8G8tetEug4"}
+2017-06-03 16:13:18 loginUser: {"mobile":"3290358217","password":"189bbbb00c5f1fb7fba9ad9285f193d1"}
+2017-06-03 16:13:18 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-03 16:13:13"}
+2017-06-03 16:13:18 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-03 16:13:19 logoutUser: {"mobile":"3290358217","token":"G4Qyhkm8oi"}
+2017-06-03 16:13:40 registerUser: {"name":"Giorgio","surname":"Prova","email":"abc@gmajl.com","mobile":"633386891","password":"e32ae4e0d9158c00684ec73ce7803ab1"}
+2017-06-03 16:14:05 loginUser: {"mobile":"633386891","password":"e32ae4e0d9158c00684ec73ce7803ab1"}
+2017-06-03 16:14:06 setGPSLocation: {"mobile":"633386891","lat":"45.6423491","lon":"9.5859875","date":"2017-06-03 16:14:01"}
+2017-06-03 16:14:06 getAS: {"mobile":"633386891","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-03 16:14:07 logoutUser: {"mobile":"633386891","token":"aSdMefs8JX"}
+2017-06-03 16:14:12 loginUser: {"mobile":"3290358217","password":"189bbbb00c5f1fb7fba9ad9285f193d1"}
+2017-06-03 16:14:12 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-03 16:14:07"}
+2017-06-03 16:14:12 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-03 16:15:20 loginWToken: {"token":"XI475lNr9f"}
+2017-06-03 16:15:21 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-03 16:15:16"}
+2017-06-03 16:15:21 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-03 16:15:25 User_Type: {"mobile":"3290358217","type":"autostoppista"}
+2017-06-03 16:15:25 User_Destination: {"mobile":"3290358217","Latitude":"45.6423491","Longitude":"9.5859875"}
+2017-06-03 16:15:29 removeUser_Type: {"mobile":"3290358217"}
+2017-06-03 16:20:07 loginWToken: {"token":"XI475lNr9f"}
+2017-06-03 16:20:08 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-03 16:20:03"}
+2017-06-03 16:20:08 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-03 16:20:13 User_Type: {"mobile":"3290358217","type":"autostoppista"}
+2017-06-03 16:20:13 User_Destination: {"mobile":"3290358217","Latitude":"45.6423491","Longitude":"9.5859875"}
+2017-06-03 16:20:18 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 10:34:57 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 10:34:58 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 10:34:51"}
+2017-06-04 10:34:58 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 10:35:05 User_Type: {"mobile":"3290358217","type":"autostoppista"}
+2017-06-04 10:35:05 User_Destination: {"mobile":"3290358217","Latitude":"45.6423491","Longitude":"9.5859875"}
+2017-06-04 10:36:39 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 10:36:39 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 10:36:33"}
+2017-06-04 10:36:39 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 10:36:52 User_Type: {"mobile":"3290358217","type":"autostoppista"}
+2017-06-04 10:36:52 User_Destination: {"mobile":"3290358217","Latitude":"45.642447","Longitude":"9.5861673"}
+2017-06-04 10:36:57 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 10:37:39 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 10:37:33"}
+2017-06-04 10:37:40 getAS2: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 10:38:39 setGPSLocation: {"mobile":"3290358217","lat":"45.6423448","lon":"9.5858895","date":"2017-06-04 10:38:33"}
+2017-06-04 10:38:40 getAS2: {"mobile":"3290358217","lat":"45.6423448","lon":"9.5858895","range":"10"}
+2017-06-04 10:39:03 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 10:39:03 getActiveUsers: {}
+2017-06-04 10:39:39 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 10:39:33"}
+2017-06-04 10:39:39 getActiveUsers: {}
+2017-06-04 10:39:40 getAS2: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 10:40:39 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 10:40:33"}
+2017-06-04 10:40:39 getActiveUsers: {}
+2017-06-04 10:40:40 getAS2: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 10:41:39 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 10:41:33"}
+2017-06-04 10:41:39 getActiveUsers: {}
+2017-06-04 10:41:40 getAS2: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 10:42:39 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 10:42:33"}
+2017-06-04 10:42:39 getActiveUsers: {}
+2017-06-04 10:42:40 getAS2: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 10:43:39 setGPSLocation: {"mobile":"3290358217","lat":"45.6423515","lon":"9.5858845","date":"2017-06-04 10:43:33"}
+2017-06-04 10:43:39 getActiveUsers: {}
+2017-06-04 10:43:40 getAS2: {"mobile":"3290358217","lat":"45.6423515","lon":"9.5858845","range":"10"}
+2017-06-04 10:44:39 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 10:44:33"}
+2017-06-04 10:44:39 getActiveUsers: {}
+2017-06-04 10:44:40 getAS2: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 10:45:39 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 10:45:33"}
+2017-06-04 10:45:39 getActiveUsers: {}
+2017-06-04 10:45:40 getAS2: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 10:46:39 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 10:46:33"}
+2017-06-04 10:46:39 getActiveUsers: {}
+2017-06-04 10:46:40 getAS2: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 10:47:39 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 10:47:33"}
+2017-06-04 10:47:39 getActiveUsers: {}
+2017-06-04 10:47:40 getAS2: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 10:48:29 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 10:48:29 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 10:48:23"}
+2017-06-04 10:48:29 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 10:48:35 User_Type: {"mobile":"3290358217","type":"autostoppista"}
+2017-06-04 10:48:35 User_Destination: {"mobile":"3290358217","Latitude":"45.6423491","Longitude":"9.5859875"}
+2017-06-04 10:48:44 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 10:49:58 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 10:49:58 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 10:49:52"}
+2017-06-04 10:49:58 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 10:50:00 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 10:50:00 getActiveUsers: {}
+2017-06-04 10:50:15 User_Type: {"mobile":"3290358217","type":"autista"}
+2017-06-04 10:50:15 getAS: {"mobile":"3290358217","lat":"45.6423457","lon":"9.5858643","range":"10"}
+2017-06-04 10:50:18 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 10:58:18 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 10:58:18 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 10:58:12"}
+2017-06-04 10:58:18 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 10:58:29 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 10:58:30 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 10:58:32 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 10:58:37 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 10:58:38 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 10:58:48 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 10:58:49 setGPSLocation: {"mobile":"3290358217","lat":"45.6422649","lon":"9.5856827","date":"2017-06-04 10:58:42"}
+2017-06-04 10:59:00 getAS: {"mobile":"3290358217","lat":"45.6422649","lon":"9.5856827","range":"10"}
+2017-06-04 10:59:54 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 10:59:54 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 10:59:48"}
+2017-06-04 10:59:54 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 11:00:08 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 11:00:43 User_Type: {"mobile":"3290358217","type":"autostoppista"}
+2017-06-04 11:00:43 User_Destination: {"mobile":"3290358217","Latitude":"45.641988","Longitude":"9.5851445"}
+2017-06-04 11:00:54 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:00:48"}
+2017-06-04 11:01:12 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 11:01:20 User_Type: {"mobile":"3290358217","type":"autostoppista"}
+2017-06-04 11:01:20 User_Destination: {"mobile":"3290358217","Latitude":"45.6425611","Longitude":"9.5859559"}
+2017-06-04 11:01:23 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 11:01:24 User_Type: {"mobile":"3290358217","type":"autista"}
+2017-06-04 11:01:24 getAS: {"mobile":"3290358217","lat":"45.6425611","lon":"9.5859559","range":"10"}
+2017-06-04 11:01:54 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:01:48"}
+2017-06-04 11:01:55 loginWToken: {"token":"QgCqXacYkY"}
+2017-06-04 11:02:15 loginUser: {"mobile":"3355761144","password":"189bbbb00c5f1fb7fba9ad9285f193d1"}
+2017-06-04 11:02:16 getUnseenContactsCount: {"mobile":"3355761144"}
+2017-06-04 11:02:17 getUnseenContactsCount: {"mobile":"3355761144"}
+2017-06-04 11:02:24 setGPSLocation: {"mobile":"3355761144","lat":"45.6425871","lon":"9.5862646","date":"2017-06-04 11:02:24"}
+2017-06-04 11:02:26 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:02:27 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:02:28 User_Type: {"mobile":"3355761144","type":"Autostoppista"}
+2017-06-04 11:02:28 User_Destination: {"mobile":"3355761144","Latitude":"45.65040837112951","Longitude":"9.598617553710938"}
+2017-06-04 11:02:32 User_Type: {"mobile":"3290358217","type":"autista"}
+2017-06-04 11:02:32 getAS: {"mobile":"3290358217","lat":"45.6425871","lon":"9.5862646","range":"10"}
+2017-06-04 11:02:37 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:02:37 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:02:41 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 11:02:44 User_Type: {"mobile":"3290358217","type":"autista"}
+2017-06-04 11:02:44 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 11:02:47 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:02:47 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:02:54 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:02:48"}
+2017-06-04 11:02:57 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:03:06 getAS: {"mobile":"3290358217","lat":"45.6419703","lon":"9.5854137","range":"10"}
+2017-06-04 11:03:07 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:03:07 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:03:17 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:03:17 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:03:27 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:03:27 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:03:35 User_Type: {"mobile":"3290358217","type":"autista"}
+2017-06-04 11:03:37 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:03:37 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:03:46 getAS: {"mobile":"3290358217","lat":"45.6419703","lon":"9.5854137","range":"10"}
+2017-06-04 11:03:47 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:03:47 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:03:57 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:03:57 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:04:07 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:04:07 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:04:17 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:04:17 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:04:27 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:04:27 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:04:37 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:04:37 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:04:47 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:04:47 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:04:57 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:05:07 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:05:07 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:05:17 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:05:17 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:05:27 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:05:27 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:05:30 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:05:23"}
+2017-06-04 11:05:37 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:05:37 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:05:47 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:05:47 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:05:57 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:05:57 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:06:07 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:06:07 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:06:17 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:06:17 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:06:19 User_Type: {"mobile":"3290358217","type":"autista"}
+2017-06-04 11:06:25 getAS: {"mobile":"3290358217","lat":"45.6422696","lon":"9.5862613","range":"10"}
+2017-06-04 11:06:30 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:06:32 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:06:40 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:06:41 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:06:46 setGPSLocation: {"mobile":"3290358217","lat":"45.6422696","lon":"9.5862613","date":"2017-06-04 11:06:40"}
+2017-06-04 11:06:50 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:06:52 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:06:59 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:07:00 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:07:02 User_Type: {"mobile":"3290358217","type":"autista"}
+2017-06-04 11:07:05 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 11:07:07 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:07:08 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:07:19 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:07:20 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:07:27 User_Type: {"mobile":"3290358217","type":"autista"}
+2017-06-04 11:07:29 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 11:07:29 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:07:30 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:08:00 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:07:54"}
+2017-06-04 11:09:00 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:08:54"}
+2017-06-04 11:09:34 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 11:09:35 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:09:28"}
+2017-06-04 11:09:35 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 11:09:38 User_Type: {"mobile":"3290358217","type":"autista"}
+2017-06-04 11:09:38 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 11:09:56 User_Type: {"mobile":"3290358217","type":"autista"}
+2017-06-04 11:09:59 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 11:10:27 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 11:10:30 User_Type: {"mobile":"3290358217","type":"autista"}
+2017-06-04 11:10:35 getAS: {"mobile":"3290358217","lat":"45.6421514","lon":"9.5853823","range":"10"}
+2017-06-04 11:10:35 setGPSLocation: {"mobile":"3290358217","lat":"45.6421514","lon":"9.5853823","date":"2017-06-04 11:10:28"}
+2017-06-04 11:10:45 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 11:10:46 setGPSLocation: {"mobile":"3290358217","lat":"45.642511","lon":"9.5859939","date":"2017-06-04 11:10:40"}
+2017-06-04 11:10:53 getAS: {"mobile":"3290358217","lat":"45.642511","lon":"9.5859939","range":"10"}
+2017-06-04 11:10:59 User_Type: {"mobile":"3290358217","type":"autista"}
+2017-06-04 11:11:01 getAS: {"mobile":"3290358217","lat":"45.642511","lon":"9.5859939","range":"10"}
+2017-06-04 11:11:25 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 11:11:26 setGPSLocation: {"mobile":"3290358217","lat":"45.6421683","lon":"9.5855358","date":"2017-06-04 11:11:19"}
+2017-06-04 11:11:26 getAS: {"mobile":"3290358217","lat":"45.6421683","lon":"9.5855358","range":"10"}
+2017-06-04 11:11:27 User_Type: {"mobile":"3290358217","type":"autista"}
+2017-06-04 11:11:27 getAS: {"mobile":"3290358217","lat":"45.6421683","lon":"9.5855358","range":"10"}
+2017-06-04 11:11:35 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 11:11:41 User_Type: {"mobile":"3290358217","type":"autista"}
+2017-06-04 11:11:41 getAS: {"mobile":"3290358217","lat":"45.6426214","lon":"9.5868497","range":"10"}
+2017-06-04 11:11:52 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 11:12:25 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:12:19"}
+2017-06-04 11:13:25 setGPSLocation: {"mobile":"3290358217","lat":"45.6424117","lon":"9.5857276","date":"2017-06-04 11:13:19"}
+2017-06-04 11:13:40 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 11:13:40 setGPSLocation: {"mobile":"3290358217","lat":"45.6423606","lon":"9.5856867","date":"2017-06-04 11:13:33"}
+2017-06-04 11:13:40 getAS: {"mobile":"3290358217","lat":"45.6423606","lon":"9.5856867","range":"10"}
+2017-06-04 11:13:42 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 11:13:42 getActiveUsers: {}
+2017-06-04 11:14:08 User_Type: {"mobile":"3290358217","type":"autista"}
+2017-06-04 11:14:08 getAS: {"mobile":"3290358217","lat":"45.6424879","lon":"9.586001","range":"10"}
+2017-06-04 11:14:09 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 11:14:39 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 11:14:39 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:14:33"}
+2017-06-04 11:14:39 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 11:14:41 User_Type: {"mobile":"3290358217","type":"autista"}
+2017-06-04 11:14:41 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 11:15:39 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:15:33"}
+2017-06-04 11:16:39 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:16:33"}
+2017-06-04 11:17:03 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 11:17:06 setGPSLocation: {"mobile":"3290358217","lat":"45.6424049","lon":"9.5859049","date":"2017-06-04 11:16:59"}
+2017-06-04 11:17:06 getAS: {"mobile":"3290358217","lat":"45.6424049","lon":"9.5859049","range":"10"}
+2017-06-04 11:17:10 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 11:17:47 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 11:17:47 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:17:41"}
+2017-06-04 11:17:47 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 11:17:49 User_Type: {"mobile":"3290358217","type":"autista"}
+2017-06-04 11:17:49 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 11:18:33 User_Type: {"mobile":"3290358217","type":"autostoppista"}
+2017-06-04 11:18:33 User_Destination: {"mobile":"3290358217","Latitude":"45.6423993","Longitude":"9.5858775"}
+2017-06-04 11:18:34 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 11:18:58 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 11:18:58 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:18:52"}
+2017-06-04 11:18:58 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 11:19:02 User_Type: {"mobile":"3290358217","type":"autostoppista"}
+2017-06-04 11:19:02 User_Destination: {"mobile":"3290358217","Latitude":"45.6423491","Longitude":"9.5859875"}
+2017-06-04 11:19:04 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 11:19:58 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:19:51"}
+2017-06-04 11:20:58 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:20:51"}
+2017-06-04 11:21:58 setGPSLocation: {"mobile":"3290358217","lat":"45.64245","lon":"9.5856758","date":"2017-06-04 11:21:51"}
+2017-06-04 11:22:01 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 11:22:02 setGPSLocation: {"mobile":"3290358217","lat":"45.64245","lon":"9.5856758","date":"2017-06-04 11:21:55"}
+2017-06-04 11:22:02 getAS: {"mobile":"3290358217","lat":"45.64245","lon":"9.5856758","range":"10"}
+2017-06-04 11:22:04 User_Type: {"mobile":"3290358217","type":"autista"}
+2017-06-04 11:22:04 getAS: {"mobile":"3290358217","lat":"45.64245","lon":"9.5856758","range":"10"}
+2017-06-04 11:22:18 User_Type: {"mobile":"3290358217","type":"autostoppista"}
+2017-06-04 11:22:18 User_Destination: {"mobile":"3290358217","Latitude":"45.6421851","Longitude":"9.5857646"}
+2017-06-04 11:22:20 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 11:22:22 User_Type: {"mobile":"3290358217","type":"autista"}
+2017-06-04 11:22:23 getAS: {"mobile":"3290358217","lat":"45.6421851","lon":"9.5857646","range":"10"}
+2017-06-04 11:22:25 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 11:22:25 getActiveUsers: {}
+2017-06-04 11:23:06 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:23:06 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:23:06 removeUser_Type: {"mobile":"3355761144"}
+2017-06-04 11:23:06 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:23:07 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:23:08 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 11:23:08 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:23:02"}
+2017-06-04 11:23:08 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 11:23:09 User_Type: {"mobile":"3290358217","type":"autista"}
+2017-06-04 11:23:09 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 11:23:17 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:23:17 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:23:30 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:23:31 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:23:39 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:23:40 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:23:49 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:23:50 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:23:59 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:24:01 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:24:07 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:24:07 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:24:08 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 11:24:09 setGPSLocation: {"mobile":"3290358217","lat":"45.6423411","lon":"9.5857133","date":"2017-06-04 11:24:02"}
+2017-06-04 11:24:09 getAS: {"mobile":"3290358217","lat":"45.6423411","lon":"9.5857133","range":"10"}
+2017-06-04 11:24:11 User_Type: {"mobile":"3290358217","type":"autista"}
+2017-06-04 11:24:11 getAS: {"mobile":"3290358217","lat":"45.6423411","lon":"9.5857133","range":"10"}
+2017-06-04 11:24:17 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:24:17 User_Type: {"mobile":"3290358217","type":"autista"}
+2017-06-04 11:24:17 getAS: {"mobile":"3290358217","lat":"45.6423411","lon":"9.5857133","range":"10"}
+2017-06-04 11:24:26 User_Type: {"mobile":"3290358217","type":"autista"}
+2017-06-04 11:24:26 getAS: {"mobile":"3290358217","lat":"45.642413","lon":"9.5859658","range":"10"}
+2017-06-04 11:24:27 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:24:27 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:24:28 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 11:24:38 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:24:38 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:24:46 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 11:24:46 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:24:40"}
+2017-06-04 11:24:46 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 11:24:47 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:24:47 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:24:57 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:24:58 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:25:10 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:25:11 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:25:19 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:25:20 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:25:29 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:25:30 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:25:39 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:25:40 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:25:46 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:25:39"}
+2017-06-04 11:25:49 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:25:51 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:25:59 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:26:00 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:26:09 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:26:10 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:26:20 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:26:21 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:26:29 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:26:30 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:26:39 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:26:40 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:26:46 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:26:39"}
+2017-06-04 11:26:48 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:26:50 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:26:59 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:27:00 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:27:09 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:27:10 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:27:20 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:27:21 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:27:29 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:27:30 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:27:39 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:27:40 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:27:46 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:27:39"}
+2017-06-04 11:27:49 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:27:50 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:27:59 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:28:00 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:28:46 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:28:39"}
+2017-06-04 11:29:03 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:29:03 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:29:04 setGPSLocation: {"mobile":"3355761144","lat":"45.6423447","lon":"9.5858547","date":"2017-06-04 11:29:04"}
+2017-06-04 11:29:06 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:29:07 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:29:11 countRides: {"mobile":"3355761144"}
+2017-06-04 11:29:11 countContacts: {"mobile":"3355761144"}
+2017-06-04 11:29:11 getRating: {"mobile":"3355761144"}
+2017-06-04 11:29:16 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:29:17 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:29:24 setGPSLocation: {"mobile":"3355761144","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:29:24"}
+2017-06-04 11:29:26 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:29:27 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:29:36 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:29:37 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:29:46 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:29:39"}
+2017-06-04 11:29:46 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:29:47 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:29:56 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:29:57 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:30:06 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:30:07 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:30:16 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:30:17 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:30:24 setGPSLocation: {"mobile":"3355761144","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:30:24"}
+2017-06-04 11:30:26 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:30:27 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:30:36 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:30:37 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:30:46 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:30:39"}
+2017-06-04 11:30:46 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:30:47 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:30:56 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:30:57 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:31:06 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:31:07 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:31:17 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:31:17 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:31:28 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:31:29 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:31:39 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:31:40 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:31:46 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:31:39"}
+2017-06-04 11:31:49 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:31:50 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:31:56 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:31:57 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:32:06 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:32:07 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:32:16 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:32:17 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:32:24 setGPSLocation: {"mobile":"3355761144","lat":"45.6423488","lon":"9.5858838","date":"2017-06-04 11:32:24"}
+2017-06-04 11:32:26 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:32:27 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:32:36 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:32:37 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:32:46 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:32:40"}
+2017-06-04 11:32:46 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:32:47 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:32:57 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:33:09 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:33:10 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:33:19 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:33:21 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:33:29 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:33:31 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:33:39 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:33:40 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:33:46 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:33:40"}
+2017-06-04 11:33:50 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:33:51 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:33:59 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:34:01 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:34:10 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:34:12 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:34:19 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:34:19 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:34:24 setGPSLocation: {"mobile":"3355761144","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:34:24"}
+2017-06-04 11:34:26 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:34:27 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:34:36 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:34:37 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:34:46 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:34:40"}
+2017-06-04 11:34:46 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:34:47 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:34:56 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:34:57 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:35:06 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:35:07 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:35:17 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:35:17 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:35:30 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:35:30 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:35:37 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:35:38 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:35:46 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:35:40"}
+2017-06-04 11:35:49 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:35:50 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:35:57 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:35:59 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:36:09 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:36:10 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:36:18 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:36:18 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:36:21 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 11:36:21 setGPSLocation: {"mobile":"3290358217","lat":"45.6423497","lon":"9.5858974","date":"2017-06-04 11:36:15"}
+2017-06-04 11:36:21 getAS: {"mobile":"3290358217","lat":"45.6423497","lon":"9.5858974","range":"10"}
+2017-06-04 11:36:27 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:36:27 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:36:39 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:36:40 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:36:50 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:36:51 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:36:59 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:37:00 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:37:10 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:37:11 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:37:19 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:37:21 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:37:14"}
+2017-06-04 11:37:21 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:37:29 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:37:29 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:37:39 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:37:40 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:37:50 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:37:51 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:37:57 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:37:58 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:38:09 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:38:10 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:38:17 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:38:18 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:38:21 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:38:14"}
+2017-06-04 11:38:29 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:38:30 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:38:39 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:38:40 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:38:49 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:38:50 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:38:59 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:38:59 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:39:10 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:39:13 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:39:20 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:39:21 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:39:21 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:39:15"}
+2017-06-04 11:39:30 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:39:31 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:39:39 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:39:40 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:39:46 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 11:39:47 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:39:47 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:39:49 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:39:42"}
+2017-06-04 11:39:49 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 11:39:53 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 11:39:53 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:39:47"}
+2017-06-04 11:39:53 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 11:39:57 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:39:57 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:40:07 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:40:07 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:40:16 User_Type: {"mobile":"3290358217","type":"autista"}
+2017-06-04 11:40:16 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 11:40:19 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:40:19 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 11:40:19 getActiveUsers: {}
+2017-06-04 11:40:20 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:40:27 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:40:27 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:40:37 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 11:40:37 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:40:37 getActiveUsers: {}
+2017-06-04 11:40:38 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:40:47 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:40:48 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:40:53 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:40:47"}
+2017-06-04 11:40:57 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:40:57 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:41:09 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:41:10 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:41:19 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:41:20 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:41:29 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:41:30 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:41:39 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:41:40 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:41:49 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:41:50 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:41:53 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:41:47"}
+2017-06-04 11:41:57 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:41:58 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:42:10 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:42:11 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:42:18 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:42:19 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:42:21 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 11:42:22 setGPSLocation: {"mobile":"3290358217","lat":"45.6423625","lon":"9.5859126","date":"2017-06-04 11:42:15"}
+2017-06-04 11:42:22 getAS: {"mobile":"3290358217","lat":"45.6423625","lon":"9.5859126","range":"10"}
+2017-06-04 11:42:27 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:42:28 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:42:39 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:42:40 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:42:45 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 11:42:46 setGPSLocation: {"mobile":"3290358217","lat":"45.6423676","lon":"9.5859197","date":"2017-06-04 11:42:39"}
+2017-06-04 11:42:46 getAS: {"mobile":"3290358217","lat":"45.6423676","lon":"9.5859197","range":"10"}
+2017-06-04 11:42:47 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:42:47 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:42:57 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:42:57 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:43:07 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:43:08 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:43:10 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 11:43:10 setGPSLocation: {"mobile":"3290358217","lat":"45.6423684","lon":"9.5859224","date":"2017-06-04 11:43:04"}
+2017-06-04 11:43:10 getAS: {"mobile":"3290358217","lat":"45.6423684","lon":"9.5859224","range":"10"}
+2017-06-04 11:43:17 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:43:27 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:43:27 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:43:34 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 11:43:35 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:43:28"}
+2017-06-04 11:43:35 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 11:43:37 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:43:37 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:43:47 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:43:47 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:43:57 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:43:57 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:44:07 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:44:07 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:44:20 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:44:21 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:44:29 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:44:30 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:44:35 setGPSLocation: {"mobile":"3290358217","lat":"45.6427085","lon":"9.5798518","date":"2017-06-04 11:44:28"}
+2017-06-04 11:44:39 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:44:40 checkContacts: {"mobile":"3355761144"}
+2017-06-04 11:45:35 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:45:28"}
+2017-06-04 11:46:35 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:46:28"}
+2017-06-04 11:47:35 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:47:28"}
+2017-06-04 11:47:43 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 11:47:44 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:47:37"}
+2017-06-04 11:47:44 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 11:48:38 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 11:48:39 setGPSLocation: {"mobile":"3290358217","lat":"45.6425775","lon":"9.585675","date":"2017-06-04 11:48:32"}
+2017-06-04 11:48:39 getAS: {"mobile":"3290358217","lat":"45.6425775","lon":"9.585675","range":"10"}
+2017-06-04 11:49:38 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:49:32"}
+2017-06-04 11:49:58 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 11:49:58 getActiveUsers: {}
+2017-06-04 11:50:38 setGPSLocation: {"mobile":"3290358217","lat":"45.6423745","lon":"9.585918","date":"2017-06-04 11:50:32"}
+2017-06-04 11:51:12 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 11:51:13 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:51:06"}
+2017-06-04 11:51:13 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 11:52:12 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:52:06"}
+2017-06-04 11:52:31 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 11:52:31 setGPSLocation: {"mobile":"3290358217","lat":"45.6423862","lon":"9.585937","date":"2017-06-04 11:52:25"}
+2017-06-04 11:52:31 getAS: {"mobile":"3290358217","lat":"45.6423862","lon":"9.585937","range":"10"}
+2017-06-04 11:52:51 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 11:52:51 setGPSLocation: {"mobile":"3290358217","lat":"45.6423866","lon":"9.5859374","date":"2017-06-04 11:52:45"}
+2017-06-04 11:52:51 getAS: {"mobile":"3290358217","lat":"45.6423866","lon":"9.5859374","range":"10"}
+2017-06-04 11:53:24 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 11:53:24 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:53:17"}
+2017-06-04 11:53:24 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 11:54:24 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:54:17"}
+2017-06-04 11:55:24 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:55:17"}
+2017-06-04 11:55:50 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 11:55:51 setGPSLocation: {"mobile":"3290358217","lat":"45.6423797","lon":"9.5859314","date":"2017-06-04 11:55:44"}
+2017-06-04 11:55:51 getAS: {"mobile":"3290358217","lat":"45.6423797","lon":"9.5859314","range":"10"}
+2017-06-04 11:56:50 setGPSLocation: {"mobile":"3290358217","lat":"45.6423797","lon":"9.5859314","date":"2017-06-04 11:56:44"}
+2017-06-04 11:57:19 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 11:57:20 setGPSLocation: {"mobile":"3290358217","lat":"45.6423829","lon":"9.5859308","date":"2017-06-04 11:57:13"}
+2017-06-04 11:57:20 getAS: {"mobile":"3290358217","lat":"45.6423829","lon":"9.5859308","range":"10"}
+2017-06-04 11:57:38 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 11:57:39 setGPSLocation: {"mobile":"3290358217","lat":"45.6423834","lon":"9.5859316","date":"2017-06-04 11:57:32"}
+2017-06-04 11:57:39 getAS: {"mobile":"3290358217","lat":"45.6423834","lon":"9.5859316","range":"10"}
+2017-06-04 11:58:39 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 11:58:40 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:58:33"}
+2017-06-04 11:58:40 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 11:58:58 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 11:58:58 setGPSLocation: {"mobile":"3290358217","lat":"45.6423814","lon":"9.5859304","date":"2017-06-04 11:58:52"}
+2017-06-04 11:58:58 getAS: {"mobile":"3290358217","lat":"45.6423814","lon":"9.5859304","range":"10"}
+2017-06-04 11:59:50 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 11:59:51 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 11:59:44"}
+2017-06-04 11:59:51 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 12:00:50 setGPSLocation: {"mobile":"3290358217","lat":"45.6425775","lon":"9.585675","date":"2017-06-04 12:00:44"}
+2017-06-04 12:01:50 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 12:01:44"}
+2017-06-04 12:02:50 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 12:02:44"}
+2017-06-04 12:03:50 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 12:04:35 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 12:04:36 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 12:04:29"}
+2017-06-04 12:04:36 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 12:04:50 loginWToken: {"token":"Ir6kYWavwT"}
+2017-06-04 12:05:29 loginUser: {"mobile":"3290358217","password":"189bbbb00c5f1fb7fba9ad9285f193d1"}
+2017-06-04 12:05:30 getUnseenContactsCount: {"mobile":"3290358217"}
+2017-06-04 12:05:30 getUnseenContactsCount: {"mobile":"3290358217"}
+2017-06-04 12:05:33 getContacts: {"mobile":"3290358217"}
+2017-06-04 12:05:34 countContacts: {"mobile":"3290358217"}
+2017-06-04 12:05:34 countRides: {"mobile":"3290358217"}
+2017-06-04 12:05:34 getRating: {"mobile":"3290358217"}
+2017-06-04 12:05:35 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 12:05:29"}
+2017-06-04 12:05:40 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:05:40 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:05:50 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:05:50 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:05:59 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 12:05:59 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 12:05:53"}
+2017-06-04 12:05:59 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 12:06:00 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:06:00 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:06:10 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:06:10 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:06:20 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:06:20 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:06:25 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 12:06:30 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:06:30 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:06:40 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:06:40 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:06:41 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 12:06:34"}
+2017-06-04 12:06:41 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 12:06:50 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:06:50 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:07:00 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:07:00 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:07:05 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 12:07:10 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:07:10 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:07:20 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:07:20 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:07:30 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:07:30 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:07:36 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 12:07:29"}
+2017-06-04 12:07:36 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 12:07:40 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:07:40 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:07:50 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:07:50 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:08:00 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:08:00 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:08:10 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:08:10 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:08:20 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:08:20 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:08:30 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:08:30 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:26:47 loginWToken: {"token":"CyevACAfZI"}
+2017-06-04 12:26:47 getUnseenContactsCount: {"mobile":"3290358217"}
+2017-06-04 12:26:57 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:27:02 getRating: {"mobile":"3290358217"}
+2017-06-04 12:27:02 countRides: {"mobile":"3290358217"}
+2017-06-04 12:27:02 countContacts: {"mobile":"3290358217"}
+2017-06-04 12:27:07 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:27:17 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:27:27 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:27:37 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:27:47 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:27:57 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:28:06 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 12:28:07 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:28:17 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:28:27 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:28:37 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:28:39 setGPSLocation: {"mobile":"3290358217","lat":"45.6423455","lon":"9.5858917","date":"2017-06-04 12:28:32"}
+2017-06-04 12:28:39 getAS: {"mobile":"3290358217","lat":"45.6423455","lon":"9.5858917","range":"10"}
+2017-06-04 12:28:47 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:28:57 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:29:07 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:29:17 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:29:27 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:29:32 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 12:29:37 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:29:47 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:29:57 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:30:07 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:30:17 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:30:23 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 12:30:27 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:30:37 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:30:47 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:30:57 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:31:07 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:31:17 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:31:27 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:31:33 loginWToken: {"token":"CyevACAfZI"}
+2017-06-04 12:31:44 loginWToken: {"token":"CyevACAfZI"}
+2017-06-04 12:31:45 getUnseenContactsCount: {"mobile":"3290358217"}
+2017-06-04 12:31:47 getContacts: {"mobile":"3290358217"}
+2017-06-04 12:31:48 countContacts: {"mobile":"3290358217"}
+2017-06-04 12:31:48 getRating: {"mobile":"3290358217"}
+2017-06-04 12:31:48 countRides: {"mobile":"3290358217"}
+2017-06-04 12:31:55 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:32:05 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:32:15 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:32:25 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:32:35 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:32:38 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 12:32:45 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:32:49 loginUser: {"mobile":"3290358217","password":"189bbbb00c5f1fb7fba9ad9285f193d1"}
+2017-06-04 12:32:55 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:33:05 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 12:33:05 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:33:15 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:33:25 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:33:29 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 12:33:35 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:33:45 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:33:55 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:34:05 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:34:15 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:34:17 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 12:34:25 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:34:35 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:34:45 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:34:55 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:34:59 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 12:35:05 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:35:15 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:35:25 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:35:35 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:35:45 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:35:55 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:36:05 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:36:15 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:36:25 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:36:35 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:36:45 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:36:55 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:37:05 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:37:15 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:37:25 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:37:35 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 12:37:35 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:37:36 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 12:37:29"}
+2017-06-04 12:37:36 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 12:37:45 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:37:55 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:38:05 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:38:12 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 12:38:12 setGPSLocation: {"mobile":"3290358217","lat":"45.6423767","lon":"9.5858926","date":"2017-06-04 12:38:06"}
+2017-06-04 12:38:12 getAS: {"mobile":"3290358217","lat":"45.6423767","lon":"9.5858926","range":"10"}
+2017-06-04 12:38:15 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:38:25 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:38:35 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:38:35 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 12:38:36 setGPSLocation: {"mobile":"3290358217","lat":"45.6423909","lon":"9.5858593","date":"2017-06-04 12:38:29"}
+2017-06-04 12:38:36 getAS: {"mobile":"3290358217","lat":"45.6423909","lon":"9.5858593","range":"10"}
+2017-06-04 12:38:45 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:38:53 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 12:38:53 setGPSLocation: {"mobile":"3290358217","lat":"45.6423888","lon":"9.5858586","date":"2017-06-04 12:38:47"}
+2017-06-04 12:38:53 getAS: {"mobile":"3290358217","lat":"45.6423888","lon":"9.5858586","range":"10"}
+2017-06-04 12:38:55 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:39:05 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:39:13 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 12:39:14 setGPSLocation: {"mobile":"3290358217","lat":"45.6423886","lon":"9.585861","date":"2017-06-04 12:39:07"}
+2017-06-04 12:39:14 getAS: {"mobile":"3290358217","lat":"45.6423886","lon":"9.585861","range":"10"}
+2017-06-04 12:39:15 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:39:25 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:39:34 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 12:39:34 setGPSLocation: {"mobile":"3290358217","lat":"45.6423884","lon":"9.5858615","date":"2017-06-04 12:39:27"}
+2017-06-04 12:39:34 getAS: {"mobile":"3290358217","lat":"45.6423884","lon":"9.5858615","range":"10"}
+2017-06-04 12:39:35 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:39:45 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:39:55 User_Type: {"mobile":"3290358217","type":"autista"}
+2017-06-04 12:39:55 getAS: {"mobile":"3290358217","lat":"45.6423884","lon":"9.5858615","range":"10"}
+2017-06-04 12:39:55 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:39:57 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 12:39:57 getActiveUsers: {}
+2017-06-04 12:40:05 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:40:15 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:40:25 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:40:34 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 12:40:35 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:40:35 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 12:40:29"}
+2017-06-04 12:40:35 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 12:40:38 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 12:40:38 getActiveUsers: {}
+2017-06-04 12:40:45 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:40:55 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:41:05 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:41:15 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:41:19 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 12:41:20 setGPSLocation: {"mobile":"3290358217","lat":"45.6423949","lon":"9.5858681","date":"2017-06-04 12:41:14"}
+2017-06-04 12:41:20 getAS: {"mobile":"3290358217","lat":"45.6423949","lon":"9.5858681","range":"10"}
+2017-06-04 12:41:25 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:41:31 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 12:41:31 getActiveUsers: {}
+2017-06-04 12:41:35 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:41:45 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:41:55 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:42:05 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:42:14 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 12:42:15 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 12:42:08"}
+2017-06-04 12:42:15 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 12:42:15 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:42:19 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 12:42:19 getActiveUsers: {}
+2017-06-04 12:42:25 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:42:35 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:42:45 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:42:55 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:43:05 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:43:15 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:43:25 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:43:35 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:43:45 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:43:55 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:44:05 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:44:15 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:44:25 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:44:35 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:44:45 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:44:55 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:45:05 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:45:15 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:45:25 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:45:25 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 12:45:18"}
+2017-06-04 12:45:25 getActiveUsers: {}
+2017-06-04 12:45:29 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 12:45:29 getActiveUsers: {}
+2017-06-04 12:45:34 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 12:45:34 getActiveUsers: {}
+2017-06-04 12:45:35 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 12:45:35 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:45:36 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 12:45:36 getActiveUsers: {}
+2017-06-04 12:45:43 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 12:45:43 getActiveUsers: {}
+2017-06-04 12:45:45 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:45:46 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 12:45:49 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 12:45:49 getActiveUsers: {}
+2017-06-04 12:45:55 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 12:45:55 setGPSLocation: {"mobile":"3290358217","lat":"45.6423856","lon":"9.5858694","date":"2017-06-04 12:45:48"}
+2017-06-04 12:45:55 getAS: {"mobile":"3290358217","lat":"45.6423856","lon":"9.5858694","range":"10"}
+2017-06-04 12:45:55 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:45:58 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 12:45:58 getActiveUsers: {}
+2017-06-04 12:46:05 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:46:08 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 12:46:09 setGPSLocation: {"mobile":"3290358217","lat":"45.6423856","lon":"9.5858694","date":"2017-06-04 12:46:03"}
+2017-06-04 12:46:09 getAS: {"mobile":"3290358217","lat":"45.6423856","lon":"9.5858694","range":"10"}
+2017-06-04 12:46:11 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 12:46:11 getActiveUsers: {}
+2017-06-04 12:46:15 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:46:25 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:46:25 setGPSLocation: {"mobile":"3290358217","lat":"45.6443631","lon":"9.578901","date":"2017-06-04 12:46:25"}
+2017-06-04 12:46:25 getActiveUsers: {}
+2017-06-04 12:46:35 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:46:35 getActiveUsers: {}
+2017-06-04 12:46:45 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:46:55 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:46:56 getActiveUsers: {"token":"XI475lNr9f"}
+2017-06-04 12:47:05 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:47:09 setGPSLocation: {"mobile":"3290358217","lat":"45.6423856","lon":"9.5858694","date":"2017-06-04 12:47:02"}
+2017-06-04 12:47:15 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:47:17 getActiveUsers: {"token":"XI475lNr9f"}
+2017-06-04 12:47:25 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:47:25 setGPSLocation: {"mobile":"3290358217","lat":"45.6443631","lon":"9.578901","date":"2017-06-04 12:47:25"}
+2017-06-04 12:47:35 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:47:35 getActiveUsers: {"token":"XI475lNr9f"}
+2017-06-04 12:47:45 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:47:55 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:47:56 getActiveUsers: {"token":"XI475lNr9f"}
+2017-06-04 12:48:05 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:48:09 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 12:48:02"}
+2017-06-04 12:48:11 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 12:48:11 getActiveUsers: {}
+2017-06-04 12:48:15 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:48:25 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:48:25 setGPSLocation: {"mobile":"3290358217","lat":"45.6443631","lon":"9.578901","date":"2017-06-04 12:48:25"}
+2017-06-04 12:48:35 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:48:45 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:48:55 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:49:05 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:49:09 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 12:49:02"}
+2017-06-04 12:49:09 getActiveUsers: {}
+2017-06-04 12:49:14 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 12:49:14 getActiveUsers: {}
+2017-06-04 12:49:15 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:49:25 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:49:25 setGPSLocation: {"mobile":"3290358217","lat":"45.6443631","lon":"9.578901","date":"2017-06-04 12:49:25"}
+2017-06-04 12:49:35 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:49:45 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:49:55 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:50:05 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:50:15 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:50:25 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:50:25 setGPSLocation: {"mobile":"3290358217","lat":"45.6443631","lon":"9.578901","date":"2017-06-04 12:50:25"}
+2017-06-04 12:50:35 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:50:45 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:50:55 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:51:05 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:51:07 setGPSLocation: {"mobile":"3290358217","lat":"45.6423793","lon":"9.5858629","date":"2017-06-04 12:51:00"}
+2017-06-04 12:51:07 getActiveUsers: {}
+2017-06-04 12:51:15 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:51:18 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 12:51:18 getActiveUsers: {}
+2017-06-04 12:51:25 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:51:25 setGPSLocation: {"mobile":"3290358217","lat":"45.6443631","lon":"9.578901","date":"2017-06-04 12:51:25"}
+2017-06-04 12:51:35 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:51:38 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 12:51:42 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 12:51:35"}
+2017-06-04 12:51:42 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 12:51:45 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:51:53 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 12:51:53 getActiveUsers: {}
+2017-06-04 12:51:55 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:52:05 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:52:15 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:52:25 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:52:25 setGPSLocation: {"mobile":"3290358217","lat":"45.6443631","lon":"9.578901","date":"2017-06-04 12:52:25"}
+2017-06-04 12:52:35 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:52:41 setGPSLocation: {"mobile":"3290358217","lat":"45.6423807","lon":"9.5858641","date":"2017-06-04 12:52:35"}
+2017-06-04 12:52:41 getActiveUsers: {}
+2017-06-04 12:52:45 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:52:55 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:53:05 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:53:15 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:53:18 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 12:53:25 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:53:25 setGPSLocation: {"mobile":"3290358217","lat":"45.6443631","lon":"9.578901","date":"2017-06-04 12:53:25"}
+2017-06-04 12:53:26 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 12:53:19"}
+2017-06-04 12:53:26 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 12:53:28 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 12:53:28 getActiveUsers: {}
+2017-06-04 12:53:35 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:53:45 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:53:55 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:54:05 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:54:15 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:54:25 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:54:25 setGPSLocation: {"mobile":"3290358217","lat":"45.6443631","lon":"9.578901","date":"2017-06-04 12:54:25"}
+2017-06-04 12:54:25 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 12:54:18"}
+2017-06-04 12:54:35 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:54:45 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:54:55 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:55:05 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:55:15 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:55:23 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 12:55:23 getActiveUsers: {}
+2017-06-04 12:55:25 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:55:25 setGPSLocation: {"mobile":"3290358217","lat":"45.6443631","lon":"9.578901","date":"2017-06-04 12:55:25"}
+2017-06-04 12:55:25 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 12:55:18"}
+2017-06-04 12:55:25 getActiveUsers: {}
+2017-06-04 12:55:30 User_Type: {"mobile":"3290358217","type":"autista"}
+2017-06-04 12:55:35 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:55:37 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 12:55:44 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 12:55:45 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:55:55 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:56:05 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:56:15 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:56:25 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:56:25 setGPSLocation: {"mobile":"3290358217","lat":"45.6443631","lon":"9.578901","date":"2017-06-04 12:56:25"}
+2017-06-04 12:56:25 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 12:56:18"}
+2017-06-04 12:56:35 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 12:56:35 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:56:38 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 12:56:38 getActiveUsers: {}
+2017-06-04 12:56:45 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:56:55 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:57:05 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:57:15 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:57:25 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:57:25 setGPSLocation: {"mobile":"3290358217","lat":"45.6443631","lon":"9.578901","date":"2017-06-04 12:57:25"}
+2017-06-04 12:57:25 setGPSLocation: {"mobile":"3290358217","lat":"45.642381","lon":"9.5858667","date":"2017-06-04 12:57:18"}
+2017-06-04 12:57:25 getActiveUsers: {}
+2017-06-04 12:57:35 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:57:39 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 12:57:39 setGPSLocation: {"mobile":"3290358217","lat":"45.6423805","lon":"9.5858661","date":"2017-06-04 12:57:32"}
+2017-06-04 12:57:39 getAS: {"mobile":"3290358217","lat":"45.6423805","lon":"9.5858661","range":"10"}
+2017-06-04 12:57:41 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 12:57:41 getActiveUsers: {}
+2017-06-04 12:57:45 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:57:55 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:57:55 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 12:57:55 getActiveUsers: {}
+2017-06-04 12:58:05 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:58:15 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:58:25 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:58:25 setGPSLocation: {"mobile":"3290358217","lat":"45.6443631","lon":"9.578901","date":"2017-06-04 12:58:25"}
+2017-06-04 12:58:35 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:58:39 setGPSLocation: {"mobile":"3290358217","lat":"45.6423805","lon":"9.5858661","date":"2017-06-04 12:58:32"}
+2017-06-04 12:58:39 getActiveUsers: {}
+2017-06-04 12:58:45 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:58:55 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:59:05 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:59:15 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:59:25 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:59:25 setGPSLocation: {"mobile":"3290358217","lat":"45.6443631","lon":"9.578901","date":"2017-06-04 12:59:25"}
+2017-06-04 12:59:35 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:59:39 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 12:59:32"}
+2017-06-04 12:59:39 getActiveUsers: {}
+2017-06-04 12:59:45 checkContacts: {"mobile":"3290358217"}
+2017-06-04 12:59:55 checkContacts: {"mobile":"3290358217"}
+2017-06-04 13:00:05 checkContacts: {"mobile":"3290358217"}
+2017-06-04 13:00:15 checkContacts: {"mobile":"3290358217"}
+2017-06-04 13:00:25 checkContacts: {"mobile":"3290358217"}
+2017-06-04 13:00:25 setGPSLocation: {"mobile":"3290358217","lat":"45.6443631","lon":"9.578901","date":"2017-06-04 13:00:25"}
+2017-06-04 13:00:35 checkContacts: {"mobile":"3290358217"}
+2017-06-04 13:00:39 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 13:00:32"}
+2017-06-04 13:00:39 getActiveUsers: {}
+2017-06-04 13:00:45 checkContacts: {"mobile":"3290358217"}
+2017-06-04 13:00:55 checkContacts: {"mobile":"3290358217"}
+2017-06-04 13:01:05 checkContacts: {"mobile":"3290358217"}
+2017-06-04 13:01:15 checkContacts: {"mobile":"3290358217"}
+2017-06-04 13:01:25 checkContacts: {"mobile":"3290358217"}
+2017-06-04 13:01:35 checkContacts: {"mobile":"3290358217"}
+2017-06-04 13:01:45 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 13:01:45 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 13:01:38"}
+2017-06-04 13:01:45 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 13:01:45 checkContacts: {"mobile":"3290358217"}
+2017-06-04 13:01:55 checkContacts: {"mobile":"3290358217"}
+2017-06-04 13:02:05 checkContacts: {"mobile":"3290358217"}
+2017-06-04 13:02:10 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 13:02:10 getActiveUsers: {}
+2017-06-04 13:02:15 checkContacts: {"mobile":"3290358217"}
+2017-06-04 13:02:25 checkContacts: {"mobile":"3290358217"}
+2017-06-04 13:02:35 checkContacts: {"mobile":"3290358217"}
+2017-06-04 13:02:45 checkContacts: {"mobile":"3290358217"}
+2017-06-04 13:02:55 checkContacts: {"mobile":"3290358217"}
+2017-06-04 13:03:03 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 13:02:56"}
+2017-06-04 13:03:03 getActiveUsers: {}
+2017-06-04 13:03:05 checkContacts: {"mobile":"3290358217"}
+2017-06-04 13:03:15 checkContacts: {"mobile":"3290358217"}
+2017-06-04 13:03:25 checkContacts: {"mobile":"3290358217"}
+2017-06-04 13:03:35 checkContacts: {"mobile":"3290358217"}
+2017-06-04 13:03:45 checkContacts: {"mobile":"3290358217"}
+2017-06-04 13:03:48 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 13:03:49 setGPSLocation: {"mobile":"3290358217","lat":"45.6423526","lon":"9.5859951","date":"2017-06-04 13:03:42"}
+2017-06-04 13:03:49 getAS: {"mobile":"3290358217","lat":"45.6423526","lon":"9.5859951","range":"10"}
+2017-06-04 13:03:50 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 13:03:50 getActiveUsers: {}
+2017-06-04 13:03:55 checkContacts: {"mobile":"3290358217"}
+2017-06-04 13:04:05 checkContacts: {"mobile":"3290358217"}
+2017-06-04 13:04:15 checkContacts: {"mobile":"3290358217"}
+2017-06-04 13:04:25 checkContacts: {"mobile":"3290358217"}
+2017-06-04 13:04:35 checkContacts: {"mobile":"3290358217"}
+2017-06-04 13:04:45 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 13:04:45 checkContacts: {"mobile":"3290358217"}
+2017-06-04 13:04:48 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 13:04:42"}
+2017-06-04 13:04:55 checkContacts: {"mobile":"3290358217"}
+2017-06-04 13:05:05 loginWToken: {"token":"XI475lNr9f"}
+2017-06-04 13:05:05 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-04 13:04:58"}
+2017-06-04 13:05:05 getAS: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","range":"10"}
+2017-06-04 13:05:05 checkContacts: {"mobile":"3290358217"}
+2017-06-04 13:05:08 removeUser_Type: {"mobile":"3290358217"}
+2017-06-04 13:05:09 getActiveUsers: {}
+2017-06-04 13:05:15 checkContacts: {"mobile":"3290358217"}
+2017-06-04 13:05:25 checkContacts: {"mobile":"3290358217"}
