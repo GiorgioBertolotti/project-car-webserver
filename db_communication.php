@@ -268,7 +268,7 @@ function getAS($data){
 		while($utente = mysqli_fetch_array($utenti)){
 			if($utente['Distance']<$data->range){
 				// Evaluate average rating
-				$query2="SELECT AVG(Feedback) as rating from user_contacts WHERE caller_id = ".$utente['id']." AND State=3 GROUP BY caller_id";
+				$query2="SELECT AVG(Feedback) as rating from user_contacts WHERE caller_id = ".$utente['id']." AND State=5 GROUP BY caller_id";
 				$result = mysqli_query($conn,$query2);
 				if(!$result)
 					API_Response(true,"Errore nella query",__FUNCTION__);
