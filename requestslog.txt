@@ -8769,3 +8769,20 @@ lat":"45.644373699999996","lon":"9.5831913","date":"2017-06-07 12:28:58"}
 2017-06-20 16:41:46 checkContacts: {"mobile":"3290358217"}
 2017-06-20 16:41:56 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-20 15:41:46"}
 2017-06-20 16:41:56 checkContacts: {"mobile":"3290358217"}
+2017-06-20 16:42:06 checkContacts: {"mobile":"3290358217"}
+2017-06-20 16:42:16 checkContacts: {"mobile":"3290358217"}
+2017-06-20 16:42:26 checkContacts: {"mobile":"3290358217"}
+2017-06-20 16:42:36 checkContacts: {"mobile":"3290358217"}
+2017-06-20 16:42:46 checkContacts: {"mobile":"3290358217"}
+2017-06-20 16:42:56 setGPSLocation: {"mobile":"3290358217","lat":"45.6423491","lon":"9.5859875","date":"2017-06-20 15:42:46"}
+2017-06-20 16:42:56 checkContacts: {"mobile":"3290358217"}
+2017-06-20 16:43:06 checkContacts: {"mobile":"3290358217"}
+2017-06-20 16:43:16 checkContacts: {"mobile":"3290358217"}
+2017-06-20 16:43:26 checkContacts: {"mobile":"3290358217"}
+2017-06-20 16:43:36 checkContacts: {"mobile":"3290358217"}
+2017-06-20 16:43:46 checkContacts: {"mobile":"3290358217"}
+2017-06-20 16:43:56 setGPSLocation: {"mobile":"3290358217","lat":"45.6423911","lon":"9.5858805","date":"2017-06-20 15:43:46"}
+2017-06-20 16:43:56 checkContacts: {"mobile":"3290358217"}
+2017-06-20 16:44:06 checkContacts: {"mobile":"3290358217"}
+2017-06-20 16:44:16 checkContacts: {"mobile":"3290358217"}
+2017-06-20 16:44:26 checkContacts: {"mobile":"3290358217"}
