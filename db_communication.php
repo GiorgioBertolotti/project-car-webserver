@@ -198,7 +198,7 @@ function logoutUser($data){
 		if(!mysqli_query($conn,$queryt))
 			API_Response(true,"Errore nella query",__FUNCTION__);
 		// Delete user's token
-		$queryto = "DELETE FROM user_token WHERE User_id = '".$id."'";
+		$queryto = "DELETE FROM user_token WHERE Token = '".$logout_data->token."'";
 		if(!mysqli_query($conn,$queryto))
 			API_Response(true,"Errore nella query",__FUNCTION__);
 		API_Response(false,"Logout eseguito con successo",__FUNCTION__);
