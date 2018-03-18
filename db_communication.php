@@ -811,8 +811,8 @@ function forgotPassword($data){
 				$mailer = new PHPMailer();
 				/* CONFIGURATION */
 				$crendentials = array(
-					'email'     => 'giorgiobertol@gmail.com',    //Your GMail adress
-					'password'  => 'plettro98'               //Your GMail password
+					'email'     => '',    //Your GMail adress
+					'password'  => ''               //Your GMail password
 					);
 				/* SPECIFIC TO GMAIL SMTP */
 				$smtp = array(
@@ -833,7 +833,7 @@ function forgotPassword($data){
 				//Now, send mail :
 				//From - To :
 				$mailer->From       = $crendentials['email'];
-				$mailer->FromName   = 'Giorgio'; //Optional
+				$mailer->FromName   = ''; //Optional
 				$mailer->addAddress($to);  // Add a recipient
 				//Subject - Body :
 				$mailer->Subject        = $subject;
